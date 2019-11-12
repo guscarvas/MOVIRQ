@@ -1,0 +1,2 @@
+module AtleticasHelper
+end

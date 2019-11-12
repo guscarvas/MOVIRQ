@@ -1,0 +1,45 @@
+// Place all the styles related to the Atleticas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.atleticas{
+    background-color: #ffff99;
+    font-family: 'Montserrat', sans-serif;
+    table {
+        border-collapse: collapse;
+    }
+
+    table tr td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    .tabela-atleticas {
+        width: 50%;
+        margin-top: 3%;
+        padding: 5px;
+        display: flexbox;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .nome-atletica{
+        font-family:'Montserrat', sans-serif;
+        font-size: larger;
+    }
+
+    .botao{
+        background-color: #ffcc99;
+        border: 1px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .botao:hover{
+        background-color: #fafac6;
+    }
+    .botao-link{
+        background-color: #ffff99;
+        border: solid, black;
+    }
+}
+

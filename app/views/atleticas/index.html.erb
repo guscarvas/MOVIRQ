@@ -1,0 +1,19 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1>Gerenciar Atléticas</h1>
+
+<table class = "tabela-atleticas">
+  <% @atleticas.each do |atletica| %>
+    <tr>
+      <td class = 'nome-atletica'><%= atletica.name %></td>
+      <td><%= link_to 'Editar', edit_atletica_path(atletica), {class: 'botao'}%></td>
+      <td><%= button_to 'Excluir', atletica, method: :delete%></td>
+    </tr>
+  <% end %>
+</table>
+
+<br>
+<div>
+<%= link_to 'Cadastrar nova atlética', new_atletica_path, {class: 'botao'} %>
+</div>

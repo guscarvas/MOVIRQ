@@ -1,0 +1,2 @@
+class Atletica < ApplicationRecord
+end
