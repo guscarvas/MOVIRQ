@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Modalidade:</strong>
+  <%= @reserva.modalidade %>
+</p>
+
+
+<p>
+  <strong>Naipe:</strong>
+  <%= @reserva.naipe %>
+</p>
+
+
+<p>
+  <strong>Dia:</strong>
+  <%= @reserva.dia %>
+</p>
+
+
+<p>
+  <strong>Inicio:</strong>
+  <%= @reserva.inicio %>
+</p>
+
+
+<p>
+  <strong>Termino:</strong>
+  <%= @reserva.termino %>
+</p>
+
+<p>
+  <strong>Odp:</strong>
+  <%= @reserva.odp %>
+</p>
+
+<p>
+  <strong>Ph:</strong>
+  <%= @reserva.ph %>
+</p>
+
+<%= link_to 'Editar', edit_reserva_path(@reserva) %> |
+<%= link_to 'Voltar', reservas_path %>

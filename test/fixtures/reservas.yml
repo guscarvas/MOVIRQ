@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  modalidade: MyString
+  : MyString
+  naipe: MyString
+  : MyString
+  dia: MyString
+  : MyString
+  inicio: MyString
+  : 2019-11-13 10:13:32
+  termino: MyString
+  : 2019-11-13 10:13:32
+  odp: MyString
+  : 9.99
+  ph: MyString
+  : 9.99
+
+two:
+  modalidade: MyString
+  : MyString
+  naipe: MyString
+  : MyString
+  dia: MyString
+  : MyString
+  inicio: MyString
+  : 2019-11-13 10:13:32
+  termino: MyString
+  : 2019-11-13 10:13:32
+  odp: MyString
+  : 9.99
+  ph: MyString
+  : 9.99

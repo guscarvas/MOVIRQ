@@ -8,7 +8,7 @@
     <tr>
       <td class = 'nome-atletica'><%= atletica.name %></td>
       <td><%= link_to 'Editar', edit_atletica_path(atletica), {class: 'botao'}%></td>
-      <td><%= button_to 'Excluir', atletica, method: :delete%></td>
+      <td><%= link_to 'Excluir', atletica, method: :delete%></td>
     </tr>
   <% end %>
 </table>
