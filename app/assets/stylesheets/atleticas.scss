@@ -5,6 +5,7 @@
 .atleticas{
     background-color: #ffff99;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
     table {
         border-collapse: collapse;
     }
@@ -30,16 +31,23 @@
 
     .botao{
         background-color: #ffcc99;
-        border: 1px solid black;
-        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
         cursor: pointer;
     }
-    .botao:hover{
-        background-color: #fafac6;
+    .formulario{
+        text-align: center;
     }
-    .botao-link{
-        background-color: #ffff99;
-        border: solid, black;
+
+    .field{
+        margin-bottom: 2%;
+    }
+
+    .caixa-texto{
+        border-radius: 5px;
+        width: 20%;
+        border: transparent;
     }
 }
+
+
 
