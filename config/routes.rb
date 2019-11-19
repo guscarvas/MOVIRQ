@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   get 'sobre_nos/index'
   get 'aaa/index'
   resources :reservas
