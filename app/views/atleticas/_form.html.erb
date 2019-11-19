@@ -13,20 +13,20 @@
 
   <div class="field">
     <%= form.label :nome %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, :class => 'caixa-texto'  %>
   </div>
 
   <div class="field">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email,  :class => 'caixa-texto'  %>
   </div>
 
   <div class="field">
     <%= form.label :senha %>
-    <%= form.text_field :password %>
+    <%= form.text_field :password,  :class => 'caixa-texto'  %>
   </div>
 
   <div class="actions">
-    <%= form.submit  "Cadastrar atlética" %>
+    <%= form.submit  "Cadastrar atlética",  :class => 'botao'  %>
   </div>
 <% end %>
