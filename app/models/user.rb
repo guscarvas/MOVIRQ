@@ -7,7 +7,7 @@ class User < ApplicationRecord
     enum role: [:LAAUSP, :atletica]
     after_initialize :set_default_role, :if => :new_record?
     def set_default_role
-        self.role ||= :student
+        self.role ||= :atletica
     end
 
     before_save { self.email = email.downcase }
