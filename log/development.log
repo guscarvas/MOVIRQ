@@ -5738,3 +5738,109 @@ Migrating to AddRoleToUsers (20191119200425)
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-11-19 17:35:05 -0300
+  [1m[35m (9.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AtleticasController#index as HTML
+  Rendering atleticas/index.html.erb within layouts/application
+  [1m[36mAtletica Load (0.4ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
+  ↳ app/views/atleticas/index.html.erb:7
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 36.3ms | Allocations: 1641)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in C:/Users/Gustavo/Desktop/POLI/VI SEM/SI/MOVIRQ/public/packs
+Completed 200 OK in 15349ms (Views: 15276.7ms | ActiveRecord: 3.7ms | Allocations: 61695)
+
+
+Started GET "/users/new" for ::1 at 2019-11-19 17:39:55 -0300
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 4596)
+
+
+  
+NameError (undefined local variable or method `password' for #<Class:0x000000000bbbfc28>):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:3:in `new'
+Started GET "/users/new" for ::1 at 2019-11-19 17:42:35 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.0ms | Allocations: 4880)
+
+
+  
+NameError (undefined local variable or method `password_digest' for #<Class:0x000000000b7c81d8>):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:3:in `new'
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/new" for ::1 at 2019-11-19 17:46:16 -0300
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms | Allocations: 4924)
+
+
+  
+NameError (undefined local variable or method `password_digest' for #<Class:0x000000000bcd7cf0>):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:3:in `new'
+Started GET "/users/new" for ::1 at 2019-11-19 17:46:31 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms | Allocations: 4871)
+
+
+  
+NameError (undefined local variable or method `password' for #<Class:0x000000000b8ec140>):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:3:in `new'
+Started GET "/users/new" for ::1 at 2019-11-19 17:46:45 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 4835)
+
+
+  
+NameError (undefined local variable or method `email' for #<Class:0x000000000b5abbc0>):
+  
+app/models/user.rb:6:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:3:in `new'
+Started GET "/users/new" for ::1 at 2019-11-19 17:48:19 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 4835)
+
+
+  
+NameError (undefined local variable or method `email' for #<Class:0x000000000b63b248>):
+  
+app/models/user.rb:6:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:3:in `new'
+Started GET "/users/new" for ::1 at 2019-11-19 17:50:05 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 149.4ms | Allocations: 5240)
+Completed 200 OK in 453ms (Views: 417.3ms | ActiveRecord: 2.6ms | Allocations: 26248)
+
+
+Started GET "/users/new" for ::1 at 2019-11-19 17:50:15 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1044)
+Completed 200 OK in 82ms (Views: 62.5ms | ActiveRecord: 1.6ms | Allocations: 12973)
+
+
