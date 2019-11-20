@@ -1,7 +1,18 @@
 <h1>AAA</h1>
 <p>Find me in app/views/aaa/index.html.erb</p>
-<p>Aqui você pode editar, visualizar e enviar suas reservas</p>
-<%= link_to "Início", root_path %>
-<p> </p>
-<%= link_to "Ver Reservas", reservas_path %>
+
+<div class = 'texto-aaa' >
+<p>Bem vindo ao portal da Atlética.</p>
+<p>Aqui você pode visualizar os pedidos de reserva já enviados para a LAAUSP ou fazer uma solicitação pontual</p>
+</div>
+
+<div class = 'acoes-aaa'>
+<%= link_to "Ver reservas solicitadas", reservas_path %>
+<%= link_to "Fazer uma solicitação pontual"%>
+
+</div>
+
+<div class = "resto-aaa">
 <%= link_to "Sobre Nós", sobre_nos_index_path %>
+<%= link_to "Início", root_path %>
+</div>
