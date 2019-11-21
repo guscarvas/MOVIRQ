@@ -12,22 +12,22 @@
             </div>
 <% end %>
             <div class="field">
-                        <%= f.label :name %>
-                        <%= f.text_field :name %>
+                        <%= f.label :Nome %>
+                        <%= f.text_field :name, :class => 'caixa-texto' %>
             </div>
             <div class="field">
                         <%= f.label :email %>
-                        <%= f.email_field :email %>
+                        <%= f.email_field :email, :class => 'caixa-texto' %>
             </div>
             <div class="field">
-                        <%= f.label :password %>
-                        <%= f.password_field :password %>
+                        <%= f.label :senha %>
+                        <%= f.password_field :password, :class => 'caixa-texto' %>
             </div>
             <div class="field">
-                        <%= f.label :password_confirmation %>
-                        <%= f.password_field :password_confirmation %>
+                        <%= f.label :'Confirme sua Senha' %>
+                        <%= f.password_field :password_confirmation, :class => 'caixa-texto' %>
             </div>
             <div class="actions">
-                        <%= f.submit "Cadastrar"%>
+                        <%= f.submit "Cadastrar", :class => 'botao'%>
             </div>
 <% end %>

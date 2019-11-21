@@ -5,4 +5,16 @@
     background-color: #ffff99;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    .caixa-texto{
+        border-radius: 5px;
+        width: 20%;
+        border: transparent;
+    }
+    .botao{
+        background-color: #ffcc99;
+        border-radius: 2px;
+        border-color: black;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+    }
 }
