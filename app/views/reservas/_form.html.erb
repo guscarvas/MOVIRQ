@@ -11,42 +11,47 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :modalidade %>
-    <%= form.text_field :modalidade %>
-  </div>
+  <div class="col-md-3">
 
-  <div class="field">
-    <%= form.label :naipe %>
-    <%= form.text_field :naipe %>
-  </div>
+    <div class="form-group">
+      <%= form.label :naipe %>
+      <%= form.select :naipe, options_for_select(%w[Masculino Feminino Misto]), class: "form-control" %>
+    </div>
+    
+    <div class="form-group">
+      <%= form.label :modalidade%>
+      <%= form.select :modalidade, options_for_select(%w[Basquete Vôlei Handebol Futsal]), class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :dia %>
-    <%= form.text_field :dia %>
-  </div>
+    <div class="field">
+      <%= form.label :dia %>
+      <%= form.select :dia, options_for_select(%w[Segunda Terça Quarta Quinta Sexta]), class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :inicio %>
-    <%= form.text_field :inicio %>
-  </div>
+    <div class="field">
+      <%= form.label :inicio %>
+      <%= form.text_field :inicio %>
+    </div>
 
-  <div class="field">
-    <%= form.label :termino %>
-    <%= form.text_field :termino %>
-  </div>
+    <div class="field">
+      <%= form.label :termino %>
+      <%= form.text_field :termino %>
+    </div>
 
-  <div class="field">
-    <%= form.label :odp %>
-    <%= form.text_field :odp %>
-  </div>
+    <div class="form-group">
+      <%= form.label :ph %>
+      <%= form.select :ph, options_for_select(%w[1 2]), class: "form-control" %>
+    </div>  
+    
+    <div class="form-group">
+      <%= form.label :odp%>
+      <%= form.select :odp, options_for_select(%w[1 2]), class: "form-control" %>
+    </div>  
 
-  <div class="field">
-    <%= form.label :ph %>
-    <%= form.text_field :ph %>
   </div>
 
   <div class="actions">
-    <%= form.submit "Criar reserva", :class => "botao" %>
+    <%= form.submit %>
   </div>
+
 <% end %>

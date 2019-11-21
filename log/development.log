@@ -10367,3 +10367,282 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-11-21 09:56:51 -0300
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AtleticasController#index as HTML
+  Rendering atleticas/index.html.erb within layouts/application
+  [1m[36mAtletica Load (0.7ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
+  ↳ app/views/atleticas/index.html.erb:7
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1703)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/cidcarvalho/MOVIRQ/public/packs
+Completed 200 OK in 6245ms (Views: 6224.1ms | ActiveRecord: 1.2ms | Allocations: 40396)
+
+
+Started GET "/" for ::1 at 2019-11-21 09:57:01 -0300
+Processing by AtleticasController#index as HTML
+  Rendering atleticas/index.html.erb within layouts/application
+  [1m[36mAtletica Load (0.3ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
+  ↳ app/views/atleticas/index.html.erb:7
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 648)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.3ms | Allocations: 5398)
+
+
+Started GET "/reservas" for ::1 at 2019-11-21 09:57:03 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.erb within layouts/application
+  [1m[36mReserva Load (0.7ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.erb:20
+  Rendered reservas/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1659)
+Completed 200 OK in 31ms (Views: 24.7ms | ActiveRecord: 1.4ms | Allocations: 7286)
+
+
+Started GET "/reservas" for ::1 at 2019-11-21 09:57:04 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.erb within layouts/application
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.erb:20
+  Rendered reservas/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 662)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.2ms | Allocations: 5418)
+
+
+Started GET "/reservas/new" for ::1 at 2019-11-21 09:57:10 -0300
+Processing by ReservasController#new as HTML
+  Rendering reservas/new.html.erb within layouts/application
+  Rendered reservas/_form.html.erb (Duration: 19.1ms | Allocations: 4553)
+  Rendered reservas/new.html.erb within layouts/application (Duration: 20.7ms | Allocations: 4887)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.6ms | Allocations: 11705)
+
+
+Started GET "/reservas" for ::1 at 2019-11-21 09:57:15 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.erb within layouts/application
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.erb:20
+  Rendered reservas/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 658)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.2ms | Allocations: 5424)
+
+
+Started GET "/reservas" for ::1 at 2019-11-21 09:57:47 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.erb within layouts/application
+  [1m[36mReserva Load (2.0ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.erb:20
+  Rendered reservas/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 992)
+Completed 200 OK in 111ms (Views: 95.8ms | ActiveRecord: 2.0ms | Allocations: 6688)
+
+
+Started GET "/reservas/new" for ::1 at 2019-11-21 09:57:48 -0300
+Processing by ReservasController#new as HTML
+  Rendering reservas/new.html.erb within layouts/application
+  Rendered reservas/_form.html.erb (Duration: 2.5ms | Allocations: 1540)
+  Rendered reservas/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1864)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2572)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: reserva, local: true) do |form| %>
+  <% if reserva.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reserva.errors.count, "error") %> prohibited this reserva from being saved:</h2>
+
+      <ul>
+        <% reserva.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="col-md-3">
+
+    <div class="form-group">
+      <%= form.label :naipe %>
+      <%= form.select :naipe, options_for_select(%w[Masculino Feminino Misto]), class: "form-control" %>
+    </div>
+      
+    <div class="form-group">
+      <%= form.label :modalidade%>
+      <%= form.select :modalidade, options_for_select(%w[Basquete Vôlei Handebol Futsal]), class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :dia %>
+      <%= form.select :dia, options_for_select(%w[Segunda Terça Quarta Quinta Sexta]), class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :inicio %>
+      <%= form.text_field :inicio %>
+    </div>
+
+    <div class="field">
+      <%= form.label :termino %>
+      <%= form.text_field :termino %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :ph %>
+      <%= form.select :ph, options_for_select(%w[1 2]), class: "form-control" %>
+    </div>  
+    
+    <div class="form-group">
+      <%= form.label :odp%>
+      <%= form.select :odp, options_for_select(%w[1 2]), class: "form-control" %>
+    </div>  
+
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  
+<% end %>
+  
+
+):
+1:    <%= form_with(model: reserva, local: true) do |form| %>
+2:      <% if reserva.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(reserva.errors.count, "error") %> prohibited this reserva from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% reserva.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:    <div class="col-md-3">
+15:    
+16:        <div class="form-group">
+17:          <%= form.label :naipe %>
+18:          <%= form.select :naipe, options_for_select(%w[Masculino Feminino Misto]), class: "form-control" %>
+19:        </div>
+20:          
+21:        <div class="form-group">
+22:          <%= form.label :modalidade%>
+23:          <%= form.select :modalidade, options_for_select(%w[Basquete Vôlei Handebol Futsal]), class: "form-control" %>
+24:        </div>
+25:    
+26:        <div class="field">
+27:          <%= form.label :dia %>
+28:          <%= form.select :dia, options_for_select(%w[Segunda Terça Quarta Quinta Sexta]), class: "form-control" %>
+29:        </div>
+30:    
+31:        <div class="field">
+32:          <%= form.label :inicio %>
+33:          <%= form.text_field :inicio %>
+34:        </div>
+35:    
+36:        <div class="field">
+37:          <%= form.label :termino %>
+38:          <%= form.text_field :termino %>
+39:        </div>
+40:    
+41:        <div class="form-group">
+42:          <%= form.label :ph %>
+43:          <%= form.select :ph, options_for_select(%w[1 2]), class: "form-control" %>
+44:        </div>  
+45:        
+46:        <div class="form-group">
+47:          <%= form.label :odp%>
+48:          <%= form.select :odp, options_for_select(%w[1 2]), class: "form-control" %>
+49:        </div>  
+50:    
+51:      </div>
+52:    
+53:      <div class="actions">
+54:        <%= form.submit %>
+55:      </div>
+56:      
+57:    <% end %>
+58:      
+  
+app/views/reservas/_form.html.erb:18: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:28: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:43: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:43: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:48: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:48: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:61: syntax error, unexpected end-of-input, expecting end
+app/views/reservas/_form.html.erb:18: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:28: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:43: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:43: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:48: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:48: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:61: syntax error, unexpected end-of-input, expecting end
+app/views/reservas/_form.html.erb:18: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:28: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:43: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:43: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:48: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:48: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:61: syntax error, unexpected end-of-input, expecting end
+app/views/reservas/_form.html.erb:18: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:28: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:43: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:43: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:48: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:48: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:61: syntax error, unexpected end-of-input, expecting end
+app/views/reservas/_form.html.erb:18: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:28: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:43: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:43: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:48: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:48: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:61: syntax error, unexpected end-of-input, expecting end
+app/views/reservas/_form.html.erb:18: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:28: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:43: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:43: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:48: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/reservas/_form.html.erb:48: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/reservas/_form.html.erb:61: syntax error, unexpected end-of-input, expecting end
+app/views/reservas/new.html.erb:3
+Started GET "/reservas/new" for ::1 at 2019-11-21 09:59:11 -0300
+Started GET "/reservas" for ::1 at 2019-11-21 09:59:11 -0300
+Processing by ReservasController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering reservas/index.html.erb within layouts/application
+Processing by ReservasController#new as HTML
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  Rendering reservas/new.html.erb within layouts/application
+  ↳ app/views/reservas/index.html.erb:20
+  Rendered reservas/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1691)
+Completed 200 OK in 113ms (Views: 100.3ms | ActiveRecord: 0.4ms | Allocations: 12318)
+
+
+  Rendered reservas/_form.html.erb (Duration: 113.3ms | Allocations: 14586)
+  Rendered reservas/new.html.erb within layouts/application (Duration: 119.2ms | Allocations: 15072)
+Completed 200 OK in 202ms (Views: 192.5ms | ActiveRecord: 0.0ms | Allocations: 20794)
+
+
