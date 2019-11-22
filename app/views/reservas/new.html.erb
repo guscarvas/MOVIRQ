@@ -1,5 +1,17 @@
 <h1>Nova Reserva</h1>
 
+<div class = "texto">
+<p class = 'fonte-texto'> Aqui você pode solicitar uma nova reserva </p>
+<p class = 'fonte-texto'> <b> Naipe </b> - Escolha se você está solicitando uma reserva para uma modalidade masculina, feminina ou mista.<p>
+<p class = 'fonte-texto'> <b> Modalidade </b> - Escolha para qual modalidade de quadra você deseja realizar uma reserva.</p>
+<p class = 'fonte-texto'> <b> Dia </b> - Escolha para que dia da semana você deseja solicitar a reserva</p>
+<p class = 'fonte-texto'> <b> Início </b> - Coloque um horário de início para a reserva </p>
+<p class = 'fonte-texto'> <b> Término </b> - Coloque um horário de término para a reserva </p>
+<p class = 'fonte-texto'> <b> PH (Prioridade de horário) </b> - Indique se prefere receber 1h de reserva de quadra no ínicio (1) ou no final (2) do treino </p>
+<p class = 'fonte-texto'> <b> OdP (Ordem de Prioridade) </b> - Indique qual a prioridade desse treino dessa modalidade/naipe para receber reservas 
+sendo 1 a maior prioridade e 3 a menor. Caso você esteja solicitando apenas um treino, coloque 1.</p>
+</div>
+
 <%= render 'form', reserva: @reserva %>
 
 <%= link_to 'Voltar', reservas_path %>
