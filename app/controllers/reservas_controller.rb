@@ -1,5 +1,6 @@
 class ReservasController < ApplicationController
   before_action :set_reserva, only: [:show, :edit, :update, :destroy]
+  # before_action :verfificar, only: [:new]
 
   # GET /reservas
   # GET /reservas.json
@@ -25,6 +26,7 @@ class ReservasController < ApplicationController
   # POST /reservas.json
   def create
     @reserva = Reserva.new(reserva_params)
+    @reserva.user_id = current_user.id
 
     respond_to do |format|
       if @reserva.save
@@ -69,6 +71,6 @@ class ReservasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reserva_params
-      params.require(:reserva).permit(:modalidade, :naipe, :dia, :inicio, :termino, :odp, :ph)
+      params.require(:reserva).permit(:modalidade, :naipe, :dia, :inicio, :termino, :odp, :ph, :user_id)
     end
 end

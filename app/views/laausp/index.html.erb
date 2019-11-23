@@ -1,0 +1,18 @@
+<h1>LAAUSP</h1>
+<p>Find me in app/views/laausp/index.html.erb</p>
+
+<div >
+<p class = 'texto-laausp'>Bem vindo ao portal da LAAUSP!</p>
+<p class = 'texto-laausp'>Aqui você pode visualizar os pedidos de reserva das atléticas e gerenciar as atléticas cadastradas</p>
+</div>
+
+<div class = 'acoes-laausp'>
+<%= link_to "Ver reservas solicitadas", reservas_path %>
+<%= link_to "Gerenciar Atléticas", atleticas_path %>
+
+</div>
+
+<div class = "resto-laausp">
+<%= link_to "Sobre Nós", sobre_nos_index_path %>
+<%= link_to "Início", root_path %>
+</div>

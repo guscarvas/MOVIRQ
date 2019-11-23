@@ -1,0 +1,2 @@
+module LaauspHelper
+end
