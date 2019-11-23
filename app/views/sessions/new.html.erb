@@ -1,15 +1,15 @@
 <%= form_for :session, url: sign_in_path do |f| %>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, :class => 'caixa-texto' %>
   </div>
   
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.label :senha %><br />
+    <%= f.password_field :password, autocomplete: "off", :class => 'caixa-texto' %>
   </div>
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", :class => 'botao' %>
   </div>
-<p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+<p>Ainda não possui um cadastro? Entre em contato com a LAAUSP para cadastrar a atlética. <%= link_to "Sign up now!", new_user_path %></p>
 <% end %>
