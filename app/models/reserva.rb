@@ -1,3 +1,11 @@
+class TimeValidator < ActiveModel::Validator
+    def validate(record)
+        if record.termino < record.inicio + 90*60
+            record.errors.add(:termino, ": o horário de término deve ser pelo menos 1h30 após o início")
+        end
+    end
+end
+
 class Reserva < ApplicationRecord
 
     include ActiveModel::Validations
@@ -10,13 +18,3 @@ class Reserva < ApplicationRecord
     validates_with TimeValidator
 
 end
-
-
-class TimeValidator < ActiveModel::Validator
-    def validate(record)
-        if record.termino < record.inicio + 90*60
-            record.errors.add(:termino, ": o horário de término deve ser pelo menos 1h30 após o início")
-        end
-    end
-end
-
