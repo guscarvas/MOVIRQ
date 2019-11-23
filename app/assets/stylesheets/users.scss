@@ -1,3 +1,20 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.users{
+    background-color: #ffff99;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    .caixa-texto{
+        border-radius: 5px;
+        width: 20%;
+        border: transparent;
+    }
+    .botao{
+        background-color: #ffcc99;
+        border-radius: 2px;
+        border-color: black;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+    }
+}

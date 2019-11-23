@@ -1,14 +1,23 @@
-<h1>Sobre Nós</h1>
+<h1 class = "titulo">Sobre Nós</h1>
 <p>Find me in app/views/sobre_nos/index.html.erb</p>
-<p> Este website surgiu como trabalho da disciplina de Sistemas de Informação</p>
-<p> com a ideia de facilitar as reservas de quadras do CEPE, tanto para as </p>
-<p> atléticas quanto para a própria LAAUSP </p>
-<p> </p>
-<h3>Desenvolvedores</h3>
-<p> Eduardo Eiras </p>
-<p> Gustavo Carvas </p>
-<p> Luana Nunes </p>
-<p> João Meneghini </p>
-<p> Rafael Sobral </p>
+<div class = "texto">
+<p class = "fonte-texto">     Este website surgiu como trabalho da disciplina de Sistemas de Informação (PMR3304)
+ com a ideia de facilitar os sistema de solicitação e distribuição das reservas de quadras do CEPE,
+ deixando o processo mais fácil tanto para as atléticas quanto para a própria LAAUSP.
+</p>
+<p class = "fonte-texto">     A partir dele, cada atlética pode cadastrar seus pedidos de reserva semestralmente, além de fazer
+  alterações quando julgar necessário e fazer solicitações pontuais para a LAAUSP ao longo do semestre. 
+    A LAAUSP pode usar a própria interface do site para montar a tabela de reservas mensal e disponibilizá-la 
+        para a atléticas. </p>
+</div>
 
-<%= link_to "Início", root_path %>
+<div class = "desenvolvedores">
+<h3>Desenvolvedores</h3>
+<p class = "fonte-dev"> Eduardo Eiras </p>
+<p class = "fonte-dev"> Gustavo Carvas </p>
+<p class = "fonte-dev"> Luana Nunes </p>
+<p class = "fonte-dev"> João Meneghini </p>
+<p class = "fonte-dev"> Rafael Sobral </p>
+</div>
+
+<%= link_to "Início", root_path, :class => "link_s" %>

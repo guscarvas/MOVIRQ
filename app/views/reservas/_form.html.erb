@@ -15,43 +15,43 @@
 
     <div class="form-group">
       <%= form.label :naipe %>
-      <%= form.select :naipe, options_for_select(%w[Masculino Feminino Misto]), class: "form-control" %>
+      <%= form.select :naipe, options_for_select(%w[Masculino Feminino Misto]), {}, {class: "form-control"} %>
     </div>
     
     <div class="form-group">
       <%= form.label :modalidade%>
-      <%= form.select :modalidade, options_for_select(%w[Basquete Vôlei Handebol Futsal]), class: "form-control" %>
+      <%= form.select :modalidade, options_for_select(%w[Basquete Vôlei Handebol Futsal]), {}, {class: "form-control"} %>
     </div>
 
     <div class="field">
       <%= form.label :dia %>
-      <%= form.select :dia, options_for_select(%w[Segunda Terça Quarta Quinta Sexta]), class: "form-control" %>
+      <%= form.select :dia, options_for_select(%w[Segunda Terça Quarta Quinta Sexta]), {}, {class: "form-control"} %>
     </div>
 
     <div class="field">
       <%= form.label :inicio %>
-      <%= form.text_field :inicio %>
+      <%= form.text_field :inicio, :class => 'caixa-texto' %>
     </div>
 
     <div class="field">
       <%= form.label :termino %>
-      <%= form.text_field :termino %>
+      <%= form.text_field :termino, :class => 'caixa-texto'%>
     </div>
 
     <div class="form-group">
-      <%= form.label :ph %>
-      <%= form.select :ph, options_for_select(%w[1 2]), class: "form-control" %>
+      <%= form.label :'PH' %>
+      <%= form.select :ph, options_for_select(%w[1 2]), {}, {class: "form-control"}  %>
     </div>  
     
     <div class="form-group">
-      <%= form.label :odp %>
-      <%= form.select :odp, options_for_select(%w[1 2]), class: "form-control" %>
+      <%= form.label :'ODP'%>
+      <%= form.select :odp, options_for_select(%w[1 2 3]), {}, {class: "form-control"} %>
     </div>  
 
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Solicitar reserva", :class => 'botao'%>
   </div>
 
 <% end %>
