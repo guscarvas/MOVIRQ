@@ -17346,6 +17346,35 @@ Completed 200 OK in 238ms (Views: 212.1ms | ActiveRecord: 1.6ms | Allocations: 1
 >>>>>>> ef10edb52f6abcdaaeae1b5a2d57eb589bbc288a
 >>>>>>> 609b58434912332a53480ae2e4606e5d99482491
 <<<<<<< HEAD
+Started GET "/" for ::1 at 2019-11-23 16:06:30 -0300
+  [1m[35m (26.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AtleticasController#index as HTML
+  Rendering atleticas/index.html.erb within layouts/application
+  [1m[36mAtletica Load (0.6ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
+  ↳ app/views/atleticas/index.html.erb:7
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 1641)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 33.9ms | Allocations: 3087)
+Completed 200 OK in 2914ms (Views: 2841.5ms | ActiveRecord: 3.0ms | Allocations: 63295)
+
+
+Started GET "/" for ::1 at 2019-11-23 16:06:58 -0300
+Processing by AtleticasController#index as HTML
+  Rendering atleticas/index.html.erb within layouts/application
+  [1m[36mAtletica Load (0.6ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
+  ↳ app/views/atleticas/index.html.erb:7
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 647)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 725)
+Completed 200 OK in 79ms (Views: 77.4ms | ActiveRecord: 0.9ms | Allocations: 7656)
+
+
+Started GET "/" for ::1 at 2019-11-23 16:07:13 -0300
+=======
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2019-11-23 15:54:01 -0300
   [1m[35m (7.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -17522,10 +17551,46 @@ puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
 Started GET "/atleticas" for ::1 at 2019-11-23 15:57:03 -0300
+>>>>>>> master
 Processing by AtleticasController#index as HTML
   Rendering atleticas/index.html.erb within layouts/application
   [1m[36mAtletica Load (0.6ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
   ↳ app/views/atleticas/index.html.erb:7
+<<<<<<< HEAD
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 640)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 724)
+Completed 200 OK in 73ms (Views: 70.5ms | ActiveRecord: 1.2ms | Allocations: 7649)
+
+
+Started GET "/" for ::1 at 2019-11-23 16:07:14 -0300
+Processing by AtleticasController#index as HTML
+  Rendering atleticas/index.html.erb within layouts/application
+  [1m[36mAtletica Load (0.4ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
+  ↳ app/views/atleticas/index.html.erb:7
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 649)
+Started GET "/" for ::1 at 2019-11-23 16:07:14 -0300
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 11.9ms | Allocations: 1357)
+Completed 200 OK in 188ms (Views: 186.6ms | ActiveRecord: 0.9ms | Allocations: 8685)
+
+
+Processing by AtleticasController#index as HTML
+  Rendering atleticas/index.html.erb within layouts/application
+  [1m[36mAtletica Load (0.6ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
+  ↳ app/views/atleticas/index.html.erb:7
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 638)
+Started GET "/" for ::1 at 2019-11-23 16:07:15 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 727)
+Completed 200 OK in 148ms (Views: 145.5ms | ActiveRecord: 0.9ms | Allocations: 8024)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+=======
   Rendered atleticas/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 641)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
   ↳ app/helpers/sessions_helper.rb:6:in `current_user'
@@ -17710,10 +17775,161 @@ Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.1ms | Allocations: 645
 
 Started GET "/atleticas" for ::1 at 2019-11-23 11:03:26 -0300
 >>>>>>> 605dbcb89e193b35a0a6c5951e91b31855445957
+>>>>>>> master
 Processing by AtleticasController#index as HTML
   Rendering atleticas/index.html.erb within layouts/application
   [1m[36mAtletica Load (0.4ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
   ↳ app/views/atleticas/index.html.erb:7
+<<<<<<< HEAD
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 656)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 743)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 1.2ms | Allocations: 7884)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-23 16:07:30 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 132.7ms | Allocations: 4273)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 26.1ms | Allocations: 672)
+Completed 200 OK in 261ms (Views: 240.7ms | ActiveRecord: 0.3ms | Allocations: 12494)
+
+
+Started GET "/users/new" for ::1 at 2019-11-23 16:07:33 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1712)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.3ms | Allocations: 726)
+Completed 200 OK in 91ms (Views: 74.4ms | ActiveRecord: 1.5ms | Allocations: 13644)
+
+
+Started POST "/users" for ::1 at 2019-11-23 16:07:52 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"oluKphiK+YH7TNrk4YoHqkCWcNzHV88a1GLzdhdMAjVhjsNHn7ayk6Ei7YflfvBkQFhl6afXSVrqDSLRZdykpw==", "user"=>{"name"=>"POLI", "email"=>"poli2@usp.br", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "poli2@usp.br"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "POLI"], ["email", "poli2@usp.br"], ["created_at", "2019-11-23 19:07:53.451909"], ["updated_at", "2019-11-23 19:07:53.451909"], ["password_digest", "$2a$12$w/AlWjGSqaGGhrUBFAtTR.z2DwMWTMgF0frjJv8KpqAoSvPoMQhFG"], ["role", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 449ms (ActiveRecord: 17.6ms | Allocations: 4316)
+
+
+Started GET "/users/2" for ::1 at 2019-11-23 16:07:53 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 40.0ms | Allocations: 3278)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.4ms | Allocations: 4569)
+
+
+  
+ActionView::Template::Error (undefined method `nome' for #<User:0x00000000094a50c0>
+Did you mean?  name):
+    1: <html>
+    2:               <body>
+    3:                           <h3> Perfil de <%= @user.nome %> </h3>
+    4:                           <%= @user.email %>
+    5:                           <%= @user.role %>
+    6:                           <% if current_user == @user %>
+  
+app/views/users/show.html.erb:3
+Started GET "/users/2" for ::1 at 2019-11-23 16:08:23 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 918)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 23.8ms | Allocations: 927)
+Completed 200 OK in 168ms (Views: 140.2ms | ActiveRecord: 0.9ms | Allocations: 9850)
+
+
+Started GET "/" for ::1 at 2019-11-23 16:08:42 -0300
+Processing by AtleticasController#index as HTML
+  Rendering atleticas/index.html.erb within layouts/application
+  [1m[36mAtletica Load (0.4ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
+  ↳ app/views/atleticas/index.html.erb:7
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 856)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 726)
+Completed 200 OK in 86ms (Views: 80.2ms | ActiveRecord: 0.8ms | Allocations: 8468)
+
+
+Started GET "/" for ::1 at 2019-11-23 16:08:46 -0300
+Processing by AtleticasController#index as HTML
+  Rendering atleticas/index.html.erb within layouts/application
+  [1m[36mAtletica Load (0.4ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
+  ↳ app/views/atleticas/index.html.erb:7
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 630)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 725)
+Completed 200 OK in 101ms (Views: 98.9ms | ActiveRecord: 0.7ms | Allocations: 7638)
+
+
+Started GET "/" for ::1 at 2019-11-23 16:08:47 -0300
+Processing by AtleticasController#index as HTML
+  Rendering atleticas/index.html.erb within layouts/application
+  [1m[36mAtletica Load (0.3ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
+  ↳ app/views/atleticas/index.html.erb:7
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 630)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 16.3ms | Allocations: 723)
+Completed 200 OK in 90ms (Views: 88.6ms | ActiveRecord: 0.6ms | Allocations: 7626)
+
+
+Started GET "/" for ::1 at 2019-11-23 16:08:48 -0300
+Processing by AtleticasController#index as HTML
+  Rendering atleticas/index.html.erb within layouts/application
+  [1m[36mAtletica Load (0.3ms)[0m  [1m[34mSELECT "atleticas".* FROM "atleticas"[0m
+  ↳ app/views/atleticas/index.html.erb:7
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 630)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 723)
+Completed 200 OK in 83ms (Views: 81.0ms | ActiveRecord: 0.9ms | Allocations: 7637)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-23 16:09:02 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 660)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 668)
+Completed 200 OK in 112ms (Views: 90.0ms | ActiveRecord: 0.3ms | Allocations: 8789)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-23 16:09:07 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"pwlkrIOFQRDYJ0uSw3gYFqlsmpP2EUgBxHyzgcJ5VTSWzKQz27p4/FUeI5ISs0ihRyQroeCdsnwvUS2Px+tQBg==", "session"=>{"email"=>"poli2@usp.br", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "poli2@usp.br"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 1.3ms | Allocations: 2014)
+=======
 <<<<<<< HEAD
   Rendered atleticas/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 635)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
@@ -18368,6 +18584,7 @@ Processing by SessionsController#create as HTML
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "esportivo@aaap.com.br"], ["LIMIT", 1]]
   ↳ app/controllers/sessions_controller.rb:4:in `create'
 Completed 500 Internal Server Error in 320ms (ActiveRecord: 0.9ms | Allocations: 1991)
+>>>>>>> master
 
 
   
@@ -18375,6 +18592,21 @@ ArgumentError (wrong number of arguments (given 1, expected 0)):
   
 app/helpers/sessions_helper.rb:2:in `sign_in'
 app/controllers/sessions_controller.rb:6:in `create'
+<<<<<<< HEAD
+Started POST "/sign_in" for ::1 at 2019-11-23 16:29:22 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"pwlkrIOFQRDYJ0uSw3gYFqlsmpP2EUgBxHyzgcJ5VTSWzKQz27p4/FUeI5ISs0ihRyQroeCdsnwvUS2Px+tQBg==", "session"=>{"email"=>"poli2@usp.br", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "poli2@usp.br"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 397ms (ActiveRecord: 1.9ms | Allocations: 7419)
+
+
+Started GET "/users/2" for ::1 at 2019-11-23 16:29:23 -0300
+=======
 Started GET "/users" for ::1 at 2019-11-23 16:04:27 -0300
 Processing by UsersController#index as HTML
   Rendering users/index.html.erb within layouts/application
@@ -18515,11 +18747,21 @@ puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
 Started GET "/users/2" for ::1 at 2019-11-23 16:06:29 -0300
+>>>>>>> master
 Processing by UsersController#show as HTML
   Parameters: {"id"=>"2"}
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/controllers/users_controller.rb:21:in `show'
   Rendering users/show.html.erb within layouts/application
+<<<<<<< HEAD
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 19.7ms | Allocations: 780)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 122)
+Completed 200 OK in 127ms (Views: 95.7ms | ActiveRecord: 1.7ms | Allocations: 8051)
+
+
+=======
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
   ↳ app/helpers/sessions_helper.rb:6:in `current_user'
   Rendered users/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 876)
@@ -19409,6 +19651,7 @@ Completed 200 OK in 63ms (Views: 60.9ms | ActiveRecord: 0.2ms | Allocations: 105
 
 
 >>>>>>> 605dbcb89e193b35a0a6c5951e91b31855445957
+<<<<<<< HEAD
 Started GET "/aaa/index" for ::1 at 2019-11-23 16:23:57 -0300
   [1m[35m (8.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -20410,3 +20653,6 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+=======
+>>>>>>> master
+>>>>>>> 122926f95109bc06070ba629e72d92139b94bf2d
