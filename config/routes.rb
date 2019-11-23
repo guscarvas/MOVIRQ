@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'ver_reservas/index'
+  get 'welcome/index'
   # get 'sessions/new'
   # get 'users/new'
   get 'sobre_nos/index'
@@ -10,6 +12,6 @@ Rails.application.routes.draw do
   resources :reservas
   resources :atleticas
   
-  root 'sessions#new'
+  root 'welcome#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
