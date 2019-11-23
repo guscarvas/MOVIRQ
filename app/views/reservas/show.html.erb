@@ -20,13 +20,13 @@
 
 <p>
   <strong>Inicio:</strong>
-  <%= @reserva.inicio %>
+  <%= @reserva.inicio.time.strftime("%k:%M") %>
 </p>
 
 
 <p>
   <strong>Termino:</strong>
-  <%= @reserva.termino %>
+  <%= @reserva.termino.time.strftime("%k:%M") %>
 </p>
 
 <p>

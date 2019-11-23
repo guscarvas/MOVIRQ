@@ -22,8 +22,8 @@
         <td><%= reserva.modalidade %></td>
         <td><%= reserva.naipe %></td>
         <td><%= reserva.dia %></td>
-        <td><%= reserva.inicio %></td>
-        <td><%= reserva.termino %></td>
+        <td><%= reserva.inicio.time.strftime("%k:%M") %></td>
+        <td><%= reserva.termino.time.strftime("%k:%M") %></td>
         <td><%= reserva.odp %></td>
         <td><%= reserva.ph %></td>
         <td><%= link_to 'Ver', reserva %></td>
