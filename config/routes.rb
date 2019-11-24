@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'solicitacao_pontual/index'
-  get 'ver_reservas/index'
+  
   get 'welcome/index'
   # get 'sessions/new'
   # get 'users/new'
@@ -13,6 +12,11 @@ Rails.application.routes.draw do
   resources :reservas
   resources :atleticas
   get 'laausp/index'
+
+  post 'password/forgot', to: 'password#forgot'
+  post 'password/reset', to: 'password#reset'
+
+  #get 'ver_reservas/index', as 'ver_reservas_index'
   
   root 'welcome#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
