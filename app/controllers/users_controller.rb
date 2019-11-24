@@ -40,6 +40,20 @@ class UsersController < ApplicationController
         sign_out
         redirect_to root_path
     end
+
+    def criaLaausp
+        @user = User.new(name: "LAAUSP", email: "laausp@usp.br", password: "123456", role: :LAAUSP)
+        if @user.save
+            #UserMailer.welcome_email(@user).deliver_now
+            redirect_to @user, notice: "Usuário foi criado com sucesso!"
+            #tire o método de comentário quando criar o helper.
+            #Usuário depois de cadastrar-se acessa o sistema automaticamente
+    #sign_in(@user)
+        else 
+    render action: :new
+        end
+    end
+
     private
     def user_params
         params.require(:user).permit(:name, :email, :password, :password_confirmation)

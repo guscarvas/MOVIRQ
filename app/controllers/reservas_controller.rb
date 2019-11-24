@@ -5,7 +5,11 @@ class ReservasController < ApplicationController
   # GET /reservas
   # GET /reservas.json
   def index
-    @reservas = Reserva.all
+    if current_user.role != 'atletica'
+      @reservas = Reserva.all
+    else
+      @reservas = Reserva.where(criador: current_user.name)
+    end
   end
 
   # GET /reservas/1
