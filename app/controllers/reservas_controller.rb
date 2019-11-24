@@ -5,7 +5,11 @@ class ReservasController < ApplicationController
   # GET /reservas
   # GET /reservas.json
   def index
-    @reservas = Reserva.all
+    if current_user.role != 'atletica'
+      @reservas = Reserva.all
+    else
+      @reservas = Reserva.where(criador: current_user.name)
+    end
   end
 
   # GET /reservas/1
@@ -27,6 +31,7 @@ class ReservasController < ApplicationController
   def create
     @reserva = Reserva.new(reserva_params)
     @reserva.user_id = current_user.id
+    @reserva.criador = current_user.name
 
     respond_to do |format|
       if @reserva.save
@@ -63,14 +68,30 @@ class ReservasController < ApplicationController
     end
   end
 
+  def reset 
+    Reserva.delete_all
+    respond_to do |format|
+      format.html { redirect_to reservas_url, notice: 'Reservas resetadas com sucesso.' }
+      format.json { head :no_content }
+    end
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_reserva
       @reserva = Reserva.find(params[:id])
+      @criador = User.find(@reserva.user_id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reserva_params
-      params.require(:reserva).permit(:modalidade, :naipe, :dia, :inicio, :termino, :odp, :ph, :user_id)
+      params.require(:reserva).permit(:modalidade, :naipe, :dia, :inicio, :termino, :odp, :ph)
     end
+
+    
+    # def verificaUsuario
+    #   @user = current_user
+    #   if @reserva.user_id == @user.id
+
 end

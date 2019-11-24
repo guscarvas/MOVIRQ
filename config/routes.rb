@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   post 'password/forgot' => 'password#forgot'
   post 'password/reset'  => 'password#reset'
 
+  get 'resetReservas' => 'reservas#reset'
+  get 'criaLaausp' => 'users#criaLaausp'
   #get 'ver_reservas/index', as 'ver_reservas_index'
   
   root 'welcome#index'

@@ -8,6 +8,8 @@ end
 
 class Reserva < ApplicationRecord
 
+    belongs_to :user
+    # , class_name: "object", foreign_key: "object_id"
     include ActiveModel::Validations
 
     validates_presence_of :inicio,
