@@ -39,5 +39,11 @@
   <%= @reserva.ph %>
 </p>
 
+<p>
+  <strong>Feita por:</strong>
+  <%= @criador.name %>
+  
+</p>
+
 <%= link_to 'Editar', edit_reserva_path(@reserva) %> |
 <%= link_to 'Voltar', reservas_path %>

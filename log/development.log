@@ -22278,3 +22278,476 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.3ms | Allocations: 6074)
 
 
+Started GET "/users/new" for ::1 at 2019-11-23 19:48:46 -0300
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 194.2ms | Allocations: 5567)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in C:/Users/Gustavo/Desktop/POLI/VI SEM/SI/MOVIRQ/public/packs
+  [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 42.0ms | Allocations: 1528)
+Completed 200 OK in 23037ms (Views: 22967.2ms | ActiveRecord: 16.5ms | Allocations: 94052)
+
+
+Started POST "/users" for ::1 at 2019-11-23 19:50:04 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"PXZsOEphN3NSJdvSB/J1dLfaVSJZBuePPkRRG8H3Y4IMs6ynEl4On98cs9LWOSXDWZLkEE+KHfLVac8VxGVmsA==", "user"=>{"name"=>"POLI", "email"=>"poli2@usp.br", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "poli2@usp.br"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (28.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "POLI"], ["email", "poli2@usp.br"], ["created_at", "2019-11-23 22:50:04.679603"], ["updated_at", "2019-11-23 22:50:04.679603"], ["password_digest", "$2a$12$0G/IDof1bLITdVxq/RGjgeYUW8Ru09ACasdATtTo1NYnnKwKRu//a"], ["role", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 477ms (ActiveRecord: 46.4ms | Allocations: 4303)
+
+
+Started GET "/users/1" for ::1 at 2019-11-23 19:50:04 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 33.7ms | Allocations: 764)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 551)
+Completed 200 OK in 180ms (Views: 155.8ms | ActiveRecord: 1.0ms | Allocations: 9303)
+
+
+Started GET "/" for ::1 at 2019-11-23 19:50:12 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 211)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 581)
+Completed 200 OK in 122ms (Views: 116.8ms | ActiveRecord: 0.2ms | Allocations: 8635)
+
+
+Started GET "/" for ::1 at 2019-11-23 19:50:15 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 72)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 592)
+Completed 200 OK in 71ms (Views: 70.1ms | ActiveRecord: 0.2ms | Allocations: 7872)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-23 19:50:17 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 713)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 523)
+Completed 200 OK in 130ms (Views: 111.9ms | ActiveRecord: 0.3ms | Allocations: 9584)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-23 19:50:26 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"PXoaZwlpqRs20nYYmf4nvSxUXs0oueoHqTLzZ2yzKZG312hirrXrzLv3k1356zsAOqBSLlbkVWhQbayvZaNJvQ==", "session"=>{"email"=>"poli2@usp.br", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "poli2@usp.br"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 321ms (ActiveRecord: 0.8ms | Allocations: 1672)
+
+
+Started GET "/users/1" for ::1 at 2019-11-23 19:50:27 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 676)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 122)
+Completed 200 OK in 111ms (Views: 94.2ms | ActiveRecord: 0.6ms | Allocations: 8531)
+
+
+Started GET "/reserva" for ::1 at 2019-11-23 19:50:41 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/reserva"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "//reservas/new" for ::1 at 2019-11-23 19:50:58 -0300
+Processing by ReservasController#new as HTML
+  Rendering reservas/new.html.erb within layouts/application
+  Rendered reservas/_form.html.erb (Duration: 34.2ms | Allocations: 3341)
+  Rendered reservas/new.html.erb within layouts/application (Duration: 57.6ms | Allocations: 3730)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 705)
+Completed 200 OK in 183ms (Views: 153.6ms | ActiveRecord: 2.2ms | Allocations: 19868)
+
+
+Started POST "/reservas" for ::1 at 2019-11-23 19:51:05 -0300
+Processing by ReservasController#create as HTML
+  Parameters: {"authenticity_token"=>"+faHrMaJ/QbvpU4lhEg+UDutKYcOCm/X/kkRenUi/7DIM0cznrbE6mKcJiVVg27n1eWYtRiGlaoVZI90cLD6gg==", "reserva"=>{"naipe"=>"Masculino", "modalidade"=>"Basquete", "dia"=>"Segunda", "inicio"=>"17:00", "termino"=>"18:30", "ph"=>"1", "odp"=>"1"}, "commit"=>"Solicitar reserva"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservas_controller.rb:32:in `block in create'
+  [1m[36mReserva Create (3.2ms)[0m  [1m[32mINSERT INTO "reservas" ("modalidade", "naipe", "dia", "inicio", "termino", "odp", "ph", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["modalidade", "Basquete"], ["naipe", "Masculino"], ["dia", "Segunda"], ["inicio", "2000-01-01 17:00:00"], ["termino", "2000-01-01 18:30:00"], ["odp", 1], ["ph", 1], ["created_at", "2019-11-23 22:51:05.767128"], ["updated_at", "2019-11-23 22:51:05.767128"], ["user_id", 1]]
+  ↳ app/controllers/reservas_controller.rb:32:in `block in create'
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservas_controller.rb:32:in `block in create'
+Redirected to http://localhost:3000/reservas/1
+Completed 302 Found in 67ms (ActiveRecord: 16.7ms | Allocations: 3669)
+
+
+Started GET "/reservas/1" for ::1 at 2019-11-23 19:51:05 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:69:in `set_reserva'
+  Rendering reservas/show.html.erb within layouts/application
+  Rendered reservas/show.html.erb within layouts/application (Duration: 24.4ms | Allocations: 477)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 696)
+Completed 200 OK in 125ms (Views: 102.0ms | ActiveRecord: 0.7ms | Allocations: 9203)
+
+
+Started GET "/reservas/1" for ::1 at 2019-11-23 19:52:02 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:69:in `set_reserva'
+  Rendering reservas/show.html.erb within layouts/application
+  Rendered reservas/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 487)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 931)
+Completed 200 OK in 139ms (Views: 106.6ms | ActiveRecord: 0.7ms | Allocations: 10261)
+
+
+Started GET "/reservas/1" for ::1 at 2019-11-24 12:22:06 -0300
+  [1m[35m (12.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:69:in `set_reserva'
+  Rendering reservas/show.html.erb within layouts/application
+  Rendered reservas/show.html.erb within layouts/application (Duration: 64.6ms | Allocations: 4123)
+Completed 500 Internal Server Error in 251ms (ActiveRecord: 3.3ms | Allocations: 15797)
+
+
+  
+ActionView::Template::Error (undefined method `index_reservas_on_user_id' for #<Reserva:0x000000000a421c88>
+Did you mean?  index_nested_attribute_errors):
+    42: <p>
+    43:   <strong>Feita por:</strong>
+    44:   <%= @reserva.user_id %>
+    45:   <%= @reserva.index_reservas_on_user_id %>
+    46:   
+    47: </p>
+    48: 
+  
+app/views/reservas/show.html.erb:45
+Started GET "/reservas/1" for ::1 at 2019-11-24 12:22:42 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:69:in `set_reserva'
+  Rendering reservas/show.html.erb within layouts/application
+  Rendered reservas/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1249)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.3ms | Allocations: 3085)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Modalidade:</strong>
+  <%= @reserva.modalidade %>
+</p>
+
+
+<p>
+  <strong>Naipe:</strong>
+  <%= @reserva.naipe %>
+</p>
+
+
+<p>
+  <strong>Dia:</strong>
+  <%= @reserva.dia %>
+</p>
+
+
+<p>
+  <strong>Inicio:</strong>
+  <%= @reserva.inicio.time.strftime("%k:%M") %>
+</p>
+
+
+<p>
+  <strong>Termino:</strong>
+  <%= @reserva.termino.time.strftime("%k:%M") %>
+</p>
+
+<p>
+  <strong>Odp:</strong>
+  <%= @reserva.odp %>
+</p>
+
+<p>
+  <strong>Ph:</strong>
+  <%= @reserva.ph %>
+</p>
+
+<p>
+  <strong>Feita por:</strong>
+  <%= @reserva.user_id %>
+  <%= @reserva.[user_id] %>
+  
+</p>
+
+<%= link_to 'Editar', edit_reserva_path(@reserva) %> |
+<%= link_to 'Voltar', reservas_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <p>
+4:      <strong>Modalidade:</strong>
+5:      <%= @reserva.modalidade %>
+6:    </p>
+7:    
+8:    
+9:    <p>
+10:      <strong>Naipe:</strong>
+11:      <%= @reserva.naipe %>
+12:    </p>
+13:    
+14:    
+15:    <p>
+16:      <strong>Dia:</strong>
+17:      <%= @reserva.dia %>
+18:    </p>
+19:    
+20:    
+21:    <p>
+22:      <strong>Inicio:</strong>
+23:      <%= @reserva.inicio.time.strftime("%k:%M") %>
+24:    </p>
+25:    
+26:    
+27:    <p>
+28:      <strong>Termino:</strong>
+29:      <%= @reserva.termino.time.strftime("%k:%M") %>
+30:    </p>
+31:    
+32:    <p>
+33:      <strong>Odp:</strong>
+34:      <%= @reserva.odp %>
+35:    </p>
+36:    
+37:    <p>
+38:      <strong>Ph:</strong>
+39:      <%= @reserva.ph %>
+40:    </p>
+41:    
+42:    <p>
+43:      <strong>Feita por:</strong>
+44:      <%= @reserva.user_id %>
+45:      <%= @reserva.[user_id] %>
+46:      
+47:    </p>
+48:    
+49:    <%= link_to 'Editar', edit_reserva_path(@reserva) %> |
+50:    <%= link_to 'Voltar', reservas_path %>
+  
+app/views/reservas/show.html.erb:45: syntax error, unexpected '['
+app/views/reservas/show.html.erb:53: syntax error, unexpected end, expecting ')'
+app/views/reservas/show.html.erb:45: syntax error, unexpected '['
+app/views/reservas/show.html.erb:53: syntax error, unexpected end, expecting ')'
+app/views/reservas/show.html.erb:45: syntax error, unexpected '['
+app/views/reservas/show.html.erb:53: syntax error, unexpected end, expecting ')'
+app/views/reservas/show.html.erb:45: syntax error, unexpected '['
+app/views/reservas/show.html.erb:53: syntax error, unexpected end, expecting ')'
+app/views/reservas/show.html.erb:45: syntax error, unexpected '['
+app/views/reservas/show.html.erb:53: syntax error, unexpected end, expecting ')'
+app/views/reservas/show.html.erb:45: syntax error, unexpected '['
+app/views/reservas/show.html.erb:53: syntax error, unexpected end, expecting ')'
+Started GET "/reservas/1" for ::1 at 2019-11-24 12:23:02 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:69:in `set_reserva'
+  Rendering reservas/show.html.erb within layouts/application
+  Rendered reservas/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1245)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.3ms | Allocations: 3019)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Modalidade:</strong>
+  <%= @reserva.modalidade %>
+</p>
+
+
+<p>
+  <strong>Naipe:</strong>
+  <%= @reserva.naipe %>
+</p>
+
+
+<p>
+  <strong>Dia:</strong>
+  <%= @reserva.dia %>
+</p>
+
+
+<p>
+  <strong>Inicio:</strong>
+  <%= @reserva.inicio.time.strftime("%k:%M") %>
+</p>
+
+
+<p>
+  <strong>Termino:</strong>
+  <%= @reserva.termino.time.strftime("%k:%M") %>
+</p>
+
+<p>
+  <strong>Odp:</strong>
+  <%= @reserva.odp %>
+</p>
+
+<p>
+  <strong>Ph:</strong>
+  <%= @reserva.ph %>
+</p>
+
+<p>
+  <strong>Feita por:</strong>
+  <%= @reserva.user_id %>
+  <%= @reserva.[user_id].name %>
+  
+</p>
+
+<%= link_to 'Editar', edit_reserva_path(@reserva) %> |
+<%= link_to 'Voltar', reservas_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <p>
+4:      <strong>Modalidade:</strong>
+5:      <%= @reserva.modalidade %>
+6:    </p>
+7:    
+8:    
+9:    <p>
+10:      <strong>Naipe:</strong>
+11:      <%= @reserva.naipe %>
+12:    </p>
+13:    
+14:    
+15:    <p>
+16:      <strong>Dia:</strong>
+17:      <%= @reserva.dia %>
+18:    </p>
+19:    
+20:    
+21:    <p>
+22:      <strong>Inicio:</strong>
+23:      <%= @reserva.inicio.time.strftime("%k:%M") %>
+24:    </p>
+25:    
+26:    
+27:    <p>
+28:      <strong>Termino:</strong>
+29:      <%= @reserva.termino.time.strftime("%k:%M") %>
+30:    </p>
+31:    
+32:    <p>
+33:      <strong>Odp:</strong>
+34:      <%= @reserva.odp %>
+35:    </p>
+36:    
+37:    <p>
+38:      <strong>Ph:</strong>
+39:      <%= @reserva.ph %>
+40:    </p>
+41:    
+42:    <p>
+43:      <strong>Feita por:</strong>
+44:      <%= @reserva.user_id %>
+45:      <%= @reserva.[user_id].name %>
+46:      
+47:    </p>
+48:    
+49:    <%= link_to 'Editar', edit_reserva_path(@reserva) %> |
+50:    <%= link_to 'Voltar', reservas_path %>
+  
+app/views/reservas/show.html.erb:45: syntax error, unexpected '['
+app/views/reservas/show.html.erb:45: syntax error, unexpected '['
+app/views/reservas/show.html.erb:45: syntax error, unexpected '['
+app/views/reservas/show.html.erb:45: syntax error, unexpected '['
+app/views/reservas/show.html.erb:45: syntax error, unexpected '['
+app/views/reservas/show.html.erb:45: syntax error, unexpected '['
+Started GET "/reservas/1" for ::1 at 2019-11-24 12:25:10 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.9ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:69:in `set_reserva'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:70:in `set_reserva'
+  Rendering reservas/show.html.erb within layouts/application
+  Rendered reservas/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 536)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 1059)
+Completed 200 OK in 795ms (Views: 734.9ms | ActiveRecord: 5.5ms | Allocations: 36706)
+
+

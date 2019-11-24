@@ -67,6 +67,7 @@ class ReservasController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_reserva
       @reserva = Reserva.find(params[:id])
+      @criador = User.find(@reserva.user_id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
