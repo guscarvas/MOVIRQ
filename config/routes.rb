@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post 'password/forgot', to: 'password#forgot'
   post 'password/reset', to: 'password#reset'
 
+  get 'resetReservas' => 'reservas#reset', :as => :reset_reserva_path
   #get 'ver_reservas/index', as 'ver_reservas_index'
   
   root 'welcome#index'

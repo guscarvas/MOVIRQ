@@ -5,6 +5,7 @@
 <table class = "tabela-reservas">
   <thead>
     <tr>
+      <th>Criador</th>
       <th>Modalidade</th>
       <th>Naipe</th>
       <th>Dia</th>
@@ -19,6 +20,7 @@
   <tbody>
     <% @reservas.each do |reserva| %>
       <tr>
+        <td><%= reserva.criador %></td>
         <td><%= reserva.modalidade %></td>
         <td><%= reserva.naipe %></td>
         <td><%= reserva.dia %></td>
@@ -35,7 +37,7 @@
 </table>
 
 <br>
-
+<%= link_to 'Resetar Pedidos','/resetReservas', data: { confirm: 'Tem certeza que deseja resetar os pedidos/reservas?' } %>
 <%= link_to 'Nova Reserva', new_reserva_path %>
 <p> </p>
 <%= link_to 'Voltar', aaa_index_path %>

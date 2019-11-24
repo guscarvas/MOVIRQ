@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    has_many :reservas
+    # , class_name: "object", foreign_key: "reference_id"
     has_secure_password
     validates :name, presence: true, length: {maximum: 50}
     validates :password, presence: true, length: {minimum: 6}
