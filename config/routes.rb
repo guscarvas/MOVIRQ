@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'solicitacao_pontual/index'
   get 'ver_reservas/index'
   get 'welcome/index'
   # get 'sessions/new'

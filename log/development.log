@@ -22278,3 +22278,103 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.3ms | Allocations: 6074)
 
 
+Started GET "/reservas/index" for ::1 at 2019-11-23 19:31:19 -0200
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:69:in `set_reserva'
+Completed 404 Not Found in 25ms (ActiveRecord: 1.7ms | Allocations: 3290)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reserva with 'id'=index):
+  
+app/controllers/reservas_controller.rb:69:in `set_reserva'
+Started GET "/reservas" for ::1 at 2019-11-23 19:31:22 -0200
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.erb within layouts/application
+  [1m[36mReserva Load (3.0ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.erb:20
+  Rendered reservas/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1110)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /mnt/c/Users/João Menehini/Desktop/SI/MOVIRQ/public/packs
+[Webpacker] /home/meneghini/.rbenv/versions/2.6.5/bin/ruby: warning: shebang line ending with \r may cause problems
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 14.0ms | Allocations: 2609)
+Completed 200 OK in 6798ms (Views: 6790.9ms | ActiveRecord: 4.0ms | Allocations: 17404)
+
+
+Started GET "/reservas/new" for ::1 at 2019-11-23 19:31:35 -0200
+Processing by ReservasController#new as HTML
+  Rendering reservas/new.html.erb within layouts/application
+  Rendered reservas/_form.html.erb (Duration: 17.8ms | Allocations: 4727)
+  Rendered reservas/new.html.erb within layouts/application (Duration: 20.8ms | Allocations: 5114)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.3ms | Allocations: 738)
+Completed 200 OK in 114ms (Views: 92.8ms | ActiveRecord: 0.3ms | Allocations: 18832)
+
+
+Started POST "/reservas" for ::1 at 2019-11-23 19:31:42 -0200
+Processing by ReservasController#create as HTML
+  Parameters: {"authenticity_token"=>"+YbS+P2M7pqdvbyo6JGYgs5Gpncht+S19zVZ7nb7nP0gg1583Q4plzJ7H6aQGHEY/33tyy/Gjr6+KpZTXypKIQ==", "reserva"=>{"naipe"=>"Masculino", "modalidade"=>"Basquete", "dia"=>"Segunda", "inicio"=>"17:00", "termino"=>"18:30", "ph"=>"1", "odp"=>"1"}, "commit"=>"Solicitar reserva"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 2028)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/reservas_controller.rb:29:in `create'
+Started GET "/reservas" for ::1 at 2019-11-23 19:34:37 -0200
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.erb within layouts/application
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.erb:20
+  Rendered reservas/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 655)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.9ms | Allocations: 728)
+Completed 200 OK in 113ms (Views: 111.9ms | ActiveRecord: 0.6ms | Allocations: 9355)
+
+
+Started GET "/reservas" for ::1 at 2019-11-23 20:06:18 -0200
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.erb within layouts/application
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.erb:20
+  Rendered reservas/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1976)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 27.8ms | Allocations: 2867)
+Completed 200 OK in 720ms (Views: 698.9ms | ActiveRecord: 2.9ms | Allocations: 54341)
+
+
+Started GET "/solicitacao_pontual/index" for ::1 at 2019-11-23 20:06:24 -0200
+Processing by SolicitacaoPontualController#index as HTML
+  Rendering solicitacao_pontual/index.html.erb within layouts/application
+  Rendered solicitacao_pontual/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 85)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.0ms | Allocations: 770)
+Completed 200 OK in 69ms (Views: 65.7ms | ActiveRecord: 0.3ms | Allocations: 6659)
+
+
+Started GET "/reservas/new" for ::1 at 2019-11-23 20:06:31 -0200
+Processing by ReservasController#new as HTML
+  Rendering reservas/new.html.erb within layouts/application
+  Rendered reservas/_form.html.erb (Duration: 14.0ms | Allocations: 4574)
+  Rendered reservas/new.html.erb within layouts/application (Duration: 16.9ms | Allocations: 4958)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.2ms | Allocations: 737)
+Completed 200 OK in 243ms (Views: 219.6ms | ActiveRecord: 1.7ms | Allocations: 23109)
+
+
