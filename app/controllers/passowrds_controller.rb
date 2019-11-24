@@ -1,0 +1,2 @@
+class PassowrdsController < ApplicationController
+end
