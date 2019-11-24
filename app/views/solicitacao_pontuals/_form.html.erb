@@ -1,0 +1,22 @@
+<%= form_with(model: solicitacao_pontual, local: true) do |form| %>
+  <% if solicitacao_pontual.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(solicitacao_pontual.errors.count, "error") %> prohibited this solicitacao_pontual from being saved:</h2>
+
+      <ul>
+        <% solicitacao_pontual.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Solicitação %>
+    <%= form.text_area :Solicitação %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

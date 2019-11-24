@@ -1,0 +1,2 @@
+class SolicitacaoPontual < ApplicationRecord
+end

@@ -12,7 +12,7 @@ class UsersController < ApplicationController
             #Usuário depois de cadastrar-se acessa o sistema automaticamente
     #sign_in(@user)
         else 
-    render action: :new
+            render action: :new
         end
     end
     def index

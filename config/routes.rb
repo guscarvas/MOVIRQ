@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :solicitacao_pontuals
+  get 'solicitacao_pontuals/index'
   get 'welcome/index'
   # get 'sessions/new'
   # get 'users/new'
@@ -13,8 +15,8 @@ Rails.application.routes.draw do
   resources :atleticas
   get 'laausp/index'
 
-  post 'password/forgot', to: 'password#forgot'
-  post 'password/reset', to: 'password#reset'
+  post 'password/forgot' => 'password#forgot'
+  post 'password/reset'  => 'password#reset'
 
   #get 'ver_reservas/index', as 'ver_reservas_index'
   

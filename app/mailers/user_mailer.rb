@@ -5,4 +5,8 @@ def welcome_email(user)
     mail(to: @user.email, subject: 'Welcome to My Awesome Site')
 end
 
+def forget_email(user)
+	@user = user
+	mail(to: @user.email, subject: 'Recuperação de senha MOVIRQ')
+
 end

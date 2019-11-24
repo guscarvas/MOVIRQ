@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Solicitação Pontual</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solicitações</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @solicitacao_pontuals.each do |solicitacao_pontual| %>
+      <tr>
+        <td><%= solicitacao_pontual.Solicitação %></td>
+        <td><%= link_to 'Show', solicitacao_pontual %></td>
+        <td><%= link_to 'Edit', edit_solicitacao_pontual_path(solicitacao_pontual) %></td>
+        <td><%= link_to 'Destroy', solicitacao_pontual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nova Solicitação Pontual', new_solicitacao_pontual_path %>
