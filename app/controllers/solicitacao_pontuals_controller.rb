@@ -25,6 +25,7 @@ class SolicitacaoPontualsController < ApplicationController
   # POST /solicitacao_pontuals.json
   def create
     @solicitacao_pontual = SolicitacaoPontual.new(solicitacao_pontual_params)
+    UserMailer.reserva_pontual(@solicitacao_pontual).deliver_now
 
     respond_to do |format|
       if @solicitacao_pontual.save
