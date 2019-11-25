@@ -1,16 +1,26 @@
 class PasswordController < ApplicationController
 
+def new
+end
+
+def create
+  user = User.find_by_email(params[:email])
+  user.send_password_reset if user
+  redirect_to root_url, :notice => "Email enviado com instruções de nova senha"
+end
+
 def forgot
     if params[:email].blank? # check if email is present
       return render json: {error: 'Email not present'}
     end
 
-    user = User.find_by(email: params[:email]) # if present find user by email
+    #@user = User.find_by(email: params[:email]) # if present find user by email
 
     if user.present?
       user.generate_password_token! #generate pass token
       # SEND EMAIL HERE
-      render json: {status: 'ok'}, status: :ok
+      UserMailer.forgot_password(@user).deliver_now
+      #render json: {status: 'ok'}, status: :ok
     else
       render json: {error: ['Email address not found. Please check and try again.']}, status: :not_found
     end
@@ -27,7 +37,7 @@ def reset
 
     if user.present? && user.password_token_valid?
       if user.reset_password!(params[:password])
-        render json: {status: 'o'’}, status: :ok
+        #render json: {status: 'o'’}, status: :ok
       else
         render json: {error: user.errors.full_messages}, status: :unprocessable_entity
       end

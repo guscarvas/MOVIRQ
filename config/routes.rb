@@ -28,8 +28,12 @@ Rails.application.routes.draw do
   get 'laausp/index'
 
   get 'tabela' => 'tabela#index'
-  post 'password/forgot' => 'password#forgot'
-  post 'password/reset'  => 'password#reset'
+
+  #post 'password/forgot' => 'password#forgot'
+  #post 'password/reset'  => 'password#reset'
+  #resources :password_reset
+  #get 'password/forgot' => 'password#forgot'
+  #get 'password/reset'  => 'password#reset'
 
   get 'resetReservas' => 'reservas#reset'
   get 'criaLaausp' => 'users#criaLaausp'
