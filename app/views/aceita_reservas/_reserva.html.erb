@@ -8,6 +8,6 @@
         <td><%= reserva.termino.time.strftime("%k:%M") %></td>
         <td><%= reserva.odp %></td>
         <td><%= reserva.ph %></td>
-        <td><%= link_to 'Aprovar', '/aprovar/' + reserva.id.to_s %></td>
+        <td><%= link_to 'Aprovar', '/aprovar/' + reserva.id.to_s + @parametroQuadra.to_s %></td>
       </tr>
     <% end %>
