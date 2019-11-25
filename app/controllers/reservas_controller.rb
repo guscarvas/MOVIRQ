@@ -32,7 +32,7 @@ class ReservasController < ApplicationController
     @reserva = Reserva.new(reserva_params)
     @reserva.user_id = current_user.id
     @reserva.criador = current_user.name
-
+    @reserva.status = 0
     respond_to do |format|
       if @reserva.save
         format.html { redirect_to @reserva, notice: 'Reserva atualizada com sucesso.' }

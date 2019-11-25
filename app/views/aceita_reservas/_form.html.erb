@@ -1,4 +1,4 @@
-<%= form_with(model: reserva_aceitum, local: true) do |form| %>
+<%= form_with url:@url, scope: "post" do |form| %>
   <% if reserva_aceitum.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(reserva_aceitum.errors.count, "error") %> prohibited this reserva_aceitum from being saved:</h2>
