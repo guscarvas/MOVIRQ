@@ -1,5 +1,6 @@
 class SolicitacaoPontualsController < ApplicationController
   before_action :set_solicitacao_pontual, only: [:show, :edit, :update, :destroy]
+  before_action :authorize
 
   # GET /solicitacao_pontuals
   # GET /solicitacao_pontuals.json

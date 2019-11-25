@@ -1,3 +1,4 @@
+<% if @current_user.role == "atletica" %>
 
 <p id="notice"><%= notice %></p>
 
@@ -17,3 +18,7 @@
 <div>
 <%= link_to 'Cadastrar nova atlética', new_atletica_path %>
 </div>
+
+<% else %>
+<p class = 'texto-atletica'> Você não tem permissão para acessar esta página</p>
+<% end %>

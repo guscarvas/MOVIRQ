@@ -1,5 +1,6 @@
 class ReservasController < ApplicationController
   before_action :set_reserva, only: [:show, :edit, :update, :destroy]
+  before_action :authorize
   # before_action :verfificar, only: [:new]
 
   # GET /reservas

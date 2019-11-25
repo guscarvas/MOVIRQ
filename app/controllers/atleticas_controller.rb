@@ -1,5 +1,6 @@
 class AtleticasController < ApplicationController
   before_action :set_atletica, only: [:show, :edit, :update, :destroy]
+  before_action :authorize
 
   # GET /atleticas
   # GET /atleticas.json

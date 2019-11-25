@@ -1,5 +1,7 @@
 class AceitaReservasController < ApplicationController
 
+  before_action :authorize
+
     def index
         redirect_to '/aceitarReservas/1011'
     end

@@ -1,3 +1,5 @@
+<% if @current_user.role == "LAAUSP" %>
+
 <h1>LAAUSP</h1>
 
 <div >
@@ -15,3 +17,7 @@
 
 <%= link_to "Início", root_path %>
 </div>
+
+<% else %>
+<p class = 'texto-laausp'> Você não tem permissão para acessar esta página</p>
+<% end %>

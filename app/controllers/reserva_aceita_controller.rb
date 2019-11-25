@@ -1,6 +1,7 @@
 class ReservaAceitaController < ApplicationController
   # before_action :set_reserva_aceitum, only: [:show, :edit, :update, :destroy]
   before_action :set_reserva_novo, only: [:new]
+  before_action :authorize
 
   # GET /reserva_aceita
   # GET /reserva_aceita.json

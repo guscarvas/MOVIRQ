@@ -1,3 +1,5 @@
+<% if @current_user.role == "atletica" %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -14,3 +16,7 @@
 
 <%= link_to 'Editar', edit_atletica_path(@atletica) %> |
 <%= link_to 'Voltar', atleticas_path %>
+
+<% else %>
+<p class = 'texto-atletica'> Você não tem permissão para acessar esta página</p>
+<% end %>
