@@ -12,7 +12,7 @@ class User < ApplicationRecord
         self.role ||= :atletica
     end
 
-    #FORGOT PASSOWORD
+    #FORGOT PASSWORD
     def generate_password_token!
         self.reset_password_token = generate_token
         self.reset_password_sent_at = Time.now.utc
@@ -29,11 +29,24 @@ class User < ApplicationRecord
         save!
     end
 
-    private
-
-    def generate_token
-        SecureRandom.hex(10)
+    def send_password_reset
+        generate_token(:password_reset_token)
+        self.reset_password_sent_at = Time.zone.now
+        save!
+        UserMailer.password_reset(self).deliver
     end
+
+    def generate_token(column)
+        begin
+            self[column] = SecureRandom.urlsafe_base64
+        end while User.exists?(column => self[column])
+    end
+
+    #private
+
+    #def generate_token
+        #SecureRandom.hex(10)
+    #end
     
-    #END FORGOT PASSOWRD
+    #END FORGOT PASSWORD
 end
