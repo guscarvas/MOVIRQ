@@ -1,6 +1,12 @@
+<% if @current_user.role == "atletica" %>
+
 <h1>Editando Atletica</h1>
 
 <%= render 'form', atletica: @atletica %>
 
 <%= link_to 'Ver dados', @atletica %> |
 <%= link_to 'Voltar', atleticas_path %>
+
+<% else %>
+<p class = 'texto-atletica'> Você não tem permissão para acessar esta página</p>
+<% end %>

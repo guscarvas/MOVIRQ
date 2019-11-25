@@ -15,4 +15,7 @@ class ApplicationController < ActionController::Base
                             redirect_to users_path
                 end
   end
+  def after_sign_in_path_for(resource)
+    users_path
+  end
 end

@@ -1,5 +1,8 @@
 class AceitaReservasController < ApplicationController
     before_action :set_coisas, only: [:new, :create]
+
+    before_action :authorize
+
     def index
         redirect_to '/aceitarReservas/1011'
     end

@@ -1,5 +1,6 @@
 class SolicitacaoPontualsController < ApplicationController
   before_action :set_solicitacao_pontual, only: [:show, :edit, :update, :destroy]
+  before_action :authorize
 
   # GET /solicitacao_pontuals
   # GET /solicitacao_pontuals.json
@@ -25,6 +26,7 @@ class SolicitacaoPontualsController < ApplicationController
   # POST /solicitacao_pontuals.json
   def create
     @solicitacao_pontual = SolicitacaoPontual.new(solicitacao_pontual_params)
+    UserMailer.reserva_pontual(@solicitacao_pontual).deliver_now
 
     respond_to do |format|
       if @solicitacao_pontual.save
