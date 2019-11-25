@@ -39,15 +39,15 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_options = {from: 'meneghinijoao@gmail.com'}
+  config.action_mailer.default_options = {from: 'movirq@gmail.com'}
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'example.com',
-  user_name:            'meneghinijoao@gmail.com',
-  password:             'meneghini98',
+  user_name:            'movirq@gmail.com',
+  password:             'movirq123456',
   authentication:       'plain',
   enable_starttls_auto: true  }
 
