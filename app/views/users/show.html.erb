@@ -8,8 +8,13 @@
                                      <ul class = 'acoes-usuario'>
                                                  <li><%= link_to "Editar perfil", edit_user_path(current_user) %></li>
                                                  <li><%= link_to "Deletar perfil", @user, method: :delete%></li>
+                                                 <% if current_user.role == "LAAUSP" %>
                                                  <li><%= link_to "Portal da LAAUSP", laausp_index_path%></li>
-                                     </ul>
+                                                 <%end%>
+                                                 <% elsif current_user.role == "atletica" %>
+                                                 <li><%= link_to "Portal da Atlética", aaa_index_path%></li>
+                                                 <%end%>
+                                                 </ul>
                           <%end%>
               </body>
   </html>
