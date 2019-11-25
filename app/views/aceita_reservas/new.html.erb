@@ -5,6 +5,9 @@
 <p>Esporte:<%= @reserva.modalidade   %>  Naipe:<%= @reserva.naipe %></p>
 <p>Início:<%= @reserva.inicio %> Fim:<%= @reserva.termino %></p>
 
+<h3>Confirmar pedido:</h3>
+<p>Quadra: <%= @quadra %></p>
+
 <%= render 'form', reserva_aceitum: @reserva_aceitum %>
 
 <%= link_to 'Back', reserva_aceita_path %>

@@ -15,12 +15,16 @@ Rails.application.routes.draw do
   resources :reservas
   resources :atleticas
   resources :quadras
-  resources :aceita_reservas
+  # resources :aceita_reservas
 
   get 'aceitarReservas' => 'aceita_reservas#index'
   post 'aceitarReservas' => 'aceita_reservas#set_parametros'
   get '/aceitarReservas/:id' => 'aceita_reservas#show'
-  get '/aprovar/:id' => 'reserva_aceita#new'
+  get '/aprovar/' => 'aceita_reservas#new'
+  post '/aprovar/:id' => 'reserva_aceita#create'
+  
+  # get '/aprovar/:id' => 'reserva_aceita#new'
+  # post '/aprovar/:id' => 'reserva_aceita#create'
   get 'laausp/index'
 
   get 'tabela' => 'tabela#index'

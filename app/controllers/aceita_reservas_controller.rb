@@ -11,16 +11,14 @@ class AceitaReservasController < ApplicationController
     #     end 
     #   end
     def show
-        @quadraHash = {101 => 'Quadra 1', 102 => 'Quadra 2', 103=> 'Quadra 3'}
+        @quadraHash = {101 => 'Quadra 1', 102 => 'Quadra 2', 103 => 'Quadra 3'}
         @diasHash = {1 => 'Segunda',2 => 'Terça',3 => 'Quarta', 4 => 'Quinta', 5 => 'Sexta'}
 
         
         @resposta1 = @quadraHash[params[:id].to_i / 10]
-        
+        puts @diasHash[params[:id].to_i%10]
         @resposta2 = @diasHash[params[:id].to_i%10]
         @quadra = Quadra.find_by name: @resposta1
-        puts "AAAAAAAAAAAAAA"
-        puts @quadra.esportes
         lista_undesirables = []
         @reservas = Reserva.where(dia: @resposta2)
         @reservas.each do |reserva|
@@ -29,11 +27,8 @@ class AceitaReservasController < ApplicationController
             else
                 lista_undesirables.push(reserva.id)
             end
-        @reservas = @reservas.where.not(id: lista_undesirables)
-
-            
+        @reservas = @reservas.where.not(id: lista_undesirables) 
         end
-        
     end
 
 
