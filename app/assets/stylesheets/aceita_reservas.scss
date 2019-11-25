@@ -1,3 +1,28 @@
 // Place all the styles related to the aceitaReservas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.aceita_reservas{
+    background-color: #ffff99;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    .form-control{
+        font-family: "Montserrat", sans-serif;
+        border-radius: 2px;
+    }
+    .botao{
+        background-color: #ffcc99;
+        border-radius: 2px;
+        border-color: black;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+    }
+    .tabela-reservas{
+        width: 80%;
+        margin-top: 3%;
+        padding: 5px;
+        display: flexbox;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-left: 10%;
+    }
+}

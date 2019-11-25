@@ -3,17 +3,19 @@
     <nav>
       <ul>
         <% if logged_in? %>
+          <div class = 'acoes'>
           <li><%= link_to "Users", users_path %></li>
           <li>
             <ul>
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings",
+              <li><%= link_to "Dados", current_user %></li>
+              <li><%= link_to "Alterar dados cadastrados",
               edit_user_path(current_user) %></li>
               <li>
-                <%= link_to "Log out", sign_out_path, method: "delete" %>
+                <%= link_to "Sair", sign_out_path, method: "delete" %>
               </li>
             </ul>
           </li>
+          </div>
         <% else %>
           <li><%= link_to "Log in", root_path %></li>
         <% end %>
