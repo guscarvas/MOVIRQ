@@ -17,12 +17,31 @@
         cursor: pointer;
     }
     .tabela-reservas{
-        width: 80%;
+        width: 40%;
         margin-top: 3%;
         padding: 5px;
         display: flexbox;
         justify-content: space-between;
         flex-direction: column;
         margin-left: 10%;
+    }
+    .tabela-quadra{
+        width: 30%;
+        display: flexbox;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-right: 10%;
+        margin-left: 60%;
+    }
+    .dia{
+        margin-right: 10%;
+        margin-left: 60%;
+    }
+    .mae{
+        display: flex;
+        flex-direction: row;
+        margin-left: 10%;
+        justify-content: space-between;
+        width: 75%;
     }
 }
