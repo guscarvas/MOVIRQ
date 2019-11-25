@@ -30840,6 +30840,7 @@ Processing by TabelaController#index as HTML
 Completed 200 OK in 258ms (Views: 250.7ms | ActiveRecord: 0.9ms | Allocations: 22178)
 
 
+<<<<<<< Updated upstream
 Started GET "/reserva__aceitas" for ::1 at 2019-11-24 23:36:32 -0300
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   
@@ -43979,6 +43980,78 @@ Completed 200 OK in 116ms (Views: 101.5ms | ActiveRecord: 0.8ms | Allocations: 1
 Started GET "/packs/js/application-194245500b690b756f5a.js" for ::1 at 2019-11-25 11:37:22 -0300
   
 ActionController::RoutingError (No route matches [GET] "/packs/js/application-194245500b690b756f5a.js"):
+=======
+Started GET "/" for ::1 at 2019-11-25 01:39:02 -0200
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 361)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /mnt/c/Users/João Menehini/Desktop/SI/MOVIRQ/public/packs
+[Webpacker] /home/meneghini/.rbenv/versions/2.6.5/bin/ruby: warning: shebang line ending with \r may cause problems
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 33.7ms | Allocations: 4349)
+Completed 200 OK in 9243ms (Views: 9225.7ms | ActiveRecord: 1.6ms | Allocations: 78057)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-25 01:39:21 -0200
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2308)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.0ms | Allocations: 671)
+Completed 200 OK in 62ms (Views: 56.7ms | ActiveRecord: 0.4ms | Allocations: 9635)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 01:39:23 -0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"0bot2pHuC1SjfDQ8x9Lx7M/+yb2vCpmUFZ09wvVN8iFqKCY9+h+IOAMXFtUb0xpCvvT4vKYv9rS4etUcQE8vRA==", "session"=>{"email"=>"meneghinijoao@usp.br", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "meneghinijoao@usp.br"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 375ms (ActiveRecord: 2.2ms | Allocations: 6265)
+
+
+Started GET "/users/6" for ::1 at 2019-11-25 01:39:24 -0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 14.0ms | Allocations: 993)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 122)
+Completed 200 OK in 126ms (Views: 115.5ms | ActiveRecord: 2.3ms | Allocations: 8937)
+
+
+Started GET "/users/6/edit" for ::1 at 2019-11-25 01:39:30 -0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `correct_user?'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1803)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 122)
+Completed 200 OK in 53ms (Views: 40.0ms | ActiveRecord: 0.8ms | Allocations: 8985)
+
+
+Started GET "/routes" for ::1 at 2019-11-25 01:39:38 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+>>>>>>> Stashed changes
   
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
@@ -44010,6 +44083,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/users" for ::1 at 2019-11-25 11:38:13 -0300
 Processing by UsersController#index as HTML
   Rendering users/index.html.erb within layouts/application
@@ -44069,6 +44143,23 @@ Completed 200 OK in 116ms (Views: 110.3ms | ActiveRecord: 0.3ms | Allocations: 1
 Started GET "/packs/js/application-194245500b690b756f5a.js" for ::1 at 2019-11-25 11:38:15 -0300
   
 ActionController::RoutingError (No route matches [GET] "/packs/js/application-194245500b690b756f5a.js"):
+=======
+Started GET "/rails/info/routes?path=tabela" for ::1 at 2019-11-25 01:39:43 -0200
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"tabela"}
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 3426)
+
+
+Started GET "/rails/info/routes?path=tabela" for ::1 at 2019-11-25 01:39:43 -0200
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"tabela"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1292)
+
+
+Started GET "/tabela/index" for ::1 at 2019-11-25 01:40:01 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/tabela/index"):
+>>>>>>> Stashed changes
   
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
@@ -44100,6 +44191,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/aaa/index" for ::1 at 2019-11-25 11:38:27 -0300
 Processing by AaaController#index as HTML
   Rendering aaa/index.html.erb within layouts/application
@@ -44145,3 +44237,17 @@ puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
 >>>>>>> master
+=======
+Started GET "/tabela" for ::1 at 2019-11-25 01:40:07 -0200
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 49.7ms | Allocations: 18921)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.1ms | Allocations: 965)
+Completed 200 OK in 110ms (Views: 93.1ms | ActiveRecord: 3.3ms | Allocations: 27150)
+
+
+>>>>>>> Stashed changes
