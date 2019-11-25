@@ -18,5 +18,5 @@ class Reserva < ApplicationRecord
     message: "Complete os campos vazios"
 
     validates_with TimeValidator
-
+    
 end

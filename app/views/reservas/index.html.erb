@@ -37,7 +37,11 @@
 </table>
 
 <br>
-<%= link_to 'Resetar Pedidos','/resetReservas', data: { confirm: 'Tem certeza que deseja resetar os pedidos/reservas?' } %>
+<%= current_user.role%>
+<% if current_user.role == 'LAAUSP' %>
+  <%= link_to 'Resetar Pedidos','/resetReservas', data: { confirm: 'Tem certeza que deseja resetar os pedidos/reservas?' } %>
+<% end %>
+
 <%= link_to 'Nova Reserva', new_reserva_path %>
 <p> </p>
 <%= link_to 'Voltar', aaa_index_path %>

@@ -1,0 +1,15 @@
+<% @reservas.each do |reserva| %>
+      <tr>
+        <td><%= reserva.criador %></td>
+        <td><%= reserva.modalidade %></td>
+        <td><%= reserva.naipe %></td>
+        <td><%= reserva.dia %></td>
+        <td><%= reserva.inicio.time.strftime("%k:%M") %></td>
+        <td><%= reserva.termino.time.strftime("%k:%M") %></td>
+        <td><%= reserva.odp %></td>
+        <td><%= reserva.ph %></td>
+        <%# <td><%= link_to 'Aprovar', '/reserva_aceita' + reserva.id %></td> %>
+        <td><%= link_to 'Editar', edit_reserva_path(reserva) %></td>
+        <td><%= link_to 'Deletar', reserva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>

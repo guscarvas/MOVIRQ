@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_002147) do
+ActiveRecord::Schema.define(version: 2019_11_25_024608) do
 
   create_table "atleticas", force: :cascade do |t|
     t.string "name"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 2019_11_25_002147) do
     t.string "sex"
   end
 
+  create_table "reserva_aceita", force: :cascade do |t|
+    t.string "dono"
+    t.string "esporte"
+    t.string "naipe"
+    t.string "inicio"
+    t.string "fim"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "reservas", force: :cascade do |t|
     t.string "modalidade"
     t.string "naipe"
@@ -47,6 +57,7 @@ ActiveRecord::Schema.define(version: 2019_11_25_002147) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.string "criador"
+    t.integer "status"
     t.index ["user_id"], name: "index_reservas_on_user_id"
   end
 

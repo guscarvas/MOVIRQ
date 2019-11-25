@@ -1,11 +1,11 @@
 <html>
     <h1>SEGUNDA</h1>
     <table class= 'tabela-quadra'>
-        <thead>
+        <th class="th-quadra"ead>
             <tr>
-                <th style="vertical-align:center !important">HOR</th>
+                <th class="th-quadra" style="vertical-align:center !important">HOR</th>
             <% @quadras.each do |quadra| %>
-                <th><%= quadra.name %><br>
+                <th class="th-quadra"><%= quadra.name %><br>
                     <% quadra.esportes.each do |esporte| %>
                     <%= esporte %><br>
                     <%end%>
@@ -15,73 +15,73 @@
         </thead>
         <tbody>
             <tr>
-                <td>17:00</td>
+                <td class="td-quadra">17:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.seg[0]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>17:30</td>
+                <td class="td-quadra">17:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.seg[1]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>18:00</td>
+                <td class="td-quadra">18:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.seg[2]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>18:30</td>
+                <td class="td-quadra">18:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.seg[3]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>19:00</td>
+                <td class="td-quadra">19:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.seg[4]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>19:30</td>
+                <td class="td-quadra">19:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.seg[5]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>20:00</td>
+                <td class="td-quadra">20:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.seg[6]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>20:30</td>
+                <td class="td-quadra">20:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.seg[7]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>21:00</td>
+                <td class="td-quadra">21:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.seg[8]%>
                     </td>
                 <%end%>
@@ -90,11 +90,11 @@
     </table>
     <h1>TERÇA</h1>
     <table class= 'tabela-quadra'>
-        <thead>
+        <th class="th-quadra"ead>
             <tr>
-                <th style="vertical-align:center !important">HOR</th>
+                <th class="th-quadra" style="vertical-align:center !important">HOR</th>
             <% @quadras.each do |quadra| %>
-                <th><%= quadra.name %><br>
+                <th class="th-quadra"><%= quadra.name %><br>
                     <% quadra.esportes.each do |esporte| %>
                     <%= esporte %><br>
                     <%end%>
@@ -104,73 +104,73 @@
         </thead>
         <tbody>
             <tr>
-                <td>17:00</td>
+                <td class="td-quadra">17:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.ter[0]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>17:30</td>
+                <td class="td-quadra">17:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.ter[1]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>18:00</td>
+                <td class="td-quadra">18:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.ter[2]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>18:30</td>
+                <td class="td-quadra">18:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.ter[3]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>19:00</td>
+                <td class="td-quadra">19:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.ter[4]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>19:30</td>
+                <td class="td-quadra">19:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.ter[5]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>20:00</td>
+                <td class="td-quadra">20:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.ter[6]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>20:30</td>
+                <td class="td-quadra">20:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.ter[7]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>21:00</td>
+                <td class="td-quadra">21:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.ter[8]%>
                     </td>
                 <%end%>
@@ -179,11 +179,11 @@
     </table>
     <h1>QUARTA</h1>
     <table class= 'tabela-quadra'>
-        <thead>
+        <th class="th-quadra"ead>
             <tr>
-                <th style="vertical-align:center !important">HOR</th>
+                <th class="th-quadra" style="vertical-align:center !important">HOR</th>
             <% @quadras.each do |quadra| %>
-                <th><%= quadra.name %><br>
+                <th class="th-quadra"><%= quadra.name %><br>
                     <% quadra.esportes.each do |esporte| %>
                     <%= esporte %><br>
                     <%end%>
@@ -193,73 +193,73 @@
         </thead>
         <tbody>
             <tr>
-                <td>17:00</td>
+                <td class="td-quadra">17:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qua[0]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>17:30</td>
+                <td class="td-quadra">17:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qua[1]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>18:00</td>
+                <td class="td-quadra">18:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qua[2]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>18:30</td>
+                <td class="td-quadra">18:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qua[3]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>19:00</td>
+                <td class="td-quadra">19:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qua[4]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>19:30</td>
+                <td class="td-quadra">19:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qua[5]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>20:00</td>
+                <td class="td-quadra">20:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qua[6]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>20:30</td>
+                <td class="td-quadra">20:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qua[7]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>21:00</td>
+                <td class="td-quadra">21:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qua[8]%>
                     </td>
                 <%end%>
@@ -268,11 +268,11 @@
     </table>
     <h1>QUINTA</h1>
     <table class= 'tabela-quadra'>
-        <thead>
+        <th class="th-quadra"ead>
             <tr>
-                <th style="vertical-align:center !important">HOR</th>
+                <th class="th-quadra" style="vertical-align:center !important">HOR</th>
             <% @quadras.each do |quadra| %>
-                <th><%= quadra.name %><br>
+                <th class="th-quadra"><%= quadra.name %><br>
                     <% quadra.esportes.each do |esporte| %>
                     <%= esporte %><br>
                     <%end%>
@@ -282,73 +282,73 @@
         </thead>
         <tbody>
             <tr>
-                <td>17:00</td>
+                <td class="td-quadra">17:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qui[0]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>17:30</td>
+                <td class="td-quadra">17:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qui[1]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>18:00</td>
+                <td class="td-quadra">18:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qui[2]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>18:30</td>
+                <td class="td-quadra">18:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qui[3]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>19:00</td>
+                <td class="td-quadra">19:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qui[4]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>19:30</td>
+                <td class="td-quadra">19:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qui[5]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>20:00</td>
+                <td class="td-quadra">20:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qui[6]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>20:30</td>
+                <td class="td-quadra">20:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qui[7]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>21:00</td>
+                <td class="td-quadra">21:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.qui[8]%>
                     </td>
                 <%end%>
@@ -357,11 +357,11 @@
     </table>
     <h1>SEXTA</h1>
     <table class= 'tabela-quadra'>
-        <thead>
+        <th class="th-quadra"ead>
             <tr>
-                <th style="vertical-align:center !important">HOR</th>
+                <th class="th-quadra" style="vertical-align:center !important">HOR</th>
             <% @quadras.each do |quadra| %>
-                <th><%= quadra.name %><br>
+                <th class="th-quadra"><%= quadra.name %><br>
                     <% quadra.esportes.each do |esporte| %>
                     <%= esporte %><br>
                     <%end%>
@@ -371,73 +371,73 @@
         </thead>
         <tbody>
             <tr>
-                <td>17:00</td>
+                <td class="td-quadra">17:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.sex[0]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>17:30</td>
+                <td class="td-quadra">17:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.sex[1]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>18:00</td>
+                <td class="td-quadra">18:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.sex[2]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>18:30</td>
+                <td class="td-quadra">18:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.sex[3]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>19:00</td>
+                <td class="td-quadra">19:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.sex[4]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>19:30</td>
+                <td class="td-quadra">19:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.sex[5]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>20:00</td>
+                <td class="td-quadra">20:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.sex[6]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>20:30</td>
+                <td class="td-quadra">20:30</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.sex[7]%>
                     </td>
                 <%end%>
             </tr>
             <tr>
-                <td>21:00</td>
+                <td class="td-quadra">21:00</td>
                 <% @quadras.each do |quadra|%>
-                <td>
+                <td class="td-quadra">
                     <%= quadra.sex[8]%>
                     </td>
                 <%end%>

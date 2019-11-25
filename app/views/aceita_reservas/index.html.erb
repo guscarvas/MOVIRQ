@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 <h1>Filtro</h1>
 <%= form_with url:'/aceitarReservas', scope: "post" do |form| %>
-  <%= form.select :quadra, options_for_select(['Quadra 1', 'Quadra 2', 'Quadra 3']) , {:include_blank => "Please select"} %>
-  <%= form.select :dia, options_for_select(["Segunda", "Terça", "Quarta", "Quinta", "Sexta"]), {:include_blank => "Please select"} %>
+  <%= form.select :quadra, options_for_select([['Quadra 1', 101], ['Quadra 2', 102], ['Quadra 3',103]]) , {:include_blank => "Please select"} %>
+  <%= form.select :dia, options_for_select([["Segunda",1], ["Terça",2], ["Quarta",3], ["Quinta",4],[ "Sexta",5]]), {:include_blank => "Please select"} %>
   <%= form.submit "Filtrar", name: nil %>
 <% end %>
 
