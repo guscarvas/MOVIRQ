@@ -59400,6 +59400,7 @@ Processing by AtleticasController#index as HTML
 Completed 200 OK in 22ms (Views: 17.5ms | ActiveRecord: 0.2ms | Allocations: 7522)
 
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 >>>>>>> master
@@ -59423,6 +59424,15 @@ actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+=======
+Started GET "/atletica" for ::1 at 2019-11-25 14:35:17 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/atletica"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+>>>>>>> Stashed changes
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
@@ -59452,6 +59462,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started POST "/rails/actions" for ::1 at 2019-11-25 13:42:09 -0300
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to AddPasswordResetToUsers (20191125142640)
@@ -62595,3 +62606,191 @@ Completed 200 OK in 121ms (Views: 98.4ms | ActiveRecord: 1.7ms | Allocations: 13
 
 =======
 >>>>>>> master
+=======
+Started GET "/atleticas" for ::1 at 2019-11-25 14:35:17 -0300
+Processing by AtleticasController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering atleticas/index.html.erb within layouts/application
+  Rendered atleticas/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 277)
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 479)
+Completed 200 OK in 107ms (Views: 74.7ms | ActiveRecord: 1.8ms | Allocations: 29408)
+
+
+Started GET "/aceitarReservas" for ::1 at 2019-11-25 14:35:18 -0300
+Processing by AceitaReservasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+Redirected to http://localhost:3000/aceitarReservas/1011
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 977)
+
+
+Started GET "/aceitarReservas/1011" for ::1 at 2019-11-25 14:35:18 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1011"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mQuadra Load (0.8ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:23:in `show'
+  [1m[36mReserva Load (0.7ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Segunda"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:26:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  [1m[36mReserva Load (0.5ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ? AND 1=1 AND 1=1[0m  [["dia", "Segunda"]]
+  ↳ app/views/aceita_reservas/_reserva.html.erb:1
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 7.6ms | Allocations: 1116)
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 22.8ms | Allocations: 4489)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 125)
+Completed 200 OK in 143ms (Views: 49.8ms | ActiveRecord: 6.1ms | Allocations: 30153)
+
+
+Started GET "/" for ::1 at 2019-11-25 14:35:18 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 269)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 710)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.3ms | Allocations: 7188)
+
+
+Started GET "/" for ::1 at 2019-11-25 14:35:18 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 93)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 689)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.2ms | Allocations: 6355)
+
+
+Started GET "/tabela" for ::1 at 2019-11-25 14:35:22 -0300
+Processing by TabelaController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.8ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 60.1ms | Allocations: 10966)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 154)
+Completed 200 OK in 81ms (Views: 76.7ms | ActiveRecord: 1.0ms | Allocations: 17880)
+
+
+Started GET "/sobre_nos/index" for ::1 at 2019-11-25 14:35:28 -0300
+Processing by SobreNosController#index as HTML
+  Rendering sobre_nos/index.html.erb within layouts/application
+  Rendered sobre_nos/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 183)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 696)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.2ms | Allocations: 7041)
+
+
+Started GET "/" for ::1 at 2019-11-25 14:35:34 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 101)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 710)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.2ms | Allocations: 6387)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-25 14:35:50 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+Redirected to http://localhost:3000/users
+Filter chain halted as :block_access rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 991)
+
+
+Started GET "/users" for ::1 at 2019-11-25 14:35:50 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1079)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 0.4ms | Allocations: 7994)
+
+
+Started GET "/users" for ::1 at 2019-11-25 15:15:42 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1287)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 385)
+Completed 200 OK in 176ms (Views: 134.8ms | ActiveRecord: 2.2ms | Allocations: 30542)
+
+
+Started GET "/users" for ::1 at 2019-11-25 15:15:46 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 837)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 120)
+Completed 200 OK in 42ms (Views: 36.5ms | ActiveRecord: 0.5ms | Allocations: 7084)
+
+
+Started GET "/" for ::1 at 2019-11-25 15:15:47 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 274)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 710)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.2ms | Allocations: 7193)
+
+
+Started GET "/" for ::1 at 2019-11-25 15:15:47 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 93)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 689)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.2ms | Allocations: 6335)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-25 15:15:48 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+Redirected to http://localhost:3000/users
+Filter chain halted as :block_access rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1013)
+
+
+Started GET "/users" for ::1 at 2019-11-25 15:15:49 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 843)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 125)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.4ms | Allocations: 7109)
+
+
+Started GET "/users/new" for ::1 at 2019-11-25 15:16:07 -0300
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 23.2ms | Allocations: 5045)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 126)
+Completed 200 OK in 48ms (Views: 40.9ms | ActiveRecord: 0.3ms | Allocations: 11375)
+
+
+>>>>>>> Stashed changes
