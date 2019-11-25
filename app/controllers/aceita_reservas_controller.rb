@@ -23,7 +23,7 @@ class AceitaReservasController < ApplicationController
         @resposta2 = @diasHash[params[:id].to_i%10]
         @quadra = Quadra.find_by name: @resposta1
         lista_undesirables = []
-        @reservas = Reserva.where(dia: @resposta2)
+        @reservas = Reserva.where(status:0).where(dia: @resposta2)
         @reservas.each do |reserva|
             if @quadra.esportes.include? reserva.modalidade
             
@@ -49,7 +49,7 @@ class AceitaReservasController < ApplicationController
         @quadraParaMudanca = Quadra.where(name: @quadra).take
         puts @quadraParaMudanca.name
         puts 'AAAAAAAAAAAAAAAAA'
-        @horaHash = {'17:00'=> 0, '18:00'=> 1, '18:30'=> 2, '19:00'=> 3, '19:30'=> 4, '20:00'=> 5, '20:30'=> 6, '21:00'=> 7}
+        @horaHash = {'17:00'=> 0,'17:30' => 1, '18:00'=> 2, '18:30'=> 3, '19:00'=> 4, '19:30'=> 5, '20:00'=> 6, '20:30'=> 7, '21:00'=> 8}
         @reserva_aceitum = ReservaAceitum.new()
         @reserva_aceitum.dono = @reserva.criador
         @reserva_aceitum.esporte = @reserva.modalidade
@@ -78,7 +78,7 @@ class AceitaReservasController < ApplicationController
         elsif @reserva.dia == 'Sexta'
             @quadraParaMudanca.sex[resultado] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
             @quadraParaMudanca.sex[resultado+1] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
-            @quadraParaMudanca.sex[resultado+2] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
+
         end
         @quadraParaMudanca.save
         @reserva.save
@@ -113,5 +113,24 @@ class AceitaReservasController < ApplicationController
         @reserva = Reserva.find(params[:id].to_i/1000)
         @quadraHash = {101 => 'Quadra 1', 102 => 'Quadra 2', 103=> 'Quadra 3', 104 => 'Quadra 4', 105 => 'Quadra 5', 106 => 'Quadra 6', 107 => 'Quadra 7', 108 => 'Quadra 8', 109 => 'Quadra 9 A', 110 => 'Quadra 9 B', 111 => 'Quadra 10 A', 112 => 'Quadra 10 B', 113 => 'Velódromo A', 114 => 'Velódromo B', 115 => 'Módulo 1', 116 => 'Módulo 2', 117 => 'Módulo 3', 118 => 'Módulo 4'  }
         @quadra =  @quadraHash[params[:id].to_i / 10]
+    end
+
+    def reiniciarQuadra
+        @quadras = Quadra.all
+        @quadras.each do |quadra|
+            quadra.seg = ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago']
+            quadra.ter = ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago']
+            quadra.qua = ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago']
+            quadra.qui = ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago']
+            quadra.sex = ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago']
+            quadra.save            
+        end
+        @reservas = Reserva.all
+        @reservas.each do |reserva|
+            reserva.status = 0
+            reserva.save
+        end    
+        ReservaAceitum.delete_all
+        redirect_to '/aceitarReservas'
     end
 end

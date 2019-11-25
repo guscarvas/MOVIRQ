@@ -34,6 +34,7 @@
 <%= current_user.role%>
 <% if current_user.role == 'LAAUSP' %>
   <%= link_to 'Resetar Pedidos','/resetReservas', data: { confirm: 'Tem certeza que deseja resetar os pedidos/reservas?' } %>
+  <%= link_to 'Resetar Quadras','/resetQuadras', data: { confirm: 'Tem certeza que deseja resetar as quadras?' } %>
 <% end %>
 
 <%= link_to 'Nova Reserva', new_reserva_path %>

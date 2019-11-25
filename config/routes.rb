@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   #resources :password_reset
   #get 'password/forgot' => 'password#forgot'
   #get 'password/reset'  => 'password#reset'
-
+  get 'resetQuadras' => 'aceita_reservas#reiniciarQuadra'
   get 'resetReservas' => 'reservas#reset'
   get 'criaLaausp' => 'users#criaLaausp'
   #get 'ver_reservas/index', as 'ver_reservas_index'
