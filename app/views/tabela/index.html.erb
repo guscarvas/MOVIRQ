@@ -1,0 +1,447 @@
+<html>
+    <h1>SEGUNDA</h1>
+    <table class= 'tabela-quadra'>
+        <thead>
+            <tr>
+                <th style="vertical-align:center !important">HOR</th>
+            <% @quadras.each do |quadra| %>
+                <th><%= quadra.name %><br>
+                    <% quadra.esportes.each do |esporte| %>
+                    <%= esporte %><br>
+                    <%end%>
+                </th>
+                <%end%>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>17:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.seg[0]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>17:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.seg[1]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>18:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.seg[2]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>18:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.seg[3]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>19:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.seg[4]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>19:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.seg[5]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>20:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.seg[6]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>20:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.seg[7]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>21:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.seg[8]%>
+                    </td>
+                <%end%>
+            </tr>
+        </tbody>
+    </table>
+    <h1>TERÇA</h1>
+    <table class= 'tabela-quadra'>
+        <thead>
+            <tr>
+                <th style="vertical-align:center !important">HOR</th>
+            <% @quadras.each do |quadra| %>
+                <th><%= quadra.name %><br>
+                    <% quadra.esportes.each do |esporte| %>
+                    <%= esporte %><br>
+                    <%end%>
+                </th>
+                <%end%>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>17:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.ter[0]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>17:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.ter[1]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>18:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.ter[2]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>18:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.ter[3]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>19:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.ter[4]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>19:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.ter[5]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>20:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.ter[6]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>20:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.ter[7]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>21:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.ter[8]%>
+                    </td>
+                <%end%>
+            </tr>
+        </tbody>
+    </table>
+    <h1>QUARTA</h1>
+    <table class= 'tabela-quadra'>
+        <thead>
+            <tr>
+                <th style="vertical-align:center !important">HOR</th>
+            <% @quadras.each do |quadra| %>
+                <th><%= quadra.name %><br>
+                    <% quadra.esportes.each do |esporte| %>
+                    <%= esporte %><br>
+                    <%end%>
+                </th>
+                <%end%>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>17:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qua[0]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>17:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qua[1]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>18:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qua[2]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>18:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qua[3]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>19:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qua[4]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>19:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qua[5]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>20:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qua[6]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>20:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qua[7]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>21:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qua[8]%>
+                    </td>
+                <%end%>
+            </tr>
+        </tbody>
+    </table>
+    <h1>QUINTA</h1>
+    <table class= 'tabela-quadra'>
+        <thead>
+            <tr>
+                <th style="vertical-align:center !important">HOR</th>
+            <% @quadras.each do |quadra| %>
+                <th><%= quadra.name %><br>
+                    <% quadra.esportes.each do |esporte| %>
+                    <%= esporte %><br>
+                    <%end%>
+                </th>
+                <%end%>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>17:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qui[0]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>17:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qui[1]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>18:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qui[2]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>18:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qui[3]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>19:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qui[4]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>19:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qui[5]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>20:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qui[6]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>20:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qui[7]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>21:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.qui[8]%>
+                    </td>
+                <%end%>
+            </tr>
+        </tbody>
+    </table>
+    <h1>SEXTA</h1>
+    <table class= 'tabela-quadra'>
+        <thead>
+            <tr>
+                <th style="vertical-align:center !important">HOR</th>
+            <% @quadras.each do |quadra| %>
+                <th><%= quadra.name %><br>
+                    <% quadra.esportes.each do |esporte| %>
+                    <%= esporte %><br>
+                    <%end%>
+                </th>
+                <%end%>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>17:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.sex[0]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>17:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.sex[1]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>18:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.sex[2]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>18:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.sex[3]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>19:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.sex[4]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>19:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.sex[5]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>20:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.sex[6]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>20:30</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.sex[7]%>
+                    </td>
+                <%end%>
+            </tr>
+            <tr>
+                <td>21:00</td>
+                <% @quadras.each do |quadra|%>
+                <td>
+                    <%= quadra.sex[8]%>
+                    </td>
+                <%end%>
+            </tr>
+        </tbody>
+    </table>
+</html>

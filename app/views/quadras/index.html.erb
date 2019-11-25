@@ -1,0 +1,21 @@
+<h1> Quadras </h1>
+<table class= 'tabela-users'>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Esportes</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @quadras.each do |quadra| %>
+            <tr>
+            <td><%= quadra.name %></td>
+            <td><% quadra.esportes.each do |esporte| %>
+                <%= esporte %>,
+            <%end%></td>
+            <td><%= link_to "Visualizar", quadra %></td>
+            </tr>
+        <%end%>
+    </tbody>
+</table>

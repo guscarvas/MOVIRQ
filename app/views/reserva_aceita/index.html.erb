@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reserva Aceita</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dono</th>
+      <th>Esporte</th>
+      <th>Naipe</th>
+      <th>Inicio</th>
+      <th>Fim</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reserva_aceita.each do |reserva_aceitum| %>
+      <tr>
+        <td><%= reserva_aceitum.dono %></td>
+        <td><%= reserva_aceitum.esporte %></td>
+        <td><%= reserva_aceitum.naipe %></td>
+        <td><%= reserva_aceitum.inicio %></td>
+        <td><%= reserva_aceitum.fim %></td>
+        <td><%= link_to 'Show', reserva_aceitum %></td>
+        <td><%= link_to 'Edit', edit_reserva_aceitum_path(reserva_aceitum) %></td>
+        <td><%= link_to 'Destroy', reserva_aceitum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reserva Aceitum', new_reserva_aceitum_path %>

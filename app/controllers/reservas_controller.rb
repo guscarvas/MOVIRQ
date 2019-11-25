@@ -93,5 +93,8 @@ class ReservasController < ApplicationController
     # def verificaUsuario
     #   @user = current_user
     #   if @reserva.user_id == @user.id
+    # rails generate model Quadra name:string ordem:integer atual:integer
+    # rails g migration add_arrays_to_quadra esportes:string
+    # 
 
 end

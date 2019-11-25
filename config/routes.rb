@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :reserva_aceita
   resources :solicitacao_pontuals
   get 'solicitacao_pontuals/index'
   get 'welcome/index'
@@ -13,8 +14,10 @@ Rails.application.routes.draw do
   delete 'sign_out'  => 'sessions#destroy'
   resources :reservas
   resources :atleticas
+  resources :quadras
   get 'laausp/index'
 
+  get 'tabela' => 'tabela#index'
   post 'password/forgot' => 'password#forgot'
   post 'password/reset'  => 'password#reset'
 
