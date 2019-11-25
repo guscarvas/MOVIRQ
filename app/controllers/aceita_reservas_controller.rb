@@ -65,16 +65,13 @@ class AceitaReservasController < ApplicationController
             puts 'Deu terca mesmo'
             @quadraParaMudanca.ter[resultado] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
             @quadraParaMudanca.ter[resultado+1] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
-            @quadraParaMudanca.ter[resultado+2] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
         elsif @reserva.dia == 'Quarta'
             puts 'Deu quarta mesmo'
             @quadraParaMudanca.qua[resultado] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
             @quadraParaMudanca.qua[resultado+1] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
-            @quadraParaMudanca.qua[resultado+2] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
         elsif @reserva.dia == 'Quinta'
             @quadraParaMudanca.qui[resultado] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
             @quadraParaMudanca.qui[resultado+1] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
-            @quadraParaMudanca.qui[resultado+2] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
         elsif @reserva.dia == 'Sexta'
             @quadraParaMudanca.sex[resultado] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
             @quadraParaMudanca.sex[resultado+1] = @reserva_aceitum.dono+'-'+@reserva_aceitum.esporte[0]+@reserva_aceitum.naipe[0]
