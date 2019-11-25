@@ -20,8 +20,8 @@ Rails.application.routes.draw do
   get 'aceitarReservas' => 'aceita_reservas#index'
   post 'aceitarReservas' => 'aceita_reservas#set_parametros'
   get '/aceitarReservas/:id' => 'aceita_reservas#show'
-  get '/aprovar/' => 'aceita_reservas#new'
-  post '/aprovar/:id' => 'reserva_aceita#create'
+  get '/aprovar/:id' => 'aceita_reservas#new'
+  post '/aprovar/:id' => 'aceita_reservas#create'
   
   # get '/aprovar/:id' => 'reserva_aceita#new'
   # post '/aprovar/:id' => 'reserva_aceita#create'

@@ -6,12 +6,12 @@
                           <p><b>Tipo de usuário:</b><%= @user.role %></p>
                           <% if current_user == @user %>
                                      <ul class = 'acoes-usuario'>
-                                                 <li><%= link_to "Editar perfil", edit_user_path(current_user) %></li>
-                                                 <li><%= link_to "Deletar perfil", @user, method: :delete%></li>
+                                                 <p><%= link_to "Editar perfil", edit_user_path(current_user) %></p>
+                                                 <p><%= link_to "Deletar perfil", @user, method: :delete%></p>
                                                  <% if current_user.role == "LAAUSP" %>
-                                                 <li><%= link_to "Portal da LAAUSP", laausp_index_path%></li>
+                                                 <p><%= link_to "Portal da LAAUSP", laausp_index_path%></p>
                                                  <% else%>
-                                                 <li><%= link_to "Portal da Atlética", aaa_index_path%></li>
+                                                 <p><%= link_to "Portal da Atlética", aaa_index_path%></p>
                                                  <%end%>
                                                  </ul>
                           <%end%>
