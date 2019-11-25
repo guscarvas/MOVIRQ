@@ -14,9 +14,9 @@
     <% @solicitacao_pontuals.each do |solicitacao_pontual| %>
       <tr>
         <td><%= solicitacao_pontual.Solicitação %></td>
-        <td><%= link_to 'Show', solicitacao_pontual %></td>
-        <td><%= link_to 'Edit', edit_solicitacao_pontual_path(solicitacao_pontual) %></td>
-        <td><%= link_to 'Destroy', solicitacao_pontual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', solicitacao_pontual %></td>
+        <td><%= link_to 'Editar', edit_solicitacao_pontual_path(solicitacao_pontual) %></td>
+        <td><%= link_to 'Deletar', solicitacao_pontual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

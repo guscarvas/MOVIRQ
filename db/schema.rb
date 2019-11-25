@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_140939) do
+ActiveRecord::Schema.define(version: 2019_11_25_142640) do
 
   create_table "atleticas", force: :cascade do |t|
     t.string "name"
@@ -75,6 +75,8 @@ ActiveRecord::Schema.define(version: 2019_11_25_140939) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.integer "role"
+    t.string "password_reset_token"
+    t.datetime "password_reset_sent_at"
   end
 
   add_foreign_key "reservas", "users"

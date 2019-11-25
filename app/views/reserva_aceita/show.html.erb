@@ -17,12 +17,12 @@
 
 <p>
   <strong>Inicio:</strong>
-  <%= @reserva_aceitum.inicio %>
+  <%= @reserva_aceitum.inicio.time.strftime("%k:%M") %>
 </p>
 
 <p>
   <strong>Fim:</strong>
-  <%= @reserva_aceitum.fim %>
+  <%= @reserva_aceitum.fim.time.strftime("%k:%M") %>
 </p>
 
 <%= link_to 'Edit', edit_reserva_aceitum_path(@reserva_aceitum) %> |

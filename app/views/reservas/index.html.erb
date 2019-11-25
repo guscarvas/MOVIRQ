@@ -37,7 +37,7 @@
 </table>
 
 <br>
-<%= current_user.role%>
+
 <% if current_user.role == 'LAAUSP' %>
   <%= link_to 'Resetar Pedidos','/resetReservas', data: { confirm: 'Tem certeza que deseja resetar os pedidos/reservas?' } %>
 <% end %>
