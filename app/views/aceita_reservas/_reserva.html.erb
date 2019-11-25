@@ -8,7 +8,7 @@
         <td><%= reserva.termino.time.strftime("%k:%M") %></td>
         <td><%= reserva.odp %></td>
         <td><%= reserva.ph %></td>
-        <%# <td><%= link_to 'Aprovar', '/reserva_aceita' + reserva.id %></td> %>
+        <td><%= link_to 'Aprovar', '/reserva_aceita/' + reserva.id.to_s %></td>
         <td><%= link_to 'Editar', edit_reserva_path(reserva) %></td>
         <td><%= link_to 'Deletar', reserva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

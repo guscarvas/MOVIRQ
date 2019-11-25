@@ -34601,3 +34601,247 @@ Processing by AceitaReservasController#show as HTML
 Completed 200 OK in 82ms (Views: 69.9ms | ActiveRecord: 1.1ms | Allocations: 11905)
 
 
+Started GET "/aceitarReservas/1013" for ::1 at 2019-11-25 05:50:21 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1013"}
+  [1m[36mQuadra Load (1.1ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.7ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Quarta"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:26:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 2.0ms | Allocations: 1324)
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 18.6ms | Allocations: 3936)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 1.8ms | Allocations: 15171)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @reservas.each do |reserva| %>
+      <tr>
+        <td><%= reserva.criador %></td>
+        <td><%= reserva.modalidade %></td>
+        <td><%= reserva.naipe %></td>
+        <td><%= reserva.dia %></td>
+        <td><%= reserva.inicio.time.strftime("%k:%M") %></td>
+        <td><%= reserva.termino.time.strftime("%k:%M") %></td>
+        <td><%= reserva.odp %></td>
+        <td><%= reserva.ph %></td>
+        <td><%= link_to 'Aprovar', '/reserva_aceita/' + reserva.id.to_s</td> %>
+        <td><%= link_to 'Editar', edit_reserva_path(reserva) %></td>
+        <td><%= link_to 'Deletar', reserva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+):
+1:    <% @reservas.each do |reserva| %>
+2:          <tr>
+3:            <td><%= reserva.criador %></td>
+4:            <td><%= reserva.modalidade %></td>
+5:            <td><%= reserva.naipe %></td>
+6:            <td><%= reserva.dia %></td>
+7:            <td><%= reserva.inicio.time.strftime("%k:%M") %></td>
+8:            <td><%= reserva.termino.time.strftime("%k:%M") %></td>
+9:            <td><%= reserva.odp %></td>
+10:            <td><%= reserva.ph %></td>
+11:            <td><%= link_to 'Aprovar', '/reserva_aceita/' + reserva.id.to_s</td> %>
+12:            <td><%= link_to 'Editar', edit_reserva_path(reserva) %></td>
+13:            <td><%= link_to 'Deletar', reserva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+14:          </tr>
+15:        <% end %>
+  
+app/views/aceita_reservas/_reserva.html.erb:12: unknown regexp options - td
+app/views/aceita_reservas/_reserva.html.erb:12: unmatched close parenthesis: /td> );@output_buffer.safe_append='
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected '<'
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:14: unknown regexp options - tr
+app/views/aceita_reservas/_reserva.html.erb:17: unterminated string meets end of file
+app/views/aceita_reservas/_reserva.html.erb:17: syntax error, unexpected end-of-input, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:12: unknown regexp options - td
+app/views/aceita_reservas/_reserva.html.erb:12: unmatched close parenthesis: /td> );@output_buffer.safe_append='
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected '<'
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:14: unknown regexp options - tr
+app/views/aceita_reservas/_reserva.html.erb:17: unterminated string meets end of file
+app/views/aceita_reservas/_reserva.html.erb:17: syntax error, unexpected end-of-input, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:12: unknown regexp options - td
+app/views/aceita_reservas/_reserva.html.erb:12: unmatched close parenthesis: /td> );@output_buffer.safe_append='
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected '<'
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:14: unknown regexp options - tr
+app/views/aceita_reservas/_reserva.html.erb:17: unterminated string meets end of file
+app/views/aceita_reservas/_reserva.html.erb:17: syntax error, unexpected end-of-input, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:12: unknown regexp options - td
+app/views/aceita_reservas/_reserva.html.erb:12: unmatched close parenthesis: /td> );@output_buffer.safe_append='
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected '<'
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:14: unknown regexp options - tr
+app/views/aceita_reservas/_reserva.html.erb:17: unterminated string meets end of file
+app/views/aceita_reservas/_reserva.html.erb:17: syntax error, unexpected end-of-input, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:12: unknown regexp options - td
+app/views/aceita_reservas/_reserva.html.erb:12: unmatched close parenthesis: /td> );@output_buffer.safe_append='
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected '<'
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:14: unknown regexp options - tr
+app/views/aceita_reservas/_reserva.html.erb:17: unterminated string meets end of file
+app/views/aceita_reservas/_reserva.html.erb:17: syntax error, unexpected end-of-input, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:12: unknown regexp options - td
+app/views/aceita_reservas/_reserva.html.erb:12: unmatched close parenthesis: /td> );@output_buffer.safe_append='
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected '<'
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:13: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/aceita_reservas/_reserva.html.erb:14: unknown regexp options - tr
+app/views/aceita_reservas/_reserva.html.erb:17: unterminated string meets end of file
+app/views/aceita_reservas/_reserva.html.erb:17: syntax error, unexpected end-of-input, expecting ')'
+app/views/aceita_reservas/show.html.erb:27
+Started GET "/aceitarReservas/1013" for ::1 at 2019-11-25 05:50:51 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1013"}
+  [1m[36mQuadra Load (0.3ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Quarta"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:26:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 1.3ms | Allocations: 284)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 35.5ms | Allocations: 9311)
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 418)
+Completed 200 OK in 160ms (Views: 136.2ms | ActiveRecord: 1.1ms | Allocations: 21402)
+
+
+Started POST "/aceitarReservas" for ::1 at 2019-11-25 05:50:57 -0300
+Processing by AceitaReservasController#set_parametros as JS
+  Parameters: {"authenticity_token"=>"faI9vi4iUs4hrU1kD5fupaIosZ+wjWCGFZtY13Emo1ZMZ/0hdh1rIqyUJWTeXL4STGAAraYBmvv+tsbZdLSmZA==", "post"=>{"quadra"=>"101", "dia"=>"1"}}
+Redirected to http://localhost:3000/aceitarReservas/1011
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 478)
+
+
+Started GET "/aceitarReservas/1011" for ::1 at 2019-11-25 05:50:57 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1011"}
+  [1m[36mQuadra Load (0.3ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.5ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Segunda"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:26:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ? AND 1=1[0m  [["dia", "Segunda"]]
+  ↳ app/views/aceita_reservas/_reserva.html.erb:1
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 4.4ms | Allocations: 905)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 13.8ms | Allocations: 2153)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 119)
+Completed 200 OK in 103ms (Views: 72.7ms | ActiveRecord: 1.7ms | Allocations: 19981)
+
+
+Started GET "/reserva_aceita/1" for ::1 at 2019-11-25 05:50:59 -0300
+Processing by ReservaAceitaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReservaAceitum Load (0.5ms)[0m  [1m[34mSELECT "reserva_aceita".* FROM "reserva_aceita" WHERE "reserva_aceita"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reserva_aceita_controller.rb:68:in `set_reserva_aceitum'
+Completed 404 Not Found in 14ms (ActiveRecord: 3.5ms | Allocations: 2118)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ReservaAceitum with 'id'=1):
+  
+app/controllers/reserva_aceita_controller.rb:68:in `set_reserva_aceitum'
+Started GET "/reserva_aceita/1" for ::1 at 2019-11-25 05:52:29 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ReservaAceitaController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering reserva_aceita/show.html.erb within layouts/application
+  Rendered reserva_aceita/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1489)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 2611)
+
+
+  
+ActionView::Template::Error (undefined method `dono' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Dono:</strong>
+    5:   <%= @reserva_aceitum.dono %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/reserva_aceita/show.html.erb:5
+Started GET "/reserva_aceita/1" for ::1 at 2019-11-25 05:53:06 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ReservaAceitaController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering reserva_aceita/show.html.erb within layouts/application
+  Rendered reserva_aceita/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1255)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1959)
+
+
+  
+ActionView::Template::Error (undefined method `dono' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Dono:</strong>
+    5:   <%= @reserva_aceitum.dono %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/reserva_aceita/show.html.erb:5
+Started GET "/reserva_aceita/1" for ::1 at 2019-11-25 05:54:04 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ReservaAceitaController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering reserva_aceita/show.html.erb within layouts/application
+  Rendered reserva_aceita/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1255)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1959)
+
+
+  
+ActionView::Template::Error (undefined method `dono' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Dono:</strong>
+    5:   <%= @reserva_aceitum.dono %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/reserva_aceita/show.html.erb:5
+Started GET "/aprovar/1" for ::1 at 2019-11-25 05:54:20 -0300
+Processing by ReservaAceitaController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.8ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reserva_aceita_controller.rb:72:in `set_reserva_novo'
+  Rendering reserva_aceita/new.html.erb within layouts/application
+  Rendered reserva_aceita/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3014)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 4.5ms | Allocations: 18500)
+
+
+  
+ActionView::Template::Error (undefined method `esporte' for #<Reserva:0x0000000008503770>):
+    2: 
+    3: <h3>Pedido Selecionado:</h3>
+    4: <p>Feito por:<%= @reserva.criador %></p>
+    5: <p>Esporte:<%= @reserva.esporte %> Naipe:<%= @reserva.naipe %></p>
+    6: <p>Feito por:<%= @reserva.criador %></p>
+    7: 
+    8: <%= render 'form', reserva_aceitum: @reserva_aceitum %>
+  
+app/views/reserva_aceita/new.html.erb:5
+Started GET "/aprovar/1" for ::1 at 2019-11-25 05:54:39 -0300
+Processing by ReservaAceitaController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reserva_aceita_controller.rb:72:in `set_reserva_novo'
+  Rendering reserva_aceita/new.html.erb within layouts/application
+  Rendered reserva_aceita/_form.html.erb (Duration: 142.4ms | Allocations: 5248)
+  Rendered reserva_aceita/new.html.erb within layouts/application (Duration: 152.6ms | Allocations: 5659)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 19.2ms | Allocations: 7017)
+Completed 200 OK in 293ms (Views: 279.7ms | ActiveRecord: 1.8ms | Allocations: 23709)
+
+

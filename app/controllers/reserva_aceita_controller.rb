@@ -1,6 +1,6 @@
 class ReservaAceitaController < ApplicationController
-  before_action :set_reserva_aceitum, only: [:show, :edit, :update, :destroy]
-  before_action :set_reserva, only: [:new]
+  # before_action :set_reserva_aceitum, only: [:show, :edit, :update, :destroy]
+  before_action :set_reserva_novo, only: [:new]
 
   # GET /reserva_aceita
   # GET /reserva_aceita.json
@@ -66,6 +66,10 @@ class ReservaAceitaController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_reserva_aceitum
       @reserva_aceitum = ReservaAceitum.find(params[:id])
+    end
+
+    def set_reserva_novo
+      @reserva = Reserva.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
