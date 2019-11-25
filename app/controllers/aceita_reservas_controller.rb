@@ -1,7 +1,7 @@
 class AceitaReservasController < ApplicationController
 
     def index
-        @reservas = Reserva.all
+        redirect_to '/aceitarReservas/1011'
     end
     # def index
     #     if params[:reservas]
@@ -31,7 +31,28 @@ class AceitaReservasController < ApplicationController
         end
     end
 
+    def new
+        @reserva_aceitum = ReservaAceitum.new
+        @reserva = Reserva.find(params[:id])
+    end
 
+    def create
+        @reserva_aceitum = ReservaAceitum.new()
+        @reserva_aceitum.quadra = @quadra.name
+        @reserva_aceitum.inicio = @reserva.inicio
+        @reserva_aceitum.fim = @reserva.termino
+        @reserva.status = 1
+        @reserva.save
+        respond_to do |format|
+          if @reserva_aceitum.save
+            format.html { redirect_to '/aceitarReservas', notice: 'Reserva aceitum was successfully created.' }
+            format.json { render :show, status: :created, location: @reserva_aceitum }
+          else
+            format.html { render :new }
+            format.json { render json: @reserva_aceitum.errors, status: :unprocessable_entity }
+          end
+        end
+      end
     
     def set_parametros
         @quadra = params[:post][:quadra]
