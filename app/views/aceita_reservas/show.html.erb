@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
 <h1>Filtro</h1>
 <%= form_with url:'/aceitarReservas', scope: "post" do |form| %>
-  <%= form.select :quadra, options_for_select([['Quadra 1', 101], ['Quadra 2', 102], ['Quadra 3',103]]) , {:include_blank => "Escolha uma quadra"}, {class: "form-control"} %>
+  <%= form.select :quadra, options_for_select([['Quadra 1', 101], ['Quadra 2', 102], ['Quadra 3',103], ['Quadra 4',104], ['Quadra 5',105], ['Quadra 6',106], ['Quadra 7',107], ['Quadra 8',108], ['Quadra 9 A',109], ['Quadra 9 B',110], ['Quadra 10 A',111], ['Quadra 10 B',112], ['Velódromo A',113], ['Velódromo B',114], ['Módulo 1',115], ['Módulo 2',116], ['Módulo 3',117], ['Módulo 4',118]]) , {:include_blank => "Escolha uma quadra"}, {class: "form-control"} %>
   <%= form.select :dia, options_for_select([["Segunda",1], ["Terça",2], ["Quarta",3], ["Quinta",4],[ "Sexta",5]]), {:include_blank => "Escolha um dia da semana"}, {class: "form-control"} %>
   <%= form.submit "Filtrar", name: nil, :class => 'botao' %>
 <% end %>
+<div class="mae">
+<div class="filho">
 
 <h1>Reservas</h1>
 
@@ -37,10 +39,11 @@
 <%= link_to 'Nova Reserva', new_reserva_path %>
 <p> </p>
 <%= link_to 'Voltar', laausp_index_path %>
+</div>
 
-
+<div class="filho">
 <% if @dia == 'Segunda' %>
-    <h1>SEGUNDA</h1>
+    <h1 class = 'dia'>SEGUNDA</h1>
     <table class= 'tabela-quadra'>
         <th class="th-quadra"ead>
             <tr>
@@ -118,7 +121,7 @@
         </tbody>
     </table>
     <% elsif @dia = 'Terça' %>
-    <h1>TERÇA</h1>
+    <h1 class = 'dia'>TERÇA</h1>
     <table class= 'tabela-quadra'>
         <th class="th-quadra"ead>
             <tr>
@@ -211,7 +214,7 @@
     
     
     <% elsif @dia = 'Quarta' %>
-    <h1>QUARTA</h1>
+    <h1 class = 'dia'>QUARTA</h1>
     <table class= 'tabela-quadra'>
         <th class="th-quadra"ead>
             <tr>
@@ -301,7 +304,7 @@
         </tbody>
     </table>
     <% elsif @dia = 'Quinta' %>
-    <h1>QUINTA</h1>
+    <h1 class = 'dia'>QUINTA</h1>
     <table class= 'tabela-quadra'>
         <th class="th-quadra"ead>
             <tr>
@@ -391,7 +394,7 @@
         </tbody>
     </table>
     <% else %>
-    <h1>SEXTA</h1>
+    <h1 class = 'dia'>SEXTA</h1>
     <table class= 'tabela-quadra'>
         <th class="th-quadra"ead>
             <tr>
@@ -479,6 +482,8 @@
             </tr>
         </tbody>
     </table>
+    </div>
+    </div>
 <% end %>
 
 
