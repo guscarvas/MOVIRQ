@@ -1,12 +1,18 @@
 // Place all the styles related to the Tabela controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.tabela-quadra{
+.tabela{
+    background-color: #ffff99;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    .tabela-quadra{
     border-spacing: 0;
-}
+    }
 .th-quadra, .td-quadra{
     // min-width: 10ch;
     vertical-align: top;
     border: 1px solid black;
     box-sizing: border-box;
+    }
+
 }
