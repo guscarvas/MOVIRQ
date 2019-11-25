@@ -10,8 +10,7 @@
                                                  <li><%= link_to "Deletar perfil", @user, method: :delete%></li>
                                                  <% if current_user.role == "LAAUSP" %>
                                                  <li><%= link_to "Portal da LAAUSP", laausp_index_path%></li>
-                                                 <%end%>
-                                                 <% elsif current_user.role == "atletica" %>
+                                                 <% else%>
                                                  <li><%= link_to "Portal da Atlética", aaa_index_path%></li>
                                                  <%end%>
                                                  </ul>
