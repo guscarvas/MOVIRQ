@@ -4,5 +4,5 @@ class Quadra < ApplicationRecord
     serialize :ter
     serialize :qua
     serialize :qui
-    serialize :sex    
+    serialize :sex
 end

@@ -30840,6 +30840,7 @@ Processing by TabelaController#index as HTML
 Completed 200 OK in 258ms (Views: 250.7ms | ActiveRecord: 0.9ms | Allocations: 22178)
 
 
+<<<<<<< Updated upstream
 Started GET "/reserva__aceitas" for ::1 at 2019-11-24 23:36:32 -0300
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   
@@ -34845,6 +34846,414 @@ Processing by ReservaAceitaController#new as HTML
 Completed 200 OK in 293ms (Views: 279.7ms | ActiveRecord: 1.8ms | Allocations: 23709)
 
 
+<<<<<<< HEAD
+Started GET "/aprovar/1" for ::1 at 2019-11-25 09:49:19 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ReservaAceitaController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (8.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reserva_aceita_controller.rb:72:in `set_reserva_novo'
+  Rendering reserva_aceita/new.html.erb within layouts/application
+  Rendered reserva_aceita/new.html.erb within layouts/application (Duration: 29.0ms | Allocations: 3017)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 8.4ms | Allocations: 4834)
+
+
+  
+ActionView::Template::Error (undefined method `fim' for #<Reserva:0x000000000d9c8558>):
+    3: <h3>Pedido Selecionado:</h3>
+    4: <p>Feito por:<%= @reserva.criador %></p>
+    5: <p>Esporte:<%= @reserva.modalidade   %>  Naipe:<%= @reserva.naipe %></p>
+    6: <p>Início:<%= @reserva.inicio %> Fim:<%= @reserva.fim %></p>
+    7: 
+    8: <%= render 'form', reserva_aceitum: @reserva_aceitum %>
+    9: 
+  
+app/views/reserva_aceita/new.html.erb:6
+Started GET "/aprovar/1" for ::1 at 2019-11-25 09:49:49 -0300
+Processing by ReservaAceitaController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reserva_aceita_controller.rb:72:in `set_reserva_novo'
+  Rendering reserva_aceita/new.html.erb within layouts/application
+  Rendered reserva_aceita/_form.html.erb (Duration: 18.3ms | Allocations: 1758)
+  Rendered reserva_aceita/new.html.erb within layouts/application (Duration: 26.9ms | Allocations: 2228)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 949)
+Completed 200 OK in 177ms (Views: 160.4ms | ActiveRecord: 0.7ms | Allocations: 14195)
+
+
+  [1m[35m (21.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddQuadraToReservaAceita (20191125140939)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.3ms)[0m  [1m[35mALTER TABLE "reserva_aceita" ADD "quadra" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191125140939"]]
+  [1m[35m (19.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/aceitarReservas" for ::1 at 2019-11-25 11:49:51 -0300
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AceitaReservasController#index as HTML
+  Rendering aceita_reservas/index.html.erb within layouts/application
+  [1m[36mReserva Load (0.5ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/aceita_reservas/_reserva.html.erb:1
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 41.6ms | Allocations: 9795)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/index.html.erb within layouts/application (Duration: 223.6ms | Allocations: 19190)
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 439)
+Completed 200 OK in 2860ms (Views: 2743.7ms | ActiveRecord: 7.4ms | Allocations: 55797)
+
+
+Started POST "/aceitarReservas" for ::1 at 2019-11-25 11:50:00 -0300
+Processing by AceitaReservasController#set_parametros as JS
+  Parameters: {"authenticity_token"=>"bzLQvTJMtVnb6KlM4qjR1urikq+abfUZh+2PA3XR3WNe9xAianOMtVbRwUwzY4FhBKojnYzhD2RswBENcEPYUQ==", "post"=>{"quadra"=>"101", "dia"=>"1"}}
+Redirected to http://localhost:3000/aceitarReservas/1011
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 513)
+
+
+Started GET "/aceitarReservas/1011" for ::1 at 2019-11-25 11:50:00 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1011"}
+  [1m[36mQuadra Load (0.7ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.8ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Segunda"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ? AND 1=1[0m  [["dia", "Segunda"]]
+  ↳ app/views/aceita_reservas/_reserva.html.erb:1
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 14.2ms | Allocations: 752)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 87.0ms | Allocations: 4014)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+Completed 200 OK in 259ms (Views: 169.8ms | ActiveRecord: 4.0ms | Allocations: 23280)
+
+
+Started POST "/aceitarReservas" for ::1 at 2019-11-25 11:50:10 -0300
+Processing by AceitaReservasController#set_parametros as JS
+  Parameters: {"authenticity_token"=>"8FEEJOUVXzXWqz95FVE4zda61xRyvYkWaqtlEHv/LOuekJU7yrXS4yAe9ELlgF1/ZnVas4LwwIlZUYIerextgA==", "post"=>{"quadra"=>"102", "dia"=>"4"}}
+Redirected to http://localhost:3000/aceitarReservas/1024
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 491)
+
+
+Started GET "/aceitarReservas/1024" for ::1 at 2019-11-25 11:50:11 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1024"}
+  [1m[36mQuadra Load (0.3ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 2"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.5ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Quinta"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 27.8ms | Allocations: 1312)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 119)
+Completed 200 OK in 139ms (Views: 106.5ms | ActiveRecord: 1.2ms | Allocations: 11909)
+
+
+Started POST "/aceitarReservas" for ::1 at 2019-11-25 11:50:21 -0300
+Processing by AceitaReservasController#set_parametros as JS
+  Parameters: {"authenticity_token"=>"1w5seffnFFw6B7Z3ZwB1L8tGaTOseV4CAGlMLQw/fh+5z/1m2EeZisyyfUyX0RCde4nklFw0F50zk6sj2iw/dA==", "post"=>{"quadra"=>"101", "dia"=>""}}
+Redirected to http://localhost:3000/aceitarReservas/101
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 488)
+
+
+Started GET "/aceitarReservas/101" for ::1 at 2019-11-25 11:50:21 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Segunda"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms | Allocations: 2315)
+
+
+  
+NoMethodError (undefined method `esportes' for nil:NilClass):
+  
+app/controllers/aceita_reservas_controller.rb:25:in `block in show'
+app/controllers/aceita_reservas_controller.rb:24:in `show'
+Started GET "/aceitarReservas/" for ::1 at 2019-11-25 11:50:30 -0300
+Processing by AceitaReservasController#index as HTML
+  Rendering aceita_reservas/index.html.erb within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/aceita_reservas/_reserva.html.erb:1
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 15.7ms | Allocations: 814)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 2021)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 121)
+Completed 200 OK in 97ms (Views: 95.0ms | ActiveRecord: 0.7ms | Allocations: 11526)
+
+
+Started POST "/aceitarReservas" for ::1 at 2019-11-25 11:50:38 -0300
+Processing by AceitaReservasController#set_parametros as JS
+  Parameters: {"authenticity_token"=>"Cn4+iz+cWpEhz4nt/2afb7S0nft2WDPT/jb16ZoQE+w7u/4UZ6Njfaz24e0urc/YWvwsyWDUya4VG2vnn4IW3g==", "post"=>{"quadra"=>"101", "dia"=>"1"}}
+Redirected to http://localhost:3000/aceitarReservas/1011
+Completed 200 OK in 11ms (ActiveRecord: 0.0ms | Allocations: 476)
+
+
+Started GET "/aceitarReservas/1011" for ::1 at 2019-11-25 11:50:38 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1011"}
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Segunda"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  [1m[36mReserva Load (0.5ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ? AND 1=1[0m  [["dia", "Segunda"]]
+  ↳ app/views/aceita_reservas/_reserva.html.erb:1
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 4.6ms | Allocations: 742)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 20.2ms | Allocations: 2006)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 119)
+Completed 200 OK in 106ms (Views: 87.9ms | ActiveRecord: 1.9ms | Allocations: 12711)
+
+
+Started POST "/aceitarReservas" for ::1 at 2019-11-25 11:50:47 -0300
+Processing by AceitaReservasController#set_parametros as JS
+  Parameters: {"authenticity_token"=>"n1W+14Q0l1GEpAbcxwuJKaTE6/RgIjaYP2u82YLgpTzxlC/Iq5Qah3IRzec32uybFAtmU5BvfwcMkVvXVPPkVw==", "post"=>{"quadra"=>"101", "dia"=>"2"}}
+Redirected to http://localhost:3000/aceitarReservas/1012
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 504)
+
+
+Started GET "/aceitarReservas/1012" for ::1 at 2019-11-25 11:50:47 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1012"}
+  [1m[36mQuadra Load (0.5ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (1.3ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Terça"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  [1m[36mReserva Load (1.3ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ? AND 1=1[0m  [["dia", "Terça"]]
+  ↳ app/views/aceita_reservas/_reserva.html.erb:1
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 30.0ms | Allocations: 742)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 38.2ms | Allocations: 2006)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 119)
+Completed 200 OK in 161ms (Views: 141.0ms | ActiveRecord: 3.5ms | Allocations: 12698)
+
+
+Started GET "/aceitarReservas/1012" for ::1 at 2019-11-25 11:52:53 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1012"}
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Terça"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  [1m[36mReserva Load (0.5ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ? AND 1=1[0m  [["dia", "Terça"]]
+  ↳ app/views/aceita_reservas/_reserva.html.erb:1
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 18.7ms | Allocations: 750)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 56.7ms | Allocations: 8053)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 179)
+Completed 200 OK in 284ms (Views: 164.1ms | ActiveRecord: 9.4ms | Allocations: 36007)
+
+
+Started POST "/aceitarReservas" for ::1 at 2019-11-25 11:53:21 -0300
+Processing by AceitaReservasController#set_parametros as JS
+  Parameters: {"authenticity_token"=>"QgUAOa+3N4xef+Rynnz6OpgutE3+E16E5K8XNBjw2+VzwMCm94gOYNNGjHJPt6qNdmYFf+ifpPkPgok6HWLe1w==", "post"=>{"quadra"=>"102", "dia"=>"1"}}
+Redirected to http://localhost:3000/aceitarReservas/1021
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 472)
+
+
+Started GET "/aceitarReservas/1021" for ::1 at 2019-11-25 11:53:22 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1021"}
+  [1m[36mQuadra Load (0.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 2"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.5ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Segunda"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  [1m[36mReserva Load (0.5ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ? AND 1=1[0m  [["dia", "Segunda"]]
+  ↳ app/views/aceita_reservas/_reserva.html.erb:1
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 3.6ms | Allocations: 742)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 34.0ms | Allocations: 2007)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 119)
+Completed 200 OK in 220ms (Views: 155.4ms | ActiveRecord: 2.1ms | Allocations: 12689)
+
+
+Started POST "/aceitarReservas" for ::1 at 2019-11-25 11:53:32 -0300
+Processing by AceitaReservasController#set_parametros as JS
+  Parameters: {"authenticity_token"=>"O8TqJSkZNkmNm7VcFegPvMqwCi+6w60o8BKy8ZpmRkdVBXs6Brm7n3sufmflOWoOen+HiEqO5LfD6FX/THUHLA==", "post"=>{"quadra"=>"101", "dia"=>"3"}}
+Redirected to http://localhost:3000/aceitarReservas/1013
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 504)
+
+
+Started GET "/aceitarReservas/1013" for ::1 at 2019-11-25 11:53:32 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1013"}
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Quarta"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 53.4ms | Allocations: 1311)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 119)
+Completed 200 OK in 248ms (Views: 209.3ms | ActiveRecord: 1.0ms | Allocations: 11911)
+
+
+Started POST "/aceitarReservas" for ::1 at 2019-11-25 11:53:49 -0300
+Processing by AceitaReservasController#set_parametros as JS
+  Parameters: {"authenticity_token"=>"7hn5yqnESCOu/7Rinmaa3K0dGOcHDEVPTrAMHf9BcmaA2GjVhmTF9VhKf1lut/9uHdKVQPdBDNB9SusTKVIzDQ==", "post"=>{"quadra"=>"101", "dia"=>"1"}}
+Redirected to http://localhost:3000/aceitarReservas/1011
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 498)
+
+
+Started GET "/aceitarReservas/1011" for ::1 at 2019-11-25 11:53:49 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1011"}
+  [1m[36mQuadra Load (0.3ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.6ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Segunda"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  [1m[36mReserva Load (2.0ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ? AND 1=1[0m  [["dia", "Segunda"]]
+  ↳ app/views/aceita_reservas/_reserva.html.erb:1
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 66.0ms | Allocations: 742)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 77.8ms | Allocations: 2006)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 119)
+Completed 200 OK in 224ms (Views: 192.3ms | ActiveRecord: 3.6ms | Allocations: 12707)
+
+
+Started POST "/aceitarReservas" for ::1 at 2019-11-25 11:54:15 -0300
+Processing by AceitaReservasController#set_parametros as JS
+  Parameters: {"authenticity_token"=>"qyjxuKbZ12rjzBeqendYh2vEFHOX6xGlpV3nK9QddITF6WCniXlavBV53JGKpj012wuZ1GemWDqWpwAlAg417w==", "post"=>{"quadra"=>"101", "dia"=>"2"}}
+Redirected to http://localhost:3000/aceitarReservas/1012
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 502)
+
+
+Started GET "/aceitarReservas/1012" for ::1 at 2019-11-25 11:54:15 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1012"}
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.8ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Terça"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  [1m[36mReserva Load (1.7ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ? AND 1=1[0m  [["dia", "Terça"]]
+  ↳ app/views/aceita_reservas/_reserva.html.erb:1
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 26.4ms | Allocations: 742)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 43.5ms | Allocations: 2006)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 119)
+Completed 200 OK in 165ms (Views: 136.9ms | ActiveRecord: 3.3ms | Allocations: 12710)
+
+
+Started POST "/aceitarReservas" for ::1 at 2019-11-25 11:54:20 -0300
+Processing by AceitaReservasController#set_parametros as JS
+  Parameters: {"authenticity_token"=>"UoTp/UjlcXdAtlictNNloZQuPqlaoS/PM+ySZOuYGRM8RXjiZ0X8obYDk6dEAgATJOGzDqrsZlAAFnVqPYtYeA==", "post"=>{"quadra"=>"101", "dia"=>"3"}}
+Redirected to http://localhost:3000/aceitarReservas/1013
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 502)
+
+
+Started GET "/aceitarReservas/1013" for ::1 at 2019-11-25 11:54:20 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1013"}
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.5ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Quarta"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 31.1ms | Allocations: 1311)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 119)
+Completed 200 OK in 169ms (Views: 140.2ms | ActiveRecord: 1.9ms | Allocations: 11908)
+
+
+Started GET "/aceitarReservas/1013" for ::1 at 2019-11-25 11:55:56 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1013"}
+  [1m[36mQuadra Load (0.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Quarta"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 1.0ms | Allocations: 250)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 50.9ms | Allocations: 9640)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 418)
+Completed 200 OK in 320ms (Views: 212.0ms | ActiveRecord: 11.5ms | Allocations: 31335)
+
+
+Started GET "/aceitarReservas/1013" for ::1 at 2019-11-25 11:56:36 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1013"}
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (5.9ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Quarta"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 1.4ms | Allocations: 250)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 41.8ms | Allocations: 3624)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 361)
+Completed 200 OK in 246ms (Views: 160.3ms | ActiveRecord: 6.8ms | Allocations: 15605)
+
+
+Started POST "/aceitarReservas" for ::1 at 2019-11-25 11:56:44 -0300
+Processing by AceitaReservasController#set_parametros as JS
+  Parameters: {"authenticity_token"=>"xG2crbp5riIMa59wT1BF3Ip5xp6ccWJ4Rrg6kEJZes31qFwy4kaXzoFS93CemxVrZDF3rIr9mAWtlaSeR8t//w==", "post"=>{"quadra"=>"101", "dia"=>"3"}}
+Redirected to http://localhost:3000/aceitarReservas/1013
+Completed 200 OK in 19ms (ActiveRecord: 0.0ms | Allocations: 477)
+
+
+Started GET "/aceitarReservas/1013" for ::1 at 2019-11-25 11:56:45 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1013"}
+  [1m[36mQuadra Load (0.5ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.9ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Quarta"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 45.1ms | Allocations: 1316)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 119)
+Completed 200 OK in 151ms (Views: 123.0ms | ActiveRecord: 1.7ms | Allocations: 11914)
+
+
+Started GET "/aceitarReservas/1013" for ::1 at 2019-11-25 11:58:26 -0300
+Processing by AceitaReservasController#show as HTML
+  Parameters: {"id"=>"1013"}
+  [1m[36mQuadra Load (0.5ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."name" = ? LIMIT ?[0m  [["name", "Quadra 1"], ["LIMIT", 1]]
+  ↳ app/controllers/aceita_reservas_controller.rb:21:in `show'
+  [1m[36mReserva Load (0.7ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."dia" = ?[0m  [["dia", "Quarta"]]
+  ↳ app/controllers/aceita_reservas_controller.rb:24:in `show'
+  Rendering aceita_reservas/show.html.erb within layouts/application
+  Rendered aceita_reservas/_reserva.html.erb (Duration: 1.4ms | Allocations: 250)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered aceita_reservas/show.html.erb within layouts/application (Duration: 52.9ms | Allocations: 3626)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 361)
+Completed 200 OK in 265ms (Views: 191.3ms | ActiveRecord: 2.0ms | Allocations: 15602)
+
+
+=======
 Started GET "/" for ::1 at 2019-11-25 09:59:52 -0300
   [1m[35m (42.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -43571,6 +43980,78 @@ Completed 200 OK in 116ms (Views: 101.5ms | ActiveRecord: 0.8ms | Allocations: 1
 Started GET "/packs/js/application-194245500b690b756f5a.js" for ::1 at 2019-11-25 11:37:22 -0300
   
 ActionController::RoutingError (No route matches [GET] "/packs/js/application-194245500b690b756f5a.js"):
+=======
+Started GET "/" for ::1 at 2019-11-25 01:39:02 -0200
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 361)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /mnt/c/Users/João Menehini/Desktop/SI/MOVIRQ/public/packs
+[Webpacker] /home/meneghini/.rbenv/versions/2.6.5/bin/ruby: warning: shebang line ending with \r may cause problems
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 33.7ms | Allocations: 4349)
+Completed 200 OK in 9243ms (Views: 9225.7ms | ActiveRecord: 1.6ms | Allocations: 78057)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-25 01:39:21 -0200
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2308)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.0ms | Allocations: 671)
+Completed 200 OK in 62ms (Views: 56.7ms | ActiveRecord: 0.4ms | Allocations: 9635)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 01:39:23 -0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"0bot2pHuC1SjfDQ8x9Lx7M/+yb2vCpmUFZ09wvVN8iFqKCY9+h+IOAMXFtUb0xpCvvT4vKYv9rS4etUcQE8vRA==", "session"=>{"email"=>"meneghinijoao@usp.br", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "meneghinijoao@usp.br"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 375ms (ActiveRecord: 2.2ms | Allocations: 6265)
+
+
+Started GET "/users/6" for ::1 at 2019-11-25 01:39:24 -0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 14.0ms | Allocations: 993)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 122)
+Completed 200 OK in 126ms (Views: 115.5ms | ActiveRecord: 2.3ms | Allocations: 8937)
+
+
+Started GET "/users/6/edit" for ::1 at 2019-11-25 01:39:30 -0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `correct_user?'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1803)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 122)
+Completed 200 OK in 53ms (Views: 40.0ms | ActiveRecord: 0.8ms | Allocations: 8985)
+
+
+Started GET "/routes" for ::1 at 2019-11-25 01:39:38 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+>>>>>>> Stashed changes
   
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
@@ -43602,6 +44083,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/users" for ::1 at 2019-11-25 11:38:13 -0300
 Processing by UsersController#index as HTML
   Rendering users/index.html.erb within layouts/application
@@ -43661,6 +44143,23 @@ Completed 200 OK in 116ms (Views: 110.3ms | ActiveRecord: 0.3ms | Allocations: 1
 Started GET "/packs/js/application-194245500b690b756f5a.js" for ::1 at 2019-11-25 11:38:15 -0300
   
 ActionController::RoutingError (No route matches [GET] "/packs/js/application-194245500b690b756f5a.js"):
+=======
+Started GET "/rails/info/routes?path=tabela" for ::1 at 2019-11-25 01:39:43 -0200
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"tabela"}
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 3426)
+
+
+Started GET "/rails/info/routes?path=tabela" for ::1 at 2019-11-25 01:39:43 -0200
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"tabela"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1292)
+
+
+Started GET "/tabela/index" for ::1 at 2019-11-25 01:40:01 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/tabela/index"):
+>>>>>>> Stashed changes
   
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
@@ -43692,6 +44191,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< Updated upstream
 Started GET "/aaa/index" for ::1 at 2019-11-25 11:38:27 -0300
 Processing by AaaController#index as HTML
   Rendering aaa/index.html.erb within layouts/application
@@ -43736,6 +44236,7 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2019-11-25 11:57:00 -0300
 Started GET "/" for ::1 at 2019-11-25 11:57:00 -0300
   [1m[35m (22.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
@@ -45965,3 +46466,20 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+=======
+>>>>>>> master
+=======
+Started GET "/tabela" for ::1 at 2019-11-25 01:40:07 -0200
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 49.7ms | Allocations: 18921)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.1ms | Allocations: 965)
+Completed 200 OK in 110ms (Views: 93.1ms | ActiveRecord: 3.3ms | Allocations: 27150)
+
+
+>>>>>>> Stashed changes
+>>>>>>> 660aa59c1042a3ed1cc7a25711d670186ed02e80
