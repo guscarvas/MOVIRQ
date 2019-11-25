@@ -1,0 +1,37 @@
+<%= form_for @user do |f| %>
+            <% if @user.errors.any? %>
+            <div id="error_explanation">
+                        <div class="alert-error">
+                                   O formulário contém <%= pluralize(@user.errors.count, "erro") %>.
+                        </div>
+                        <ul>
+                                   <% @user.errors.full_messages.each do |msg| %>
+                                   <li><%= msg %></li>
+                                   <% end %>
+                        </ul>
+            </div>
+<% end %>
+            <div class="field">
+                        <%= f.label :Nome %>
+                        <%= f.text_field :name, :class => 'caixa-texto' %>
+            </div>
+            <div class="field">
+                        <%= f.label :email %>
+                        <%= f.email_field :email, :class => 'caixa-texto' %>
+            </div>
+            <div class="field">
+                        <%= f.label :senha %>
+                        <%= f.password_field :password, :class => 'caixa-texto' %>
+            </div>
+            <div class="field">
+                        <%= f.label :'Confirme sua Senha' %>
+                        <%= f.password_field :password_confirmation, :class => 'caixa-texto' %>
+            </div>
+            <div class="actions">
+                        <%= f.submit "Cadastrar", :class => 'botao'%>
+            </div>
+<% end %>
+<ul>
+            <li><%= link_to "Editar", edit_user_path(current_user) %></li>
+            <li><%= link_to "Deletar", @user, method: :delete%></li>
+</ul>

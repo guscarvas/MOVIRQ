@@ -29275,3 +29275,608 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (12.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuadras (20191124233055)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (28.7ms)[0m  [1m[35mCREATE TABLE "quadras" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "ordem" integer, "atual" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191124233055"]]
+  [1m[35m (43.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddArraysToQuadra (20191124233140)
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddArraysToQuadra (20191124233140)
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddArraysToQuadra (20191124233140)
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddArraysToQuadra (20191124233140)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (84.9ms)[0m  [1m[35mALTER TABLE "quadras" ADD "esportes" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191124233140"]]
+  [1m[35m (35.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/quadras" for ::1 at 2019-11-24 21:04:30 -0300
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  Rendered quadras/index.html.erb within layouts/application (Duration: 45.0ms | Allocations: 2238)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.0ms | Allocations: 5370)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:         </tr>
+     9:     </thead>
+    10:     <tbody>
+    11:         <% @users.each do |user| %>
+    12:             <tr>
+    13:             <td><%= user.name %></td>
+    14:             <td><%= user.email %></td>
+  
+app/views/quadras/index.html.erb:11
+Started GET "/quadras" for ::1 at 2019-11-24 21:05:35 -0300
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.7ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 34.7ms | Allocations: 1318)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in C:/Users/Gustavo/Desktop/POLI/VI SEM/SI/MOVIRQ/public/packs
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 68.4ms | Allocations: 4116)
+Completed 200 OK in 18472ms (Views: 18457.6ms | ActiveRecord: 8.6ms | Allocations: 107853)
+
+
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/quadras" for ::1 at 2019-11-24 21:09:34 -0300
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.3ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1527)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 27.7ms | Allocations: 4052)
+Completed 200 OK in 344ms (Views: 303.9ms | ActiveRecord: 2.4ms | Allocations: 34558)
+
+
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/users" for 127.0.0.1 at 2019-11-24 21:11:58 -0300
+  [1m[35m (12.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 59.4ms | Allocations: 5956)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 11.0ms | Allocations: 1496)
+Completed 200 OK in 449ms (Views: 378.6ms | ActiveRecord: 5.7ms | Allocations: 38118)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-24 21:12:00 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 661)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 579)
+Completed 200 OK in 91ms (Views: 90.1ms | ActiveRecord: 0.7ms | Allocations: 9866)
+
+
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.3ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra teste"], ["ordem", 1], ["atual", 1], ["created_at", "2019-11-25 00:14:22.101519"], ["updated_at", "2019-11-25 00:14:22.101519"], ["esportes", "---\n- basquete\n- futebol\n"]]
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.0ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra teste"], ["ordem", 1], ["atual", 1], ["created_at", "2019-11-25 00:15:09.448044"], ["updated_at", "2019-11-25 00:15:09.448044"], ["esportes", "---\n- basquete\n- futebol\n"]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "teste@usp.br"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "teste"], ["email", "teste@usp.br"], ["created_at", "2019-11-25 00:15:09.778802"], ["updated_at", "2019-11-25 00:15:09.778802"], ["password_digest", "$2a$12$RbAkqrFrXeBd0UGXEKwDp.5w6YX7eILKr/TChhCjlJ/eHTgeFN3ca"], ["role", 1]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/quadras" for ::1 at 2019-11-24 21:15:32 -0300
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 370.2ms | Allocations: 151629)
+Completed 500 Internal Server Error in 439ms (ActiveRecord: 1.9ms | Allocations: 154775)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x000000000be24b30>:0x000000000be26d18>
+Did you mean?  super):
+    12:             <tr>
+    13:             <td><%= quadra.name %></td>
+    14:             <td><%= quadra.esportes[1] %></td>
+    15:             <td><%= link_to "Visualizar", user %></td>
+    16:             </tr>
+    17:         <%end%>
+    18:     </tbody>
+  
+app/views/quadras/index.html.erb:15
+app/views/quadras/index.html.erb:11
+Started GET "/users" for ::1 at 2019-11-24 21:15:48 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 5530)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 10.3ms | Allocations: 1491)
+Completed 200 OK in 418ms (Views: 377.6ms | ActiveRecord: 4.1ms | Allocations: 36179)
+
+
+Started GET "/quadras" for ::1 at 2019-11-24 21:16:00 -0300
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (1.0ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 1006)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.3ms | Allocations: 816)
+Completed 200 OK in 126ms (Views: 120.1ms | ActiveRecord: 1.6ms | Allocations: 11573)
+
+
+Started GET "/quadras" for ::1 at 2019-11-24 21:16:12 -0300
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.5ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 953)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 816)
+Completed 200 OK in 105ms (Views: 98.9ms | ActiveRecord: 0.8ms | Allocations: 11521)
+
+
+Started GET "/quadras" for ::1 at 2019-11-24 21:16:19 -0300
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.3ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 970)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 817)
+Completed 200 OK in 103ms (Views: 98.6ms | ActiveRecord: 0.5ms | Allocations: 11542)
+
+
+Started GET "/quadras" for ::1 at 2019-11-24 21:17:35 -0300
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  Rendered quadras/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1108)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 2354)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> Quadras </h1>
+<table class= 'tabela-users'>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>esportes</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @quadras.each do |quadra| %>
+            <tr>
+            <td><%= quadra.name %></td>
+            <td><% quadra.esportes.each do |esporte| %>
+                <%= esporte %>
+            </td>
+            <td><%= link_to "Visualizar", quadra %></td>
+            </tr>
+        <%end%>
+    </tbody>
+</table>
+):
+1:    <h1> Quadras </h1>
+2:    <table class= 'tabela-users'>
+3:        <thead>
+4:            <tr>
+5:                <th>Nome</th>
+6:                <th>esportes</th>
+7:                <th></th>
+8:            </tr>
+9:        </thead>
+10:        <tbody>
+11:            <% @quadras.each do |quadra| %>
+12:                <tr>
+13:                <td><%= quadra.name %></td>
+14:                <td><% quadra.esportes.each do |esporte| %>
+15:                    <%= esporte %>
+16:                </td>
+17:                <td><%= link_to "Visualizar", quadra %></td>
+18:                </tr>
+19:            <%end%>
+20:        </tbody>
+21:    </table>
+  
+app/views/quadras/index.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/quadras/index.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/quadras/index.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/quadras/index.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/quadras/index.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/quadras/index.html.erb:23: syntax error, unexpected end-of-input, expecting end
+Started GET "/quadras" for ::1 at 2019-11-24 21:17:51 -0300
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.5ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 1013)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 816)
+Completed 200 OK in 108ms (Views: 102.0ms | ActiveRecord: 0.7ms | Allocations: 11583)
+
+
+Started GET "/quadras" for ::1 at 2019-11-24 21:18:40 -0300
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (2.1ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 1006)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 818)
+Completed 200 OK in 119ms (Views: 112.0ms | ActiveRecord: 2.4ms | Allocations: 11572)
+
+
+Started GET "/quadras" for ::1 at 2019-11-24 21:18:58 -0300
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 1011)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 816)
+Completed 200 OK in 123ms (Views: 110.8ms | ActiveRecord: 0.6ms | Allocations: 11571)
+
+
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDiasToQuadra (20191125002147)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "quadras" ADD "seg" varchar[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "quadras" ADD "ter" varchar[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "quadras" ADD "qua" varchar[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "quadras" ADD "qui" varchar[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "quadras" ADD "sex" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191125002147"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mQuadra Destroy (14.2ms)[0m  [1m[31mDELETE FROM "quadras"[0m
+Started GET "/quadras" for ::1 at 2019-11-24 21:28:57 -0300
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.3ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1864)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 25.9ms | Allocations: 4052)
+Completed 200 OK in 388ms (Views: 336.3ms | ActiveRecord: 1.9ms | Allocations: 35010)
+
+
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.9ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 1"], ["ordem", 1], ["atual", 1], ["created_at", "2019-11-25 00:43:07.611136"], ["updated_at", "2019-11-25 00:43:07.611136"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.0ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 2"], ["ordem", 2], ["atual", 1], ["created_at", "2019-11-25 00:43:07.657952"], ["updated_at", "2019-11-25 00:43:07.657952"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.8ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 3"], ["ordem", 3], ["atual", 1], ["created_at", "2019-11-25 00:43:07.679883"], ["updated_at", "2019-11-25 00:43:07.679883"], ["esportes", "---\n- Futsal\n- Handebol\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (24.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.9ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 4"], ["ordem", 4], ["atual", 1], ["created_at", "2019-11-25 00:43:07.712943"], ["updated_at", "2019-11-25 00:43:07.712943"], ["esportes", "---\n- Futsal\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (28.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.0ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 5"], ["ordem", 5], ["atual", 1], ["created_at", "2019-11-25 00:43:07.749116"], ["updated_at", "2019-11-25 00:43:07.749116"], ["esportes", "---\n- Futsal\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.9ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 6"], ["ordem", 6], ["atual", 1], ["created_at", "2019-11-25 00:43:07.782542"], ["updated_at", "2019-11-25 00:43:07.782542"], ["esportes", "---\n- Futsal\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (17.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.0ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 7"], ["ordem", 7], ["atual", 1], ["created_at", "2019-11-25 00:43:07.808441"], ["updated_at", "2019-11-25 00:43:07.808441"], ["esportes", "---\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (18.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.0ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 8"], ["ordem", 8], ["atual", 1], ["created_at", "2019-11-25 00:43:07.835220"], ["updated_at", "2019-11-25 00:43:07.835220"], ["esportes", "---\n- Vôlei\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (17.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.9ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 9 A"], ["ordem", 9], ["atual", 1], ["created_at", "2019-11-25 00:43:07.860468"], ["updated_at", "2019-11-25 00:43:07.860468"], ["esportes", "---\n- Futsal\n- Handebol\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (22.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.8ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 9 B"], ["ordem", 10], ["atual", 1], ["created_at", "2019-11-25 00:43:07.891252"], ["updated_at", "2019-11-25 00:43:07.891252"], ["esportes", "---\n- Futsal\n- Handebol\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (28.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.9ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 10 A"], ["ordem", 11], ["atual", 1], ["created_at", "2019-11-25 00:43:07.930597"], ["updated_at", "2019-11-25 00:43:07.930597"], ["esportes", "---\n- Futsal\n- Handebol\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (17.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.8ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 10 B"], ["ordem", 12], ["atual", 1], ["created_at", "2019-11-25 00:43:07.956444"], ["updated_at", "2019-11-25 00:43:07.956444"], ["esportes", "---\n- Futsal\n- Handebol\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (23.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.0ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Velódromo A"], ["ordem", 13], ["atual", 1], ["created_at", "2019-11-25 00:43:07.988487"], ["updated_at", "2019-11-25 00:43:07.988487"], ["esportes", "---\n- Futsal\n- Handebol\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.0ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Velódromo B"], ["ordem", 14], ["atual", 1], ["created_at", "2019-11-25 00:43:08.009318"], ["updated_at", "2019-11-25 00:43:08.009318"], ["esportes", "---\n- Futsal\n- Handebol\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.1ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Módulo 1"], ["ordem", 15], ["atual", 1], ["created_at", "2019-11-25 00:43:08.029941"], ["updated_at", "2019-11-25 00:43:08.029941"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.0ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Módulo 2"], ["ordem", 16], ["atual", 1], ["created_at", "2019-11-25 00:43:08.061424"], ["updated_at", "2019-11-25 00:43:08.061424"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (32.2ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Módulo 3"], ["ordem", 17], ["atual", 1], ["created_at", "2019-11-25 00:43:08.081912"], ["updated_at", "2019-11-25 00:43:08.081912"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.9ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Módulo 4"], ["ordem", 18], ["atual", 1], ["created_at", "2019-11-25 00:43:08.133829"], ["updated_at", "2019-11-25 00:43:08.133829"], ["esportes", "---\n- Vôlei\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "laausp@usp.br"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "LAAUSP"], ["email", "laausp@usp.br"], ["created_at", "2019-11-25 00:43:08.467652"], ["updated_at", "2019-11-25 00:43:08.467652"], ["password_digest", "$2a$12$UBp.Y5lZRjdjTFwiUeB7Tu1XDRkxKpwLdrVY4yWo2rTjP.mw0FqB2"], ["role", 0]]
+  [1m[35m (25.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/quadras" for ::1 at 2019-11-24 21:43:35 -0300
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (2.5ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 64.5ms | Allocations: 10869)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 37.2ms | Allocations: 3987)
+Completed 200 OK in 387ms (Views: 343.9ms | ActiveRecord: 6.8ms | Allocations: 43943)
+
+
+Started GET "/users" for ::1 at 2019-11-24 21:47:36 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 26.7ms | Allocations: 5716)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 937)
+Completed 200 OK in 131ms (Views: 111.5ms | ActiveRecord: 3.7ms | Allocations: 18206)
+
+
+Started GET "/users/8" for ::1 at 2019-11-24 21:47:39 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 765)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 551)
+Completed 200 OK in 77ms (Views: 64.3ms | ActiveRecord: 0.5ms | Allocations: 10695)
+
+
+Started GET "/quadras" for ::1 at 2019-11-24 21:52:22 -0300
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.9ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 46.4ms | Allocations: 9926)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 13.7ms | Allocations: 823)
+Completed 200 OK in 175ms (Views: 161.6ms | ActiveRecord: 4.1ms | Allocations: 20877)
+
+
+Started GET "/quadras/3" for ::1 at 2019-11-24 21:52:24 -0300
+Processing by QuadrasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/quadras_controller.rb:9:in `show'
+Completed 404 Not Found in 9ms (ActiveRecord: 0.3ms | Allocations: 1115)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+  
+app/controllers/quadras_controller.rb:9:in `show'
+Started GET "/quadras/3" for ::1 at 2019-11-24 21:52:53 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuadrasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuadra Load (0.5ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/quadras_controller.rb:9:in `show'
+  Rendering quadras/show.html.erb within layouts/application
+  Rendered quadras/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 458)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 14.2ms | Allocations: 2731)
+Completed 200 OK in 123ms (Views: 88.1ms | ActiveRecord: 5.9ms | Allocations: 21055)
+
+
+Started GET "/quadras/3" for ::1 at 2019-11-24 21:53:27 -0300
+Processing by QuadrasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/quadras_controller.rb:9:in `show'
+  Rendering quadras/show.html.erb within layouts/application
+  Rendered quadras/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 446)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.3ms | Allocations: 838)
+Completed 200 OK in 145ms (Views: 124.6ms | ActiveRecord: 0.9ms | Allocations: 11548)
+
+
+Started GET "/quadras/3" for ::1 at 2019-11-24 21:57:17 -0300
+Processing by QuadrasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/quadras_controller.rb:9:in `show'
+  Rendering quadras/show.html.erb within layouts/application
+  Rendered quadras/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1076)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.2ms | Allocations: 845)
+Completed 200 OK in 148ms (Views: 129.8ms | ActiveRecord: 0.7ms | Allocations: 12180)
+
+
+Started GET "/quadras/" for ::1 at 2019-11-24 21:57:28 -0300
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.7ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 2538)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 581)
+Completed 200 OK in 107ms (Views: 96.5ms | ActiveRecord: 1.0ms | Allocations: 11865)
+
+
+Started GET "/quadras/4" for ::1 at 2019-11-24 21:57:30 -0300
+Processing by QuadrasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuadra Load (0.3ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/quadras_controller.rb:9:in `show'
+  Rendering quadras/show.html.erb within layouts/application
+  Rendered quadras/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 302)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 600)
+Completed 200 OK in 71ms (Views: 61.6ms | ActiveRecord: 0.9ms | Allocations: 10030)
+
+
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mQuadra Destroy (16.1ms)[0m  [1m[31mDELETE FROM "quadras"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.9ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 1"], ["ordem", 1], ["atual", 1], ["created_at", "2019-11-25 01:01:01.417134"], ["updated_at", "2019-11-25 01:01:01.417134"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- POLI - BM\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.8ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 2"], ["ordem", 2], ["atual", 1], ["created_at", "2019-11-25 01:01:01.439058"], ["updated_at", "2019-11-25 01:01:01.439058"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.8ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 3"], ["ordem", 3], ["atual", 1], ["created_at", "2019-11-25 01:01:01.460258"], ["updated_at", "2019-11-25 01:01:01.460258"], ["esportes", "---\n- Futsal\n- Handebol\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.0ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 4"], ["ordem", 4], ["atual", 1], ["created_at", "2019-11-25 01:01:01.481304"], ["updated_at", "2019-11-25 01:01:01.481304"], ["esportes", "---\n- Futsal\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.8ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 5"], ["ordem", 5], ["atual", 1], ["created_at", "2019-11-25 01:01:01.502228"], ["updated_at", "2019-11-25 01:01:01.502228"], ["esportes", "---\n- Futsal\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.1ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 6"], ["ordem", 6], ["atual", 1], ["created_at", "2019-11-25 01:01:01.522312"], ["updated_at", "2019-11-25 01:01:01.522312"], ["esportes", "---\n- Futsal\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.9ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 7"], ["ordem", 7], ["atual", 1], ["created_at", "2019-11-25 01:01:01.545357"], ["updated_at", "2019-11-25 01:01:01.545357"], ["esportes", "---\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.0ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 8"], ["ordem", 8], ["atual", 1], ["created_at", "2019-11-25 01:01:01.565806"], ["updated_at", "2019-11-25 01:01:01.565806"], ["esportes", "---\n- Vôlei\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.9ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 9 A"], ["ordem", 9], ["atual", 1], ["created_at", "2019-11-25 01:01:01.586572"], ["updated_at", "2019-11-25 01:01:01.586572"], ["esportes", "---\n- Futsal\n- Handebol\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.3ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 9 B"], ["ordem", 10], ["atual", 1], ["created_at", "2019-11-25 01:01:01.607870"], ["updated_at", "2019-11-25 01:01:01.607870"], ["esportes", "---\n- Futsal\n- Handebol\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (25.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.9ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 10 A"], ["ordem", 11], ["atual", 1], ["created_at", "2019-11-25 01:01:01.641912"], ["updated_at", "2019-11-25 01:01:01.641912"], ["esportes", "---\n- Futsal\n- Handebol\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.0ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 10 B"], ["ordem", 12], ["atual", 1], ["created_at", "2019-11-25 01:01:01.662541"], ["updated_at", "2019-11-25 01:01:01.662541"], ["esportes", "---\n- Futsal\n- Handebol\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.2ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Velódromo A"], ["ordem", 13], ["atual", 1], ["created_at", "2019-11-25 01:01:01.685010"], ["updated_at", "2019-11-25 01:01:01.685010"], ["esportes", "---\n- Futsal\n- Handebol\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.0ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Velódromo B"], ["ordem", 14], ["atual", 1], ["created_at", "2019-11-25 01:01:01.705966"], ["updated_at", "2019-11-25 01:01:01.705966"], ["esportes", "---\n- Futsal\n- Handebol\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.9ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Módulo 1"], ["ordem", 15], ["atual", 1], ["created_at", "2019-11-25 01:01:01.726580"], ["updated_at", "2019-11-25 01:01:01.726580"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.8ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Módulo 2"], ["ordem", 16], ["atual", 1], ["created_at", "2019-11-25 01:01:01.756773"], ["updated_at", "2019-11-25 01:01:01.756773"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.1ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Módulo 3"], ["ordem", 17], ["atual", 1], ["created_at", "2019-11-25 01:01:01.777660"], ["updated_at", "2019-11-25 01:01:01.777660"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.8ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Módulo 4"], ["ordem", 18], ["atual", 1], ["created_at", "2019-11-25 01:01:01.798646"], ["updated_at", "2019-11-25 01:01:01.798646"], ["esportes", "---\n- Vôlei\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/quadras/" for ::1 at 2019-11-24 22:01:38 -0300
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.8ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 25.4ms | Allocations: 10870)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 30.6ms | Allocations: 3987)
+Completed 200 OK in 327ms (Views: 276.0ms | ActiveRecord: 3.1ms | Allocations: 43942)
+
+
+Started GET "/quadras/21" for ::1 at 2019-11-24 22:01:42 -0300
+Processing by QuadrasController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/quadras_controller.rb:9:in `show'
+  Rendering quadras/show.html.erb within layouts/application
+  Rendered quadras/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1092)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 607)
+Completed 200 OK in 68ms (Views: 58.0ms | ActiveRecord: 0.7ms | Allocations: 11111)
+
+

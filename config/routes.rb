@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   delete 'sign_out'  => 'sessions#destroy'
   resources :reservas
   resources :atleticas
+  resources :quadras
   get 'laausp/index'
 
   post 'password/forgot' => 'password#forgot'
