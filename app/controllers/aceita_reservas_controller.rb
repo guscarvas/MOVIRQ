@@ -1,7 +1,7 @@
 class AceitaReservasController < ApplicationController
 
     def index
-        @reservas = Reserva.where(dia: @dia)
+        @reservas = Reserva.all
     end
     # def index
     #     if params[:reservas]
@@ -11,13 +11,29 @@ class AceitaReservasController < ApplicationController
     #     end 
     #   end
     def show
-        @quadra = {101 => 'Quadra 1', 102 => 'Quadra 2', 103=> 'Quadra 3'}
-        @dias = {1 => 'Segunda',2 => 'Terça',3 => 'Quarta', 4 => 'Quinta', 5 => 'Sexta'}
+        @quadraHash = {101 => 'Quadra 1', 102 => 'Quadra 2', 103=> 'Quadra 3'}
+        @diasHash = {1 => 'Segunda',2 => 'Terça',3 => 'Quarta', 4 => 'Quinta', 5 => 'Sexta'}
 
-        puts 5/2
-        @resposta1 = @quadra[params[:id].to_i / 100]
-        @resposta2 = @dias[params[:id].to_i%10]
+        
+        @resposta1 = @quadraHash[params[:id].to_i / 10]
+        
+        @resposta2 = @diasHash[params[:id].to_i%10]
+        @quadra = Quadra.find_by name: @resposta1
+        puts "AAAAAAAAAAAAAA"
+        puts @quadra.esportes
+        lista_undesirables = []
         @reservas = Reserva.where(dia: @resposta2)
+        @reservas.each do |reserva|
+            if @quadra.esportes.include? reserva.modalidade
+            
+            else
+                lista_undesirables.push(reserva.id)
+            end
+        @reservas = @reservas.where.not(id: lista_undesirables)
+
+            
+        end
+        
     end
 
 
