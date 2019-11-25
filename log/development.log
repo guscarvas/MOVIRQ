@@ -58215,3 +58215,502 @@ Completed 200 OK in 203ms (Views: 141.7ms | ActiveRecord: 6.9ms | Allocations: 3
 =======
 >>>>>>> master
 >>>>>>> master
+Started GET "/solicitacao_pontuals" for ::1 at 2019-11-25 14:02:05 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SolicitacaoPontualsController#index as HTML
+  Rendering solicitacao_pontuals/index.html.erb within layouts/application
+  [1m[36mSolicitacaoPontual Load (1.6ms)[0m  [1m[34mSELECT "solicitacao_pontuals".* FROM "solicitacao_pontuals"[0m
+  ↳ app/views/solicitacao_pontuals/index.html.erb:14
+  Rendered solicitacao_pontuals/index.html.erb within layouts/application (Duration: 22.5ms | Allocations: 4339)
+[Webpacker] Compiling…
+Started GET "/" for ::1 at 2019-11-25 14:02:07 -0300
+[Webpacker] Compiled all packs in /Users/cidcarvalho/MOVIRQ/public/packs
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 32.2ms | Allocations: 9281)
+Completed 200 OK in 4623ms (Views: 4601.3ms | ActiveRecord: 5.6ms | Allocations: 81178)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 270)
+Started GET "/" for ::1 at 2019-11-25 14:02:10 -0300
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 22.8ms | Allocations: 8455)
+Completed 200 OK in 53ms (Views: 49.5ms | ActiveRecord: 1.6ms | Allocations: 15782)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 94)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 818)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.3ms | Allocations: 6909)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-25 14:02:12 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+Redirected to http://localhost:3000/users
+Filter chain halted as :block_access rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1020)
+
+
+Started GET "/users" for ::1 at 2019-11-25 14:02:12 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1087)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 789)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.4ms | Allocations: 8125)
+
+
+Started DELETE "/sign_out" for ::1 at 2019-11-25 14:02:15 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"j3M9gNlu7FIyDmj2p5rd4NGZdqVbny9TyIH8xVX8iteVWUBv0q93XkUNZI0bmrgcwn+kV0QWzsq0ICfQNIA4lA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 466)
+
+
+Started GET "/" for ::1 at 2019-11-25 14:02:15 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 100)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 753)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms | Allocations: 6429)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-25 14:02:16 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 2208)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 669)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.2ms | Allocations: 9647)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:02:27 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"voctbfuzC7bgsAEjH7vaApbCWKEtBdZn73X02MbVojYUcFMk2afRQlnEJ/vpZxUXcUBqVXzls0VPkpgJ7lXYjw==", "session"=>{"email"=>"dueiras@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 367ms (ActiveRecord: 0.4ms | Allocations: 1879)
+
+
+Started GET "/users/9" for ::1 at 2019-11-25 14:02:27 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1005)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 217)
+Completed 200 OK in 29ms (Views: 23.9ms | ActiveRecord: 0.4ms | Allocations: 7567)
+
+
+Started DELETE "/sign_out" for ::1 at 2019-11-25 14:02:30 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+jtQB+jXxSBZQq+6Otbf2FRX/aq9Sl2HlM5sth01cKoNygubgi0rbwiDp5e7GF4v10Z5rR0kBt4Hj0sDXs2KVQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 418)
+
+
+Started GET "/" for ::1 at 2019-11-25 14:02:30 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 100)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 728)
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 0.1ms | Allocations: 6401)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-25 14:02:31 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 438)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 668)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.3ms | Allocations: 7319)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:02:39 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"kZCpb2kOgeHaKxCk4yHX010S110PP7v1rZb71NdQQQM7Z9cmSxpbFWNfNnwV/RjGupDlqV7f3tcNcZcF/9A7ug==", "session"=>{"email"=>"dueiras@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 733ms (ActiveRecord: 0.5ms | Allocations: 1701)
+
+
+Started GET "/" for ::1 at 2019-11-25 14:02:40 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 93)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 723)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.1ms | Allocations: 6409)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-25 14:02:46 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 431)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 665)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.2ms | Allocations: 7302)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:02:56 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"pG6TKvq5l/FTwqS9OnVjGhm+a+G/B8d3qRCJnIkOLecOme1j2K1NBeq2gmXMqawP/jxZFe7nolUJ9+VNoY5XXg==", "session"=>{"email"=>"dueia@usp.br", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueia@usp.br"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 2262)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/sign_in" for ::1 at 2019-11-25 14:05:53 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"pG6TKvq5l/FTwqS9OnVjGhm+a+G/B8d3qRCJnIkOLecOme1j2K1NBeq2gmXMqawP/jxZFe7nolUJ9+VNoY5XXg==", "session"=>{"email"=>"dueia@usp.br", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueia@usp.br"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.9ms | Allocations: 4925)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started GET "/sign_in" for ::1 at 2019-11-25 14:05:55 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 451)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 668)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.2ms | Allocations: 7526)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:06:04 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ME/e3KdFVArIUXSFqaOG3hmn86lhuSv0gqq4M8lG9s2auKCVhVGO/nElUl1ff0nL/iXBXTBZTtYiTdTi4caMdA==", "session"=>{"email"=>"dueiras@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 427)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 665)
+Completed 200 OK in 772ms (Views: 20.1ms | ActiveRecord: 1.2ms | Allocations: 13100)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:06:18 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"pEWXvATynj4joDsK0OOYMD3RUckR804xiK0vhyU7HVtTtMwgbghwcXJhMydRLRnHvsDVzrGdFWgb7AgyZsPnpA==", "session"=>{"email"=>"dueiras@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 427)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 665)
+Completed 200 OK in 745ms (Views: 17.4ms | ActiveRecord: 0.3ms | Allocations: 7916)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:06:26 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"FjqZ8aID69bDAv4EXoVeJYeUz9xzkEeD3mYUzTfzT1bhy8JtyPkFmZLD9infS9/SBIVL29P+HNpNJzN4dAu1qQ==", "session"=>{"email"=>"dueiras@gmail.co", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@gmail.co"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 2250)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/sign_in" for ::1 at 2019-11-25 14:07:36 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"FjqZ8aID69bDAv4EXoVeJYeUz9xzkEeD3mYUzTfzT1bhy8JtyPkFmZLD9infS9/SBIVL29P+HNpNJzN4dAu1qQ==", "session"=>{"email"=>"dueiras@gmail.co", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@gmail.co"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 436)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 668)
+Completed 200 OK in 30ms (Views: 20.6ms | ActiveRecord: 0.8ms | Allocations: 10593)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:07:41 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"FHadEqAHbiNpk/aTdCiWPlkj+EIORPmUfvZgohv+Sifjh8aOyv2AbDhS/r715hfJ2jJ8Ra4qos3tt0cXWAaw2A==", "session"=>{"email"=>"dueiras@gmail.co", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@gmail.co"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 427)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 665)
+Completed 200 OK in 23ms (Views: 18.3ms | ActiveRecord: 0.5ms | Allocations: 7844)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:07:57 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"lWNOMyLpaYZ3QC+ZvPqoIekdiIaUHDKWzQ3MhxEyCdNikhWvSBOHySaBJ7Q9NCnWagwMgTRyac9eTOsyUsrzLA==", "session"=>{"email"=>"dueiras@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 382ms (ActiveRecord: 0.9ms | Allocations: 6798)
+
+
+Started GET "/" for ::1 at 2019-11-25 14:07:57 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 102)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 726)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.2ms | Allocations: 6622)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-25 14:08:03 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 431)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 665)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.2ms | Allocations: 7295)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:08:07 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"02UHFutMyqPnatUPet26AqVFKJ+TNuBqPEdP+0IBGS55knlfyVgQV14e89eMAXUXQscaa8LWhUicoCMqaoFjlw==", "session"=>{"email"=>"dueiras@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 374ms (ActiveRecord: 0.3ms | Allocations: 1666)
+
+
+Started GET "/" for ::1 at 2019-11-25 14:08:07 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 93)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 723)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.1ms | Allocations: 6379)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-25 14:08:12 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 431)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 665)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.2ms | Allocations: 7293)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:08:18 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"UGaoXCjBsJNhG4mKUzG2qOMPiEoiFQH0vep9jYmJjj36kdYVCtVqZ9hvr1Kl7Xm9BI26vnP1ZNYdDRFcoQn0hA==", "session"=>{"email"=>"dueira@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueira@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 427)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 665)
+Completed 200 OK in 23ms (Views: 18.6ms | ActiveRecord: 0.4ms | Allocations: 7861)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:08:32 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"7mieRz+deuHuFgOSmmET9/BMH82ySiQR3pu76cAAcLwZmcXbVWeUrr/XC78br5IAc12byhIkf0hN2pxcg/iKQw==", "session"=>{"email"=>"dueiras@mail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 427)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 665)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.3ms | Allocations: 7839)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:08:41 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Gns1uOm2hkDXTXd5ImnetmaC5VozJrWqAxP7xIBObdvtim4kg0xoD4aMf1Sjp19B5ZNhXZNI7vOQUtxxw7aXJA==", "session"=>{"email"=>"dueiras@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 370ms (ActiveRecord: 0.3ms | Allocations: 1651)
+
+
+Started GET "/" for ::1 at 2019-11-25 14:08:42 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 93)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 723)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.1ms | Allocations: 6385)
+
+
+Started GET "/" for ::1 at 2019-11-25 14:09:01 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 102)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.8ms | Allocations: 3116)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.6ms | Allocations: 8982)
+
+
+Started GET "/sign_in" for ::1 at 2019-11-25 14:09:02 -0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 440)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 668)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.2ms | Allocations: 7546)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:09:15 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"RJ9nUytvD8F1NeTpDJLR4DIgM/sCmUGmaM06ZZwC3/vuaBkaCXvVNcxBwjH6Th711aIBD1N5JITIKla0tIKlQg==", "session"=>{"email"=>"dueiras@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 427)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 665)
+Redirected to 
+Completed 500 Internal Server Error in 414ms (Views: 17.3ms | ActiveRecord: 1.1ms | Allocations: 13579)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/sessions_controller.rb:15:in `create'
+Started GET "/sign_in" for ::1 at 2019-11-25 14:09:26 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 440)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 669)
+Completed 200 OK in 45ms (Views: 27.8ms | ActiveRecord: 0.7ms | Allocations: 9935)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:09:38 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"tUtq0fG344UAVobh8iYbGrHR62HHd0vnAvO3OB83KtAfvBSY06M5cbkioDkE+tQPVlPZlZaXLsWiFNvpN7dQaQ==", "session"=>{"email"=>"dueiras@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueiras@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 427)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 665)
+Completed 200 OK in 426ms (Views: 19.0ms | ActiveRecord: 1.4ms | Allocations: 13212)
+
+
+Started POST "/sign_in" for ::1 at 2019-11-25 14:10:01 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Fcl0/awXkWyZBKQmbYmejPS4JjJ0QnuourSP1euYEOTiOC9hxu1/I8jFrAvsRx97d6miNdQsIPEp9ahgqGDqGw==", "session"=>{"email"=>"dueirs@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dueirs@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1598)
+
+
+Started GET "/" for ::1 at 2019-11-25 14:10:01 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 102)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 726)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.2ms | Allocations: 6585)
+
+
