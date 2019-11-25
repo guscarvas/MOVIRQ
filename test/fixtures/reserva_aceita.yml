@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dono: MyString
+  esporte: MyString
+  naipe: MyString
+  inicio: MyString
+  fim: MyString
+
+two:
+  dono: MyString
+  esporte: MyString
+  naipe: MyString
+  inicio: MyString
+  fim: MyString

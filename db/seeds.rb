@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Quadra.delete_all
-@quadra = Quadra.new(name: "Quadra 1", ordem: 1, atual: 1, esportes: ['Vôlei','Basquete'],seg: ['POLI - BM','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'],ter: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'],qua: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'],qui: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'],sex: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'])
+@quadra = Quadra.new(name: "Quadra 1", ordem: 1, atual: 1, esportes: ['Vôlei','Basquete'],seg: ['POLI-BM','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'],ter: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'],qua: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'],qui: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'],sex: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'])
 @quadra.save
 @quadra = Quadra.new(name: "Quadra 2", ordem: 2, atual: 1, esportes: ['Vôlei','Basquete'],seg: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'],ter: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'],qua: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'],qui: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'],sex: ['Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago','Vago'])
 @quadra.save

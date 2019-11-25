@@ -1,0 +1,2 @@
+class ReservaAceitum < ApplicationRecord
+end

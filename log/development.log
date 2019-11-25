@@ -29880,3 +29880,963 @@ Processing by QuadrasController#show as HTML
 Completed 200 OK in 68ms (Views: 58.0ms | ActiveRecord: 0.7ms | Allocations: 11111)
 
 
+Started GET "/quadras/21" for ::1 at 2019-11-24 22:07:01 -0300
+Processing by QuadrasController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mQuadra Load (0.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/quadras_controller.rb:9:in `show'
+  Rendering quadras/show.html.erb within layouts/application
+  Rendered quadras/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1074)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.5ms | Allocations: 862)
+Completed 200 OK in 159ms (Views: 144.8ms | ActiveRecord: 0.9ms | Allocations: 12192)
+
+
+Started GET "/quadras/21" for ::1 at 2019-11-24 22:08:44 -0300
+Processing by QuadrasController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras" WHERE "quadras"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/quadras_controller.rb:9:in `show'
+  Rendering quadras/show.html.erb within layouts/application
+  Rendered quadras/show.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1085)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 838)
+Completed 200 OK in 121ms (Views: 108.4ms | ActiveRecord: 0.7ms | Allocations: 12210)
+
+
+Started GET "/Tabela" for ::1 at 2019-11-24 22:42:16 -0300
+  [1m[35m (12.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.1) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.1) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2019-11-24 22:42:28 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReservaAceita (20191125011604)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE TABLE "reserva_aceita" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dono" varchar, "esporte" varchar, "naipe" varchar, "inicio" varchar, "fim" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191125011604"]]
+  [1m[35m (89.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+Started GET "/Tabela" for ::1 at 2019-11-24 22:42:29 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/Tabela"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=tabela" for ::1 at 2019-11-24 22:42:39 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"tabela"}
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 3500)
+
+
+Started GET "/Tabela" for ::1 at 2019-11-24 22:43:03 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/Tabela"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=tabela" for ::1 at 2019-11-24 22:43:04 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"tabela"}
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 3711)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 22:43:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/tabela"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quadras" for ::1 at 2019-11-24 22:44:33 -0300
+Processing by QuadrasController#index as HTML
+  Rendering quadras/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/quadras/index.html.erb:11
+  Rendered quadras/index.html.erb within layouts/application (Duration: 119.7ms | Allocations: 10585)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 103.0ms | Allocations: 3468)
+Completed 200 OK in 5614ms (Views: 5553.6ms | ActiveRecord: 5.2ms | Allocations: 122228)
+
+
+Started GET "/tabelas" for ::1 at 2019-11-24 22:44:44 -0300
+  
+ActionController::RoutingError (uninitialized constant TabelasController
+Did you mean?  TabelaController):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tabelas" for ::1 at 2019-11-24 22:45:29 -0300
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant TabelasController
+Did you mean?  TabelaController):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=tabela" for ::1 at 2019-11-24 22:45:35 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"tabela"}
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 3865)
+
+
+Started GET "/rails/info/routes?path=quadras" for ::1 at 2019-11-24 22:45:46 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"quadras"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1423)
+
+
+Started GET "/rails/info/routes?path=quadras" for ::1 at 2019-11-24 22:45:47 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"quadras"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1396)
+
+
+Started GET "/rails/info/routes?path=tabelas" for ::1 at 2019-11-24 22:45:51 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"tabelas"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1411)
+
+
+Started GET "//tabelas(.:format)" for ::1 at 2019-11-24 22:46:24 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/tabelas(.:format)"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "//tabelas" for ::1 at 2019-11-24 22:46:29 -0300
+  
+ActionController::RoutingError (uninitialized constant TabelasController
+Did you mean?  TabelaController):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tabelas" for ::1 at 2019-11-24 22:46:34 -0300
+  
+ActionController::RoutingError (uninitialized constant TabelasController
+Did you mean?  TabelaController):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tabelas" for ::1 at 2019-11-24 22:50:16 -0300
+  
+ArgumentError ('Tabelas' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:18:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/tabelas" for ::1 at 2019-11-24 22:51:46 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/tabelas"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tabela" for ::1 at 2019-11-24 22:51:49 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.8ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:6
+  Rendered tabela/index.html.erb within layouts/application (Duration: 58.2ms | Allocations: 10063)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 59.4ms | Allocations: 4021)
+Completed 200 OK in 477ms (Views: 438.4ms | ActiveRecord: 7.6ms | Allocations: 44156)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 22:55:40 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.5ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:6
+  Rendered tabela/index.html.erb within layouts/application (Duration: 25.6ms | Allocations: 1633)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 605)
+Completed 200 OK in 1014ms (Views: 1011.4ms | ActiveRecord: 0.9ms | Allocations: 65908)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 22:55:52 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (1.9ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:6
+  Rendered tabela/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 1641)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 605)
+Completed 200 OK in 376ms (Views: 372.2ms | ActiveRecord: 2.2ms | Allocations: 59032)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 22:56:27 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (1.1ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:6
+  Rendered tabela/index.html.erb within layouts/application (Duration: 46.1ms | Allocations: 1633)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.3ms | Allocations: 605)
+Completed 200 OK in 382ms (Views: 379.0ms | ActiveRecord: 1.5ms | Allocations: 59388)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 22:56:42 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.8ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:6
+  Rendered tabela/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1633)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 605)
+Completed 200 OK in 341ms (Views: 339.5ms | ActiveRecord: 1.1ms | Allocations: 60321)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 22:56:46 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (1.2ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:6
+  Rendered tabela/index.html.erb within layouts/application (Duration: 22.0ms | Allocations: 1633)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 600)
+Completed 200 OK in 132ms (Views: 128.0ms | ActiveRecord: 1.4ms | Allocations: 11324)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 22:56:52 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:6
+  Rendered tabela/index.html.erb within layouts/application (Duration: 23.2ms | Allocations: 1635)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 605)
+Completed 200 OK in 372ms (Views: 369.9ms | ActiveRecord: 0.9ms | Allocations: 59394)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 22:57:06 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (1.8ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:6
+  Rendered tabela/index.html.erb within layouts/application (Duration: 34.3ms | Allocations: 1641)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 600)
+Completed 200 OK in 152ms (Views: 149.2ms | ActiveRecord: 2.1ms | Allocations: 11378)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 22:57:42 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:6
+  Rendered tabela/index.html.erb within layouts/application (Duration: 31.1ms | Allocations: 1633)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 605)
+Completed 200 OK in 421ms (Views: 419.0ms | ActiveRecord: 0.9ms | Allocations: 60670)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 22:57:58 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.8ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:6
+  Rendered tabela/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1633)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 19.5ms | Allocations: 605)
+Completed 200 OK in 373ms (Views: 369.2ms | ActiveRecord: 1.1ms | Allocations: 60336)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 22:59:55 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (5.8ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:6
+  Rendered tabela/index.html.erb within layouts/application (Duration: 30.1ms | Allocations: 1633)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.1ms | Allocations: 603)
+Completed 200 OK in 410ms (Views: 402.3ms | ActiveRecord: 6.1ms | Allocations: 60702)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:00:49 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 1854)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.8ms | Allocations: 841)
+Completed 200 OK in 267ms (Views: 260.6ms | ActiveRecord: 0.9ms | Allocations: 12925)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:01:37 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.5ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 18.3ms | Allocations: 1850)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 28.0ms | Allocations: 838)
+Completed 200 OK in 219ms (Views: 202.3ms | ActiveRecord: 0.8ms | Allocations: 12909)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:01:49 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 84.9ms | Allocations: 1847)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 29.4ms | Allocations: 848)
+Completed 200 OK in 347ms (Views: 335.2ms | ActiveRecord: 0.9ms | Allocations: 12929)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:05:10 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.8ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 55.3ms | Allocations: 2844)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 838)
+Completed 200 OK in 192ms (Views: 183.7ms | ActiveRecord: 1.1ms | Allocations: 13912)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:07:18 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.5ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 38.2ms | Allocations: 2556)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 605)
+Completed 200 OK in 520ms (Views: 517.9ms | ActiveRecord: 0.8ms | Allocations: 60779)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:08:05 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 48.8ms | Allocations: 2556)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 605)
+Completed 200 OK in 419ms (Views: 417.0ms | ActiveRecord: 0.8ms | Allocations: 60469)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:08:54 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.8ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 2556)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.1ms | Allocations: 605)
+Completed 200 OK in 425ms (Views: 422.4ms | ActiveRecord: 1.2ms | Allocations: 60803)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:09:19 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.9ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 81.8ms | Allocations: 2556)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 605)
+Completed 200 OK in 922ms (Views: 919.5ms | ActiveRecord: 1.6ms | Allocations: 61612)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:13:19 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.7ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 21.8ms | Allocations: 3565)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 841)
+Completed 200 OK in 171ms (Views: 158.4ms | ActiveRecord: 1.0ms | Allocations: 14644)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:14:15 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.8ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 101.3ms | Allocations: 3551)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 27.3ms | Allocations: 838)
+Completed 200 OK in 398ms (Views: 381.2ms | ActiveRecord: 1.3ms | Allocations: 14613)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:17:07 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (1.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 33.9ms | Allocations: 2708)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 605)
+Completed 200 OK in 128ms (Views: 125.1ms | ActiveRecord: 1.9ms | Allocations: 12402)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:17:10 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 55.3ms | Allocations: 5442)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.9ms | Allocations: 838)
+Completed 200 OK in 203ms (Views: 188.4ms | ActiveRecord: 1.0ms | Allocations: 16513)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:18:18 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 52.1ms | Allocations: 3831)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 600)
+Completed 200 OK in 137ms (Views: 135.7ms | ActiveRecord: 0.7ms | Allocations: 13524)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:18:23 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 146.1ms | Allocations: 11093)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.2ms | Allocations: 843)
+Completed 200 OK in 336ms (Views: 329.2ms | ActiveRecord: 0.6ms | Allocations: 22157)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:19:04 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.5ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 86.4ms | Allocations: 7200)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 600)
+Completed 200 OK in 165ms (Views: 162.5ms | ActiveRecord: 0.8ms | Allocations: 16881)
+
+
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (52.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mQuadra Destroy (51.1ms)[0m  [1m[31mDELETE FROM "quadras"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (4.4ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 1"], ["ordem", 1], ["atual", 1], ["created_at", "2019-11-25 02:19:45.927127"], ["updated_at", "2019-11-25 02:19:45.927127"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- POLI-BM\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.7ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 2"], ["ordem", 2], ["atual", 1], ["created_at", "2019-11-25 02:19:46.025028"], ["updated_at", "2019-11-25 02:19:46.025028"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (18.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.8ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 3"], ["ordem", 3], ["atual", 1], ["created_at", "2019-11-25 02:19:46.057102"], ["updated_at", "2019-11-25 02:19:46.057102"], ["esportes", "---\n- Futsal\n- Handebol\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.8ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 4"], ["ordem", 4], ["atual", 1], ["created_at", "2019-11-25 02:19:46.077659"], ["updated_at", "2019-11-25 02:19:46.077659"], ["esportes", "---\n- Futsal\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (28.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.8ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 5"], ["ordem", 5], ["atual", 1], ["created_at", "2019-11-25 02:19:46.114519"], ["updated_at", "2019-11-25 02:19:46.114519"], ["esportes", "---\n- Futsal\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.3ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 6"], ["ordem", 6], ["atual", 1], ["created_at", "2019-11-25 02:19:46.139157"], ["updated_at", "2019-11-25 02:19:46.139157"], ["esportes", "---\n- Futsal\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.3ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 7"], ["ordem", 7], ["atual", 1], ["created_at", "2019-11-25 02:19:46.161080"], ["updated_at", "2019-11-25 02:19:46.161080"], ["esportes", "---\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.1ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 8"], ["ordem", 8], ["atual", 1], ["created_at", "2019-11-25 02:19:46.185159"], ["updated_at", "2019-11-25 02:19:46.185159"], ["esportes", "---\n- Vôlei\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (4.8ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 9 A"], ["ordem", 9], ["atual", 1], ["created_at", "2019-11-25 02:19:46.211309"], ["updated_at", "2019-11-25 02:19:46.211309"], ["esportes", "---\n- Futsal\n- Handebol\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (17.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.3ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 9 B"], ["ordem", 10], ["atual", 1], ["created_at", "2019-11-25 02:19:46.246874"], ["updated_at", "2019-11-25 02:19:46.246874"], ["esportes", "---\n- Futsal\n- Handebol\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (26.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (3.1ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 10 A"], ["ordem", 11], ["atual", 1], ["created_at", "2019-11-25 02:19:46.294372"], ["updated_at", "2019-11-25 02:19:46.294372"], ["esportes", "---\n- Futsal\n- Handebol\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.1ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Quadra 10 B"], ["ordem", 12], ["atual", 1], ["created_at", "2019-11-25 02:19:46.323439"], ["updated_at", "2019-11-25 02:19:46.323439"], ["esportes", "---\n- Futsal\n- Handebol\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.6ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Velódromo A"], ["ordem", 13], ["atual", 1], ["created_at", "2019-11-25 02:19:46.344901"], ["updated_at", "2019-11-25 02:19:46.344901"], ["esportes", "---\n- Futsal\n- Handebol\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.1ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Velódromo B"], ["ordem", 14], ["atual", 1], ["created_at", "2019-11-25 02:19:46.370491"], ["updated_at", "2019-11-25 02:19:46.370491"], ["esportes", "---\n- Futsal\n- Handebol\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (1.9ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Módulo 1"], ["ordem", 15], ["atual", 1], ["created_at", "2019-11-25 02:19:46.408067"], ["updated_at", "2019-11-25 02:19:46.408067"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (18.4ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Módulo 2"], ["ordem", 16], ["atual", 1], ["created_at", "2019-11-25 02:19:46.430411"], ["updated_at", "2019-11-25 02:19:46.430411"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (2.2ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Módulo 3"], ["ordem", 17], ["atual", 1], ["created_at", "2019-11-25 02:19:46.476891"], ["updated_at", "2019-11-25 02:19:46.476891"], ["esportes", "---\n- Vôlei\n- Basquete\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (14.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuadra Create (3.6ms)[0m  [1m[32mINSERT INTO "quadras" ("name", "ordem", "atual", "created_at", "updated_at", "esportes", "seg", "ter", "qua", "qui", "sex") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Módulo 4"], ["ordem", 18], ["atual", 1], ["created_at", "2019-11-25 02:19:46.527855"], ["updated_at", "2019-11-25 02:19:46.527855"], ["esportes", "---\n- Vôlei\n"], ["seg", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["ter", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qua", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["qui", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"], ["sex", "---\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n- Vago\n"]]
+  [1m[35m (21.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/tabela" for ::1 at 2019-11-24 23:21:19 -0300
+  [1m[35m (10.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (1.4ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 95.8ms | Allocations: 19449)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 51.2ms | Allocations: 4032)
+Completed 200 OK in 2426ms (Views: 2361.6ms | ActiveRecord: 6.8ms | Allocations: 86825)
+
+
+Started GET "/tabela" for ::1 at 2019-11-24 23:22:20 -0300
+Processing by TabelaController#index as HTML
+  Rendering tabela/index.html.erb within layouts/application
+  [1m[36mQuadra Load (0.6ms)[0m  [1m[34mSELECT "quadras".* FROM "quadras"[0m
+  ↳ app/views/tabela/index.html.erb:7
+  Rendered tabela/index.html.erb within layouts/application (Duration: 119.0ms | Allocations: 11102)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:6:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 839)
+Completed 200 OK in 258ms (Views: 250.7ms | ActiveRecord: 0.9ms | Allocations: 22178)
+
+

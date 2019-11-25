@@ -1,0 +1,42 @@
+<%= form_with(model: reserva_aceitum, local: true) do |form| %>
+  <% if reserva_aceitum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reserva_aceitum.errors.count, "error") %> prohibited this reserva_aceitum from being saved:</h2>
+
+      <ul>
+        <% reserva_aceitum.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dono %>
+    <%= form.text_field :dono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :esporte %>
+    <%= form.text_field :esporte %>
+  </div>
+
+  <div class="field">
+    <%= form.label :naipe %>
+    <%= form.text_field :naipe %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inicio %>
+    <%= form.text_field :inicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fim %>
+    <%= form.text_field :fim %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
